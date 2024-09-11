@@ -6,8 +6,8 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Zale
-  m_DiffuseTexture: {fileID: 2800000, guid: 59de10eb45f92c84fada643fe07d8aa8, type: 3}
+  m_Name: Zale1
+  m_DiffuseTexture: {fileID: 2800000, guid: ec42644bf2cd5b74daf984b8336cb151, type: 3}
   m_NormalMapTexture: {fileID: 0}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 2, y: 2}
