@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: 380cc1922fa434643b7bfa81d45036af
+guid: 16183f98d21abc34f9317714ea25d220
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Koks
-    second: {fileID: 2100000, guid: a1ed649458e18bc429d4b638aa6de159, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: krumalapas
-    second: {fileID: -101803210009786692, guid: ef4d48952f4a48e4dacab2472911c768, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

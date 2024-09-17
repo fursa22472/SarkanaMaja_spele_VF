@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 15d144ffa438d8a4da8a1547492eabe2
+guid: 3ff9a88d180b273478c9fcf049adebc8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Koks
-    second: {fileID: 2100000, guid: a1ed649458e18bc429d4b638aa6de159, type: 2}
+    second: {fileID: 2100000, guid: 2cc1239ae1d2e0246a7d28fc5dbd4b2f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
