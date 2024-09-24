@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f84b5eaa3a8e63b478e23202b53c2411
+guid: 966aca9d2a24b6a4185528f086229fbb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Koks
+    second: {fileID: 2100000, guid: 2cc1239ae1d2e0246a7d28fc5dbd4b2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: krumalapas
-    second: {fileID: 2100000, guid: 3499dd483dc61a74ca4bcbd85637aa1d, type: 2}
+    second: {fileID: 2100000, guid: 9772464dc7b57e446bee66b781ab5ce2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
