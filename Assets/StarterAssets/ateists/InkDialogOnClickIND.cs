@@ -194,6 +194,23 @@ public class InkDialogOnClickIND : MonoBehaviour
         dialogueAudioMap.Add("RitualsAndTraditions", Resources.Load<AudioClip>("Audio/bomzisAudio/RitualsAndTraditions"));
         dialogueAudioMap.Add("AnotherStory", Resources.Load<AudioClip>("Audio/bomzisAudio/AnotherStory"));
         dialogueAudioMap.Add("End", Resources.Load<AudioClip>("Audio/bomzisAudio/End"));
+
+        dialogueAudioMap.Add("Rainis_1_N_01", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_01"));
+        dialogueAudioMap.Add("Rainis_1_N_02", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_02"));
+        dialogueAudioMap.Add("Rainis_1_N_03", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_03"));
+        dialogueAudioMap.Add("Rainis_1_N_04", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_04"));
+        dialogueAudioMap.Add("Rainis_1_N_05", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_05"));
+        dialogueAudioMap.Add("Rainis_1_N_06", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_06"));
+        dialogueAudioMap.Add("Rainis_1_N_07", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_07"));
+        dialogueAudioMap.Add("Rainis_1_N_08", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_08"));
+        dialogueAudioMap.Add("Rainis_1_N_09", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_09"));
+        dialogueAudioMap.Add("Rainis_1_N_10", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_10"));
+        dialogueAudioMap.Add("Rainis_1_N_11", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_11"));
+        dialogueAudioMap.Add("Rainis_1_N_12", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_12"));
+        dialogueAudioMap.Add("Rainis_1_N_13", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_13"));
+        dialogueAudioMap.Add("Rainis_1_N_14", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_14"));
+        dialogueAudioMap.Add("Rainis_1_N_15", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_15"));
+        dialogueAudioMap.Add("Rainis_1_N_16", Resources.Load<AudioClip>("Audio/bomzisAudio/Rainis_1_N_16"));
     }
 
     void PlayDialogueAudioFromTags(List<string> tags)
