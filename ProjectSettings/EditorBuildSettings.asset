@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/DialogueEditor/Scenes/SakumaEkrans.unity
+    path: Assets/Scenes/SakumaEkrans.unity
     guid: cf53389c755b2854983bf0dd2efbe822
   - enabled: 1
-    path: Assets/DialogueEditor/Scenes/MezsArKokiem.unity
+    path: Assets/Scenes/MezsArKokiem.unity
     guid: 0943084bfab577e4b9a9b389a6b480a3
   m_configObjects: {}
