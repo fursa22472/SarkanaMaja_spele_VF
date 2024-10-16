@@ -1,12 +1,29 @@
+VAR option1 = false
+VAR option2 = false
+
+-> VirsIntro
+
+=== VirsIntro ===
 "Turpini iet. Te tev nav, ko darīt."
+-> A1
 
-+ [Es negribēju traucēt.]
+=== A1 ===
+* [Es negribēju traucēt.]
+~ option1 = true
     "Tiešām? Nu, tu traucēji. Man nevajag kompāniju."
-    -> InitialBranch
+    -> ReturnToChoices
 
-+ [Ko jūš darat šeit viens pats?]
+* [Ko jūš darat šeit viens pats?]
+~ option2 = true
     "Ko tev izskatās? Dzīvoju savu dzīvi. Nodarbojies ar savām lietām."
+    -> ReturnToChoices
+    
+    === ReturnToChoices ===
+{option1 and option2:
     -> InitialBranch
+- else:
+    -> A1
+}
 
 === InitialBranch ===
 + [Tu neizskaties, ka tev klājas pārāk labi...]

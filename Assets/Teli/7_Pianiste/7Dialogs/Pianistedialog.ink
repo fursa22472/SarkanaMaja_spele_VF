@@ -1,20 +1,44 @@
-#audio:Pianist_7_01
-    "Oh, there you are! Did you hear that? The sound... it’s like everything finally snapped into place. You can’t see it, but it’s there, like a whisper in the dark. That’s music, you know? The only thing that makes sense."
+VAR option1 = false
+VAR option2 = false
+VAR option3 = false
+VAR option4 = false
+VAR option5 = false
+VAR option6 = false
 
-+ [It’s clear you live for this. Music seems to be everything to you.]
+-> PianistIntro
+
+=== PianistIntro ===
+#audio:Pianist_7_01
+"Oh, there you are! Did you hear that? The sound... it’s like everything finally snapped into place.  
+You can’t see it, but it’s there, like a whisper in the dark. That’s music, you know? The only thing that makes sense."
+-> A2
+
+
+=== A2 ===
+* [It’s clear you live for this. Music seems to be everything to you.] 
+    ~ option1 = true
     #audio:Pianist_7_02
     "Everything? That word doesn’t do it justice. Music is like... breathing. It’s more than just sound; it’s a way to speak when words fail. When everything else is chaos, the notes align, and suddenly, there’s meaning."
-      ->1A
+    -> ReturnToChoices
 
-+ [What do you mean, “snapped into place”?]
+* [What do you mean, “snapped into place”?] 
+    ~ option2 = true
     #audio:Pianist_7_03
     "Like a puzzle piece falling into its spot after being lost for so long. I was playing, and for a moment, everything clicked. It’s hard to explain, but when it happens... it’s like the universe is listening."
-      ->1A
+    -> ReturnToChoices
 
-+ [I heard you’ve got a concert coming up. Is that what you’re preparing for?]
+* [I heard you’ve got a concert coming up. Is that what you’re preparing for?] 
+    ~ option3 = true
     #audio:Pianist_7_04
     "Yeah. It’s not just any concert. It’s going to be the one where I make them hear me, really hear me. I’ve been putting everything I have into this piece. I can’t afford to be just background noise this time."
-    ->1A
+    -> ReturnToChoices
+
+=== ReturnToChoices ===
+{option1 and option2 and option3:
+    -> 1A
+- else:
+    -> A2
+}
 
 === 1A ===
 
@@ -41,25 +65,37 @@
 
 #audio:Pianist_7_08
     "You know... I’ve been playing a lot lately. Preparing for this concert, but also for something bigger. Like something’s building up inside of me, and it needs to be let out. I’d like you to be there. I think you’ll understand. Not many do."
+    -> A3
 
-#choice  
-    * [I’m intrigued, but what if they still don’t get it? What will you do then?]
+=== A3 ===
+    * [I’m intrigued, but what if they still don’t get it? What will you do then?] 
+    ~ option4 = true
         #audio:Pianist_7_09
         "Then they’ll miss it, and that’s on them. But I’m not playing for everyone. I’m playing for the ones who can hear it, who can feel it. And if that’s just a handful, then so be it. I’d rather reach a few people deeply than impress a crowd that doesn’t care."
 
-        -> ContinueGoodPath
+        -> ReturnToChoices2
 
-    * [If it means so much to you, why invite me?]
+    * [If it means so much to you, why invite me?] 
+    ~ option5 = true
         #audio:Pianist_7_10
         "Because you’re different. You don’t just nod along. You question things. I see that, and I respect it. But more than that... I think you’ll listen. Not just to the music, but to what’s beneath it. That’s why I’m asking you to come, and I don’t ask lightly."
 
-        -> ContinueGoodPath
+        -> ReturnToChoices2
 
-    * [I’m not sure I’d understand, but I’m curious.]
+    * [I’m not sure I’d understand, but I’m curious.] 
+    ~ option6 = true
         #audio:Pianist_7_11
         "Curiosity is enough. It’s where everything starts, right? You don’t need to understand fully; you just need to be open. So come. Listen. And maybe you’ll find more than you expected. Or maybe you won’t... but at least you’ll know."
 
-        -> ContinueGoodPath
+        -> ReturnToChoices2
+        
+        
+        === ReturnToChoices2 ===
+{option4 and option5 and option6:
+    -> ContinueGoodPath
+- else:
+    -> A3
+}
 
 === ContinueGoodPath ===
 
