@@ -9,28 +9,28 @@ VAR option6 = false
 
 === PianistIntro ===
 #audio:Pianist_7_01
-"Oh, there you are! Did you hear that? The sound... it’s like everything finally snapped into place.  
-You can’t see it, but it’s there, like a whisper in the dark. That’s music, you know? The only thing that makes sense."
+Ak, tur tu esi! Dzirdi? Skaņa... šķiet, ka viss beidzot ir savās vietās.
+Tu gan jau, ka nedzirdēsi, bet ši akustika ir kā atsevišķs skaņdarbs. It kā zvaigznes spēlē savas notis.
 -> A2
 
 
 === A2 ===
-* [It’s clear you live for this. Music seems to be everything to you.] 
+* [Ļoti skaista melodija.] 
     ~ option1 = true
     #audio:Pianist_7_02
-    "Everything? That word doesn’t do it justice. Music is like... breathing. It’s more than just sound; it’s a way to speak when words fail. When everything else is chaos, the notes align, and suddenly, there’s meaning."
+    Līdzīgi vārdiem. Tu runā līdz tu sāc saprast nozīmi. Tas ir mans runas veids - Klavires.
     -> ReturnToChoices
 
-* [What do you mean, “snapped into place”?] 
+* [Es nedzirdu zvaigznes] 
     ~ option2 = true
     #audio:Pianist_7_03
-    "Like a puzzle piece falling into its spot after being lost for so long. I was playing, and for a moment, everything clicked. It’s hard to explain, but when it happens... it’s like the universe is listening."
+    Viņas pašas bez manis nevar spēlēt. It kā šis ir orķestris un viņas spēlē pavadījumu. Trešā roka.
     -> ReturnToChoices
 
-* [I heard you’ve got a concert coming up. Is that what you’re preparing for?] 
+* [Tad tev būs koncerts šeit?] 
     ~ option3 = true
     #audio:Pianist_7_04
-    "Yeah. It’s not just any concert. It’s going to be the one where I make them hear me, really hear me. I’ve been putting everything I have into this piece. I can’t afford to be just background noise this time."
+    Mans pirmais koncerts šeit. Es spēlēju lielajās zālēs, bet aizmisu, cik patīkami būt vienai un spēlet tikai jums. 
     -> ReturnToChoices
 
 === ReturnToChoices ===
@@ -41,37 +41,27 @@ You can’t see it, but it’s there, like a whisper in the dark. That’s music
 }
 
 === 1A ===
-
-#choice  
-    * [I’d like to hear you play. Not just at the concert, but now.]
+    * [Es gribētu dzirdēt vēl kaut ko tagad.]
         #audio:Pianist_7_05
-        "Really? You’re serious? Most people just want a performance, but you’re asking to *listen*. There’s a difference, you know. Alright, I’ll play something. But it’s not the whole piece. Just a glimpse. Close your eyes and listen. There... did you feel it? The way it built up, the tension? That’s what this concert is about. I’m going to take all that tension and make them *feel* it, make them understand."
+        Man ir prieks, ka tev neinteresē priekšnesums tik ļoti, cik pats darbs. Tomēr, es vēl nevaru atklāt visu, savādāk nebūs tā paša efekta... Bet tā es spēlēju pārāk bieži. Varbūt man vajag atpūšties. Beigās dzirdu tikai zvaigznes.
+        -> A3
 
-        -> GoodIncline
-
-    * [If you’re this dedicated, why aren’t you already famous?]
+    * [Tev ir talants, bet tu neesi slavenība?]
         #audio:Pianist_7_06
-        "Hah, maybe because real music isn’t always what people want to hear. Or maybe it’s because I don’t play by their rules. It’s easier to shine if you fit the mold, but I’ve never been interested in that. Does that make me less dedicated? Maybe. Or maybe it means I’m doing it right."
-
+        Kāpēc tu domā, ka neesmu? Esmu savu draugu lokā. Vairāk jau nevajag. 
         -> NeutralIncline
 
-    * [I don’t think many people would understand what you’re trying to say.]
+    * [Man liekas cits nesaprastu par zvaigznēm...]
         #audio:Pianist_7_07
-        "Maybe not, but that’s no excuse to stop trying. If everyone waited for the world to catch up, nothing would ever change. I’m not here to make them understand—I’m here to make them *feel*. Even if it’s just a flicker. But it sounds like you don’t get that... or maybe you’re just afraid to."
-
+        Es nevēlos izskaidrot to. To nevar paskaidrot ar vādiem, tur ir tikai mūzika.
         -> BadIncline
 
-=== GoodIncline ===
-
-#audio:Pianist_7_08
-    "You know... I’ve been playing a lot lately. Preparing for this concert, but also for something bigger. Like something’s building up inside of me, and it needs to be let out. I’d like you to be there. I think you’ll understand. Not many do."
-    -> A3
 
 === A3 ===
-    * [I’m intrigued, but what if they still don’t get it? What will you do then?] 
+    * [Bet ja nu man nepatiks?] 
     ~ option4 = true
         #audio:Pianist_7_09
-        "Then they’ll miss it, and that’s on them. But I’m not playing for everyone. I’m playing for the ones who can hear it, who can feel it. And if that’s just a handful, then so be it. I’d rather reach a few people deeply than impress a crowd that doesn’t care."
+        Tas ir nekas, galvenais, lai tu jūti līdzi. Vienmēr var aiziet.
 
         -> ReturnToChoices2
 

@@ -1,141 +1,219 @@
 VAR option1 = false
 VAR option2 = false
+VAR option3 = false
+VAR option4 = false
 
--> VirsIntro
 
-=== VirsIntro ===
-"Turpini iet. Te tev nav, ko darīt."
+Turpini iet. Te tev nav, ko darīt.
 -> A1
 
 === A1 ===
 * [Es negribēju traucēt.]
 ~ option1 = true
-    "Tiešām? Nu, tu traucēji. Man nevajag kompāniju."
+    Turpini iet. Te tev nav, ko darīt.
     -> ReturnToChoices
 
-* [Ko jūš darat šeit viens pats?]
+* [Ko jūs darat šeit viens pats?]
 ~ option2 = true
-    "Ko tev izskatās? Dzīvoju savu dzīvi. Nodarbojies ar savām lietām."
+    Es šeit dzīvoju.
     -> ReturnToChoices
     
     === ReturnToChoices ===
 {option1 and option2:
-    -> InitialBranch
+    -> A2
 - else:
     -> A1
 }
 
-=== InitialBranch ===
+=== A2 ===
 + [Tu neizskaties, ka tev klājas pārāk labi...]
-    "Man viss ir kārtībā. Tu domā, ka pazīsti mani tikai no tā, kā izskatos? Man nevajag, lai mani glābj. Labāk ej, pirms zaudē savu laiku."
-    -> HesitantReveal
+    Man viss ir kārtībā. Tu domā, ka saproti mani pēc  izskata? Labāk ej.
+    -> A3
 
 + [Piedod, es negribēju tevi aizskart.]
-    "Nu jā. Vienkārši ej tālāk, kā visi pārējie. Esmu pie tā pieradis."
+    Nu jā. Vienkārši ej tālāk, kā visi pārējie. Esmu pie tā pieradis.
     -> END
 
-=== HesitantReveal ===
-+ [Vai tiešām šī ir tava mājvieta?]
-    "Jā. Un kas tad? Tā nav pils, bet tas ir viss, kas man ir. Man vairāk nevajag."
-    -> TruthOrFacade
+=== A3 ===
++ [Vai tiešām tu te dzīvo?]
+   Jā. Un kas tad? Tā nav pils, bet vairāk nevajag.
+    -> A4
 
 + [Es neticu, ka kāds šādi dzīvo pēc izvēles.]
-    "Tu domā, ka esmu šeit, jo nezinu neko labāku? Tici man, man ir labāk tā. Nav cerību, nav, kam pievilt."
-    -> TruthOrFacade
+    Tu domā, ka esmu šeit, jo negribu neko labāku? Tici man, labāku par šo man nepienākas. 
+    -> A4
 
-=== TruthOrFacade ===
-+ [Kur ir tava ģimene?]
-    "Aizgāja. Atstāja mani. Droši vien tā bija labāk. Es viņus nevainoju. Es nebiju tā vērts, lai pie manis paliktu."
-    -> FamilyDiscussion
+=== A4 ===
+* [Kur ir tava ģimene?]
+~ option3 = true
+    Aizgāja. Atstāja mani. Droši vien tā bija labāk. Es viņus nevainoju. 
+    -> ReturnToChoices2
 
-+ [Tu tiešām esi mierā ar šādu dzīvi?]
-    "Tu nesaproti, vai ne? Man nevajag izrādīties. Neviens manī vairs nerūpējas, un tas ir labi. Man nevajag viņu žēlumu."
-    -> FamilyDiscussion
+* [Tevi tiešām apmierina šāda dzīve?]
+~ option4 = true
+    Tu nesaproti, vai ne? Man nevajag izrādīties. Neviens par mani vairs nerūpējas, un tas ir labi. 
+    -> ReturnToChoices2
+    
+    
+        === ReturnToChoices2 ===
+{option3 and option4:
+    -> A5
+- else:
+    -> A4
+}
+    
 
-=== FamilyDiscussion ===
+=== A5 ===
 + [Tu tiešām domā, ka viņiem būtu labāk bez tevis?]
-    "Jā, tā domāju. Es visu sabojāju. Droši vien viņi tagad dzīvo labāk, kad esmu ārpus attēla."
-    -> NegativeOrPositiveIntro
+    Es zinu, ka esmu dzērājs. Es dzēru un vienmēr to darīšu. Tāda ir dzīve, tādi apstākļi.
+Es visu sabojāju. Droši vien viņi tagad dzīvo labāk.
+    -> A6
 
-+ [Varbūt viņi aizgāja, jo domāja, ka tu nemainīsies. Ko darīt, ja viņi atgrieztos, ja tu mēģinātu labot lietas?]
-    "Tu domā, ka es par to neesmu domājis? Ir par vēlu. Es to tiltu nodedzināju sen. Viņi mani pat vairs nepazītu."
-    -> NegativeOrPositiveIntro
 
-=== NegativeOrPositiveIntro ===
-+ [Kāpēc izliecies, ka viss ir kārtībā? Šī ir izdzīvošana, nevis dzīvošana. Tev kaut kas ir jādara, nevis jāslēpjas mežā.]
-    "Tev sliktas atzīmes skolā, ko? Nesaproti neko? Esmu mēģinājis. Nekas neizdevās. Tas... tas ir vieglāk. Neviens no manis neko negaida, un es neko negaidu no citiem."
-    -> NegativePath
+=== A6 ===
++ [Ja viņi atgrieztos, vai tu mēģinātu labot lietas?]
+    Nu, rekur, gudriniece!
+     Ir par vēlu. Viņi mani pat vairs nepazītu.
+    -> A7
 
-+ [Nav par vēlu mainīties. Varbūt tev būtu vēl viena iespēja ar viņiem.]
-    "Mainīties? Tu vienkārši mainies, un viss brīnumainā kārtā atgriežas vecajās sliedēs? Es visu esmu zaudējis. Neviens mani vairs negaida."
-    -> PositivePushback
 
-=== NegativePath ===
-+ [Tu esi padevies. Tu domā, ka neesi pelnījis neko labāku, bet tā nav taisnība. Beidz tā domāt.]
-    "Es *zinu*, ka neesmu pelnījis neko labāku. Daži cilvēki vienkārši nav domāti tam, lai izturētu, un es esmu viens no viņiem. Pārstāj mēģināt salabot to, kas ir salauzts."
-    -> NegativePushFurther
+=== A7 ===
++ [Šī ir izdzīvošana, nevis dzīvošana. Tev kaut kas ir jādara.]
+    Tev sliktas atzīmes skolā, ko? Nesaproti neko? 
+    Esmu mēģinājis. Nekas neizdevās. Neviens no manis neko negaida, un es neko negaidu no citiem.
+    -> A8
 
-+ [Tev taisnība. Cilvēki kā tu tiek pamesti. Neviens nenāks tevi glābt.]
-    "Beidzot kāds, kas to saprot. Tu cīnies, un tas neko nemaina. Galu galā nekas nemainās. Cilvēki iet tālāk, un es palieku šeit."
-    -> NegativePushFurther
+=== A8 ===
 
-=== NegativePushFurther ===
++ [Nav par vēlu mainīties. Varbūt tev būtu vēl viena iespēja.]
+    Tu nezini to sajūtu, nu, kad tev tāds....Tu zini, ka esi pretīgs un vainīgs un, ja pat piedotu,, tad... Kuram es tāds vajadzīgs.
+    -> P1
+    
+    + [Tu esi padevies. Tu domā, ka neesi pelnījis neko labāku, bet tā nav. Beidz tā domāt.]
+   Beidz stāvēt šeit. Beidz būt tik uzbāzīga. Beidz runāt ar mani. 
+    -> N1
 
-+ [Tu varētu mainīties, ja gribētu. Tu vienkārši baidies mēģināt.]
-    "Es nebaidos. Es tikai zinu, ka tas neko nemainīs. Tagad ej, pirms vēl iznieko vairāk laika ar mani."
-    -> NegativeEndingChoice
+=== P1 ===
++ [Jums ir jāsāk ar kaut ko mazu. ]
+    Ir. Ir iespēja nesabojāt šo. Sākt no jauna.
+    -> P2
+    
+    + [Jums vajag palīdzību. Varbūt noīrēt dzīvokli?]
+    Pareizi! Ka tā. Jā, rekur ir. Nu tad laikam iešu, paldies liels.
+    -> N2
 
-=== PositivePushback ===
-+ [Tev nav jāturpina dzīvot tā visu mūžu. Ir vietas, kas varētu palīdzēt tev atkal piecelties kājās.]
-    "Palīdzēt? Tu domā, ka patversmes rūpējas par tādiem cilvēkiem kā es? Tu esi tikai skaitlis, ķermenis. Nevienam nav laika otrajām iespējām."
-    -> PositivePushFurther
 
-+ [Tu varētu atrast darbu, nopelnīt naudu. Cilvēki saņem otro iespēju visu laiku.]
-    "Darbs? Neviens mani neņemtu darbā. Esmu pārāk ilgi bijis ārpus sistēmas. Viņi negribēs, lai es viņus vilktu atpakaļ."
-    -> PositivePushFurther
+=== P2 ===
++ [Tieši tā, jāsāk no jauna!]
+    Sākšu ar to, ka aizmirsīšu par tām dienām, kad man bija ģimene.
+    -> P3
 
-=== PositivePushFurther ===
-+ [Tu nezināsi, kamēr nepamēģināsi. Lietas nemainīsies, ja neko nedarīsi.]
-    "Pamēģināt? Tu nesaproti. Esmu mēģinājis iepriekš. Neizdevās katru reizi. Kas šoreiz būs savādāk?"
-    -> EncouragingPath
 
-+ [Tev nav ko zaudēt. Lietas varētu mainīties, bet tikai tad, ja tu pieliksi pūles.]
-    "Tu tiešām tici, ka tādi cilvēki kā es var mainīties? Es nezinu... ir grūti redzēt izeju no šīs situācijas."
-    -> EncouragingPath
+=== P3 ===
++ [Nē, jāsāk ar sevi.]
+    Tev neliekas dīvaini, ka.... tu tāda vairāk, ar dzīves zināšanām. Pārzināšanu? It kā tev būrtu līdzīga situācija. Lūdz Dievu, lai nebūtu.
+    -> P4
 
-=== EncouragingPath ===
-+ [Cilvēki ir izkļuvuši no sliktākām situācijām. Tev ir jātic, ka tas ir iespējams.]
-    "Pēc visa tā, kas noticis, ir grūti iedomāties kaut ko citu. Esmu tik ilgi bijis šeit... es pat nezinu, vai vēl protu cīnīties."
-    -> EncouragingPath2
 
-+ [Ko darīt, ja tava ģimene redzētu, ka tu mēģini mainīties? Varbūt viņi atgrieztos.]
-    "Mana ģimene... es pat nezinu, vai viņi mani gribētu atpakaļ. Bet, ja viņi gribētu... varbūt man būtu iemesls mēģināt."
-    -> EncouragingPath2
+=== P4 ===
++ [Es domāju, ka ticība jums palīdzētu. Kaut vai ticība sevī. Es satiku priesteri, kurš pats netic, bet viņš nepadevās.]
+    Ak, tad tev patīk runāties. Man nepatīk. 
+    -> P5
 
-=== EncouragingPath2 ===
-+ [Tev vēl ir iemesls. Vai tas būtu viņu dēļ vai sevis dēļ, tu vari vēl visu mainīt.]
-    "Varbūt tev taisnība. Varbūt man ir jāmēģina. Sliktāk jau diez vai var kļūt, vai ne?"
-    -> PositiveEnd
+=== P5 ===
++ [Es nezinu, kā jums palīdzēt. Jums nav auksti?]
+    Nav, nav. Tātad...Tu runāji ar priesteri, ja? Nevarētu viņam paprasīt...Nē. Zini, nu ja tu te jau esi, tad nu jau neko. Kā tu domā... ja tev tēvs dzertu, tu viņam piedotu?
+    -> P6
 
-+ [Viss sākas ar to, ka tici, ka esi pelnījis ko labāku. Tas ir pirmais solis.]
-    "Jā... varbūt esmu bijis par zemu tik ilgi, ka, ja nesākšu tagad, tad nekad nesākšu."
-    -> PositiveEnd
-
-=== PositiveEnd ===
-+ [Lai veicas. Tu esi pelnījis labāku dzīvi par šo.]
-    "Paldies, puika. Es nezinu, kas notiks, bet es mēģināšu. Tas ir viss, ko varu darīt, vai ne?"
+=== P6 ===
++ [Mans tēvs nedzer. Es viņam visu piedotu. ]
+   Paldies. Es savam nepiedodu. Nu cilvēki ir dažādi tad, jā? Ai. Zini ko? Mēģināsim. Atcerējos par to priesteri un uzreiz tā kā skaidrāk galvā. Ne par Dievu, bet par sarunām ar viņu. Tur bija tas sasodītais lietussargs.
+    -> P7
+    
+    === P7 ===
++ [Lietussargs?]
+    Izkāpu es trolejbusā, nu, jo, nu nebija taloniņa, izeju, bet tur tas, tas vīriņš iet un iedod lietussargu pats , galvenais iet bez, bet man iedod. Beigās, nu, kautkur pazaudēju, bet...jā. Skaista diena bija. 
+Ir jācenšās.
+    -> P8
+    
++ [Jūs varat konkrētāk?]
+    Izkāpu es trolejbusā, nu, jo, nu nebija taloniņa, izeju, bet tur tas, tas vīriņš iet un iedod lietussargu pats , galvenais iet bez, bet man iedod. Beigās, nu, kautkur pazaudēju, bet...jā. Skaista diena bija. 
+Ir jācenšās.
+    -> P8
+    
+    === P8 ===
++ [Es arī tā domāju.]
+   Tu esi ļoti jauka. Paldies.
+    -> P9
+    
+    + [Es nesapratu īsti par lietussargu, bet man prieks.]
+    Tu esi ļoti jauka. Paldies.
+    -> P9
+    
+    === P9 ===
++ [Visu labu! Es ceru, ka palīdzēju...]
+    Es domāju, ka tev taisnība. Es mēģināšu. Atā!
     -> END
+    
+    
+    
+   === N1 ===
+   + [Jums vajag palīdzību. Varbūt noīrēt dzīvokli?]
+    Pareizi! Ka tā. Jā, rekur ir. Nu tad laikam iešu, paldies liels.
+    -> N2   
+    
+=== N2 ===
++ [Kad jūs domājat pārvākties?]
+   Nu tulīt sākšu krāmēt mantas. Paldies vēlreiz. Vari iet jau. 
+    -> N3
+    
+=== N3 ===
++ [Kas notiek? Kādēļ jūs tad neejat?...]
+   ....
+Laikam būšu pazaudējis savus desmit tūkstošus kabatā. Diemžēl Dievs nav manā pusē.
+    -> N4
 
-=== NegativeEndingChoice ===
-+ [Bet varbūt pietiks žēloties un darīt kaut ko. Padomā par savu ģimeni. Man būtu ļoti dusmas, ja mans tētis būtu tāds kā tu.]
-    "Tu domā, ka man patīk būt vilšanās? Tici man, es neesmu par to lepns. Bet tas nav tik vienkārši kā vienkārši sākt kaut ko darīt."
-    -> PositivePushback
+=== N4 ===
++ [...Pagaidi. Tas bija joks? Jums nav naudas. ]
+   Ej, es tevi lūdzu. Paej garām. 
+    -> N5
+    
+    === N5 ===
++ [Kā es varu paiet garām. Šis ir mans pienākums.]
+   Pienākums nedot man mieru?
+    -> N6
+    
+        === N6 ===
++ [Pienākums, kā pilsonim palīdzēt tādiem kā jūs.]
+   Kurš tev to galvā ielika? ...Māte? Skolotāja? Kāds tad es esmu, ka tev tāds...tas.... pienākums?
+    -> N7
 
-+ [Varbūt tev taisnība. Varbūt nekas tavā dzīvē nemainīsies.]
-    "Tu saproti. Tādiem cilvēkiem kā man nav otrās iespējas. Es palikšu šeit, kā vienmēr."
-    -> NegativeEnd
-
-=== NegativeEnd ===
-+ [Uzredzēšanos.]
-    "Jā... uzredzēšanos. Es laikam arī...došos."
+        === N7 ===
++ [Es nezinu, kā jums palīdzēt. Jums nav auksti?]
+   Nav, nav. Tātad...Tu runāji ar priesteri, ja? Nevarētu viņam paprasīt...Nē. Zini, nu ja tu te jau esi, tad nu jau neko. Kā tu domā... ja tev tēvs dzertu, tu viņam piedotu?
+    -> P6
+    
++ [Jums ir jārīkojas. Jums ir jāsāk kaut ko darīt.]
+   Ko darīt? Šeit var tikai noslīkt.
+    -> N8
+    
+            === N8 ===
++ [Nesakiet tā. Dzīve ir svarīga. Ir tikai jātic!]
+   Kam man ticēt? Mani viss apmierina.
+    -> N9
+    
+    
+                === N9 ===
++ [Varbūt jūs varētu prasīt naudu uz ielas? Sakrātu kaut ko, vai atrastu darbu..?]
+   Nevajaga man neko. Liecies mierā.
+    -> N10
+    
+                   === N10 ===
++ [Jūs pat neklausaties, ko es saku!]
+   Es neko negribu. Man ir jāiet....Laikam došos.
+    -> N11
+    
+                       === N11 ===
++ [Pagaidiet, es nepabeidzu!]
+   Viss, čau. Jā...viss tik slikti, tiešām. Laikam, tad tā būs.
     -> END
