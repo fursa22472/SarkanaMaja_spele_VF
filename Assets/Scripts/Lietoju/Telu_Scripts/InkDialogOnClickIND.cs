@@ -24,46 +24,62 @@ public class InkDialogOnClickIND : MonoBehaviour
     private CharacterMovement2 characterMovement; // Reference to the player's movement script
     private CameraTransition cameraTransition; // Reference to the camera transition script
     private bool isFirstStory = true; // Flag to toggle between first and second JSON files
+    private bool playerInRange = false; // Track if the player is within the collider
+    private int selectedChoiceIndex = 0; // Track the currently selected choice
+    private List<Button> choiceButtons = new List<Button>();
+    private bool isDialogueActive = false; // Track whether dialogue is active
 
     void Awake()
     {
-        Debug.Log("InkDialogOnClick Awake() called for " + gameObject.name);
         RemoveChildren();
         InitializeDialogueAudioMap();
     }
 
     void Start()
     {
-        Debug.Log("InkDialogOnClick Start() called for " + gameObject.name);
-
-        // Find the player object and get the CharacterMovement2 script
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
             characterMovement = player.GetComponent<CharacterMovement2>();
-            Debug.Log("CharacterMovement2 component found on Player");
         }
 
-        // Find the main camera and get the CameraTransition script
         GameObject mainCamera = Camera.main.gameObject;
         if (mainCamera != null)
         {
             cameraTransition = mainCamera.GetComponent<CameraTransition>();
-            Debug.Log("CameraTransition component found on Main Camera");
         }
     }
 
-    void OnMouseDown()
+    void Update()
     {
-        Debug.Log("Mouse clicked on " + gameObject.name);
-        StartStoryOnClick();
+        if (playerInRange && !isDialogueActive && Input.GetKeyDown(KeyCode.E))
+        {
+            StartStoryOnClick();
+        }
+        else if (isDialogueActive)
+        {
+            HandleInput();
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
+        }
     }
 
     public void StartStoryOnClick()
     {
-        Debug.Log("StartStoryOnClick called for " + gameObject.name);
-
-        // Notify InteractiveCharacter to hide the indicator and disable the collider
         if (interactiveCharacter != null)
         {
             interactiveCharacter.SetDialogueActive(true);
@@ -72,36 +88,34 @@ public class InkDialogOnClickIND : MonoBehaviour
         if (characterMovement != null)
         {
             characterMovement.enabled = false; // Stop the player's movement
-            Debug.Log("Character movement stopped");
         }
 
         if (cameraTransition != null && cameraTargetPosition != null)
         {
             cameraTransition.MoveToTarget(cameraTargetPosition); // Move the camera to the target position
-            Debug.Log("Camera moving to target position");
         }
 
         if (characterAnimator != null && !string.IsNullOrEmpty(animationTrigger))
         {
             characterAnimator.SetTrigger(animationTrigger); // Play the character's animation
-            Debug.Log("Character animation started");
         }
 
-        // Switch between JSON files based on the isFirstStory flag
         story = new Story(isFirstStory ? inkJSONAsset1.text : inkJSONAsset2.text);
 
         if (OnCreateStory != null)
             OnCreateStory(story);
 
         isFirstStory = false; // After the first story, toggle to the second JSON file
+        isDialogueActive = true;
 
         RefreshView();
     }
 
     void RefreshView()
     {
-        Debug.Log("RefreshView called");
         RemoveChildren();
+        choiceButtons.Clear();
+        selectedChoiceIndex = 0; // Always reset to the top choice
 
         while (story.canContinue)
         {
@@ -116,35 +130,58 @@ public class InkDialogOnClickIND : MonoBehaviour
             {
                 Choice choice = story.currentChoices[i];
                 Button button = CreateChoiceView(choice.text.Trim());
-
-                button.onClick.AddListener(delegate {
-                    OnClickChoiceButton(choice);
-                });
+                choiceButtons.Add(button);
             }
+            HighlightChoiceButton(); // Highlight the top choice
         }
         else
         {
             Button choice = CreateChoiceView("Close");
-            choice.onClick.AddListener(delegate {
-                RemoveChildren();
-                if (characterMovement != null)
-                {
-                    characterMovement.enabled = true; // Resume the player's movement when closing the story
-                    Debug.Log("Character movement resumed");
-                }
-
-                if (cameraTransition != null)
-                {
-                    cameraTransition.ResetCamera(); // Reset the camera to its original position
-                    Debug.Log("Camera reset to original position");
-                }
-
-                // Notify InteractiveCharacter to show the indicator again and enable the collider
-                if (interactiveCharacter != null)
-                {
-                    interactiveCharacter.SetDialogueActive(false);
-                }
+            choice.onClick.AddListener(delegate
+            {
+                EndDialogue();
             });
+            choiceButtons.Add(choice);
+            HighlightChoiceButton();
+        }
+    }
+
+    void HandleInput()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            NavigateChoices(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            NavigateChoices(-1);
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (story.currentChoices.Count > 0)
+            {
+                OnClickChoiceButton(story.currentChoices[selectedChoiceIndex]);
+            }
+            else
+            {
+                EndDialogue();
+            }
+        }
+    }
+
+    void NavigateChoices(int direction)
+    {
+        selectedChoiceIndex = (selectedChoiceIndex + direction + choiceButtons.Count) % choiceButtons.Count;
+        HighlightChoiceButton();
+    }
+
+    void HighlightChoiceButton()
+    {
+        for (int i = 0; i < choiceButtons.Count; i++)
+        {
+            var colors = choiceButtons[i].colors;
+            colors.normalColor = (i == selectedChoiceIndex) ? Color.yellow : Color.white;
+            choiceButtons[i].colors = colors;
         }
     }
 
@@ -154,9 +191,29 @@ public class InkDialogOnClickIND : MonoBehaviour
         RefreshView();
     }
 
+    void EndDialogue()
+    {
+        isDialogueActive = false;
+        RemoveChildren();
+
+        if (characterMovement != null)
+        {
+            characterMovement.enabled = true; // Resume the player's movement
+        }
+
+        if (cameraTransition != null)
+        {
+            cameraTransition.ResetCamera(); // Reset the camera to its original position
+        }
+
+        if (interactiveCharacter != null)
+        {
+            interactiveCharacter.SetDialogueActive(false);
+        }
+    }
+
     void CreateContentView(string text)
     {
-        Debug.Log("CreateContentView called with text: " + text);
         Text storyText = Instantiate(textPrefab) as Text;
         storyText.text = text;
         storyText.transform.SetParent(canvas.transform, false);
@@ -164,14 +221,12 @@ public class InkDialogOnClickIND : MonoBehaviour
 
     Button CreateChoiceView(string text)
     {
-        Debug.Log("CreateChoiceView called with text: " + text);
         Button choice = Instantiate(buttonPrefab) as Button;
         choice.transform.SetParent(canvas.transform, false);
 
         Text choiceText = choice.GetComponentInChildren<Text>();
         choiceText.text = text;
 
-        // Ensure no layout changes here, preserving original settings
         HorizontalLayoutGroup layoutGroup = choice.GetComponent<HorizontalLayoutGroup>();
         if (layoutGroup != null)
         {
@@ -183,7 +238,6 @@ public class InkDialogOnClickIND : MonoBehaviour
 
     void RemoveChildren()
     {
-        Debug.Log("RemoveChildren called");
         int childCount = canvas.transform.childCount;
         for (int i = childCount - 1; i >= 0; --i)
         {
@@ -196,7 +250,6 @@ public class InkDialogOnClickIND : MonoBehaviour
         dialogueAudioMap = new Dictionary<string, AudioClip>();
 
         // Example mapping (replace with your actual mappings)
-
         dialogueAudioMap.Add("Rainis_1_N_00", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_00"));
         dialogueAudioMap.Add("Rainis_1_N_01", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_01"));
         dialogueAudioMap.Add("Rainis_1_N_03", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_03"));
@@ -285,7 +338,6 @@ public class InkDialogOnClickIND : MonoBehaviour
 
 //bomzis Sliktais (paradas ta papildus opcija nakt lidzi??)
 
-
         dialogueAudioMap.Add("Makslinieks_4_N_00", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_00"));
         dialogueAudioMap.Add("Makslinieks_4_N_01", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_01"));
         dialogueAudioMap.Add("Makslinieks_4_N_02", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_02"));
@@ -317,7 +369,6 @@ public class InkDialogOnClickIND : MonoBehaviour
         dialogueAudioMap.Add("Makslinieks_4_NEG_02", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_NEG_02"));
         dialogueAudioMap.Add("Makslinieks_4_NEG_03", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_NEG_03"));
         dialogueAudioMap.Add("T_Makslinieks_4_N_00", Resources.Load<AudioClip>("Audio/MakslinieksAudio/T_Makslinieks_4_N_00"));
-
 
         dialogueAudioMap.Add("Tante_5_N_00", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_00"));
         dialogueAudioMap.Add("Tante_5_N_01", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_01"));
@@ -377,10 +428,7 @@ public class InkDialogOnClickIND : MonoBehaviour
         dialogueAudioMap.Add("T_Panks_5_N_02", Resources.Load<AudioClip>("Audio/PanksAudio/T_Panks_5_N_02"));
 
 
-        
 
-        
-    
     }
 
     void PlayDialogueAudioFromTags(List<string> tags)
@@ -401,11 +449,6 @@ public class InkDialogOnClickIND : MonoBehaviour
         {
             audioSource.clip = clip;
             audioSource.Play();
-            Debug.Log("Playing audio: " + audioTag);
-        }
-        else
-        {
-            Debug.LogError("Audio tag not found or audio source is null: " + audioTag);
         }
     }
 }
