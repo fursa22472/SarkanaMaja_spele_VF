@@ -177,4 +177,5 @@ Nu, skaties meitiņ. Ja kaut kas notiek ģimenē, vienmēr vari atrast mani un p
     -> END  
     
 + [Varētu. Kāpēc gan ne? Paldies!]
+#audio:Gongs
     -> END     

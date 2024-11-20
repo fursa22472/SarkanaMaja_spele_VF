@@ -427,6 +427,8 @@ public class InkDialogOnClickIND : MonoBehaviour
         dialogueAudioMap.Add("T_Panks_5_N_01", Resources.Load<AudioClip>("Audio/PanksAudio/T_Panks_5_N_01"));
         dialogueAudioMap.Add("T_Panks_5_N_02", Resources.Load<AudioClip>("Audio/PanksAudio/T_Panks_5_N_02"));
 
+        dialogueAudioMap.Add("Gongs", Resources.Load<AudioClip>("Audio/PapildusSkana/Gongs"));
+
 
 
     }
