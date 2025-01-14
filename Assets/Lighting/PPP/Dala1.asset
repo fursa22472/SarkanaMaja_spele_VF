@@ -27,7 +27,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.432
+    value: 0.451
   smoothness:
     overrideState: 1
     value: 0.435
@@ -75,13 +75,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
   focusDistance:
     overrideState: 1
-    value: 18.88
+    value: 21.19
   aperture:
     overrideState: 1
     value: 14.7
@@ -109,10 +109,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 2.12
+    value: 15.18
   threshold:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 2
   softKnee:
     overrideState: 0
     value: 0.5
@@ -197,7 +197,7 @@ MonoBehaviour:
     value: 4
   colorFilter:
     overrideState: 1
-    value: {r: 0.6981132, g: 0.57359236, b: 0.45772517, a: 1}
+    value: {r: 0.5660378, g: 0.4357773, b: 0.31772876, a: 1}
   hueShift:
     overrideState: 1
     value: 1

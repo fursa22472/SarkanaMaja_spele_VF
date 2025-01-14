@@ -7,6 +7,7 @@ TagManager:
   - Character1
   - Character2
   - CinemachineTarget
+  - PickupItem
   layers:
   - Default
   - TransparentFX

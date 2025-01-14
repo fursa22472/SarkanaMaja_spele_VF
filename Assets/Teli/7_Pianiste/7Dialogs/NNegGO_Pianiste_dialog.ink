@@ -41,12 +41,7 @@ Tu gan jau, ka nedzirdēsi, bet ši akustika ir kā atsevišķs skaņdarbs. It k
 }
 
 === 1A ===
-    * [Es gribētu dzirdēt vēl kaut ko tagad.]
-        Man ir prieks, ka tev neinteresē priekšnesums tik ļoti, cik pats darbs. Tomēr, es vēl nevaru atklāt visu, savādāk nebūs tā paša efekta... Bet tā es spēlēju pārāk bieži. Beigās dzirdu tikai zvaigznes.
-        #audio:Pianiste_7_N_04
-        -> A3
-
-    * [Kam tu spēlē?]
+  * [Kam tu spēlē?]
         Kām? Kam es varu spēlēt? Sev, citiem un visai pasaulei. 
         #audio:Pianiste_7_Neg_00
         -> N1
@@ -58,79 +53,60 @@ Tu gan jau, ka nedzirdēsi, bet ši akustika ir kā atsevišķs skaņdarbs. It k
 
 === Navkoncerta ===
     * [Man ne īsti patīk tāda veida mūzika.] 
-        Tiešām? Nu es saprotu...visiem viss nevar patikt. Tomēr, varbūt vismaz uz pāris minūtēm?
-        #audio:Pianiste_7_N_07
+       Ne īsti? Varbūt neesi pieradusi pie īstās mākslas.
+        #audio:Pianiste_7_GO_00
         -> K1
 
 === K1 ===
-    * [Es atvainojos, nevaru.] 
-        Viss labi, tad. Līdz nākamajai reizei.
-        #audio:Pianiste_7_N_08
-        -> END
-   * [Labi, pacentīšos.] 
-        Burvīgi, tu nenožēlosi!
-        #audio:Pianiste_7_N_09
+    * [Varbūt.] 
+        Viņai ir jābūt asai. Šis ir mans dvēseles kliedziens, atskatīšanās uz pagātni.
+        #audio:Pianiste_7_GO_01
         -> K2
         
 === K2 ===
-    * [Labi. Es iešu.] 
-        Līdz nākamajai reizei!
-        #audio:Pianiste_7_N_10
+    * [Bet tik skaļi?] 
+       Jā, jo mana dvēsele kliedz.
+         #audio:Pianiste_7_GO_02
+        -> K3
+ 
+ === K3 ===
+    * [Kāpēc?] 
+       Un kāpēc, lai tam jābūt savādāk?
+         #audio:Pianiste_7_GO_03
+        -> K4
+
+
+ === K4 ===
+    * [Es pat tā nemāku.] 
+      Es varu tev iemācīt. Negribi pagaidīt līdz es pabeidzu un, tad mēs aizietu līdz manām mājām. Es tev kaut ko pamācītu. Tas būtu jautri!
+         #audio:Pianiste_7_GO_04
+        -> K5
+
+ === K5 ===
+    * [Nē, piedodiet.] 
+       Skaidrs, tev vienkārši nepatīk mūzika. Netraucē.
+         #audio:Pianiste_7_GO_05
+        -> Beigas
+        
+           === Beigas ===
+            * [Bet tā nav...] 
+    Jā, jā. Nav par ko ar tevi runāt.
+         #audio:Pianiste_7_GO_07
+         -> END
+        
+         * [Varētu.] 
+       Burvīgi, apsēdies tur stūrī. Es pēc stundas atbrīvošos un tad varam iet.
+         #audio:Pianiste_7_GO_06
+        -> K6
+        
+         === K6 ===
+            * [Labi.] 
+       Tikai vēl stundiņu. Atkārtošu šo daļu un skriesim. Tikai netraucē.
+         #audio:Pianiste_7_GO_08
         -> END 
- 
- 
-        
-=== A3 ===
-    * [Bet ja nu man nepatiks?] 
-    ~ option4 = true
-        Tas ir nekas, galvenais, lai tu jūti līdzi. Vienmēr var aiziet.
-        #audio:Pianiste_7_N_11
-
-        -> ReturnToChoices2
-
-    * [Cik ilgi jūs spēlējat?] 
-    ~ option5 = true
-        Dienā vai vispār? Katru dienu ap 5 stundām. Vispār es spēlēju no sešiem gadiem. Vecāki atļāva un kaut kā aizgāja. 
-        #audio:Pianiste_7_N_12
-
-        -> ReturnToChoices2
-
-    * [Jūs pati izdomājāt šo darbu?] 
-    ~ option6 = true
-        It kā. Iedvesmu smeļos no citiem darbiem. Dažreiz liekas, O, šito dzirdēju, šis jau bija, šis nav oriģināls, bet nu...man patīk. 
-        #audio:Pianiste_7_N_13
-
-        -> ReturnToChoices2
-        
-        
-        === ReturnToChoices2 ===
-{option4 and option5 and option6:
-    -> A4
-- else:
-    -> A3
-}
-
-=== A4 ===
-+ [Tad es labprāt atnāktu uz koncertu.]
-    Ļoti labi! Šis man ir...ļoti svarīgi.
-    #audio:Pianiste_7_N_14
-     -> A5
-
-=== A5 ===
-    * [Tad es došos.]
-       Līdz nākamajai reizei!
-       #audio:Pianiste_7_N_10
-       
-        -> A6
-
-=== A6 ===
-+ [Labi, es padomāšu]
-    Neturēšu tevi ilgāk.
-    #audio:Pianiste_7_N_20
-     -> END
-
-
-
+         
+         
+         
 === N1 ===
     * [Bet vai ir jēga? Neviena nav...]
       Tu domā vajag jēgu? Domā tādas nav? Varbūt mums tad nav jēgas runāt?

@@ -1,3 +1,15 @@
+VAR piezime = false
+
+
+{piezime:
+    This is written if yourVariableA is true. 
+    -> Irobjekts
+  - else:
+    -> Sakums
+}
+
+
+
 VAR option1 = false
 VAR option2 = false
 VAR option3 = false
@@ -5,6 +17,14 @@ VAR option4 = false
 VAR option5 = false
 
 
+=== Irobjekts ===
+Tas ir man?
++ [ja]
+-> A1
+
+
+
+=== Sakums ===
 Labu vakaru, bērns. Ko tu dari tik vēlu ārā?
 #audio:Priesteris_2_N_00
 

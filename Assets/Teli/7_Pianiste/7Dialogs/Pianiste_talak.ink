@@ -1,3 +1,3 @@
-Tikai vēl stundiņu, atkārtošu šo daļu un skriešu. Tikai netraucē. 
+Atkal un atkal. Hmmm... (Dzied?)
 * [Labi...] 
     -> END
