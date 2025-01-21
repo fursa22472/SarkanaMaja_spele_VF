@@ -5,18 +5,22 @@ VAR option4 = false
 VAR option5 = false
 
 
-(OBJEKTS NAV) Es redzēju tevi ejam. Tu neapmaldījies?
+(OBJEKTS IR) Es redzēju tevi ejam. Tu neapmaldījies?
 #audio:Priesteris_2_N_00
-    -> A00
 
-=== A00 ===
++ [Man prasīja Jums nodot vēstulīti.]
+    Šis ir man? Paldies Tev. Un no kura šis varētu būt, šis…aicinājums uz šaha festivālu? Es pat neteiktu, ka spēlēju tik labi. Pareizi. Kur mēs palikām?
+#audio:Priesteris_2_Objekts
+    -> Objekts
+
+=== Objekts ===
 + [Es eju mājās... Neuztraucies.]
     Es tikai ceru, ka tas nekļūs par vēl vienu iemeslu Dieva uztraukumam. Zini, nav droši šajā laikā klīst apkārt, pat ja Viņš mūs pieskata. 
 #audio:Priesteris_2_N_01
     -> A0
 
 + [Man nav laika runāt. Atvainojiet.]
-   Pagaidi. Piedod, es pavisam aizmirsu. Man arī vajag, lai tu palīdzi nogādāt vienu lietu manam…draugam. Viņam bija grūta dzīve, un es no visas sirds vēlētos viņam palīdzēt. Šajā aploksnē ir nauda. Lūdzu nepazaudē. Tas cilvēks ir diezgan īsa auguma, man liekas viņam ir gandrīz 50, mugurā viņam vienmēr plāns zaļš krekls un jaka.. Teiksim, ka ši būs dzimšanas dienas dāvana. Paldies Tev.
+   Pagaidi. Piedod, es pavisam aizmirsu. Man arī vajag, lai tu palīdzi nogādāt vienu lietu manam…draugam. Viņam bija grūta dzīve, un es no visas sirds vēlētos viņam palīdzēt. Šajā aploksnē ir nauda, tur aiz manis uz galda..Lūdzu nepazaudē. Tas cilvēks ir diezgan īsa auguma, man liekas viņam ir gandrīz 50, mugurā viņam vienmēr plāns zaļš krekls un jaka.. Teiksim, ka ši būs dzimšanas dienas dāvana. Paldies Tev.
 #audio:Priesteris_2_N_Aploksne
     -> END
 
@@ -212,7 +216,7 @@ Paldies... Tu man devi par ko padomāt. Varbūt es varu atrast kaut ko, kam noti
 
 === P4 ===
 + [Labi, tad došos.]
-Pagaidi. Piedod, es pavisam aizmirsu. Man arī vajag, lai tu palīdzi nogādāt vienu lietu manam…draugam. Viņam bija grūta dzīve, un es no visas sirds vēlētos viņam palīdzēt. Šajā aploksnē ir nauda. Lūdzu nepazaudē. Tas cilvēks ir diezgan īsa auguma, man liekas viņam ir gandrīz 50, mugurā viņam vienmēr plāns zaļš krekls un jaka.. Teiksim, ka ši būs dzimšanas dienas dāvana. Paldies tev.
+Pagaidi. Piedod, es pavisam aizmirsu. Man arī vajag, lai tu palīdzi nogādāt vienu lietu manam…draugam. Viņam bija grūta dzīve, un es no visas sirds vēlētos viņam palīdzēt. Šajā aploksnē ir nauda, tur aiz manis uz galda.. Lūdzu nepazaudē. Tas cilvēks ir diezgan īsa auguma, man liekas viņam ir gandrīz 50, mugurā viņam vienmēr plāns zaļš krekls un jaka.. Teiksim, ka ši būs dzimšanas dienas dāvana. Paldies tev.
 #audio:Priesteris_2_N_Aploksne
     -> P5
     

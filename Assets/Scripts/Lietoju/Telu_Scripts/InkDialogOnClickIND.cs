@@ -136,7 +136,7 @@ public class InkDialogOnClickIND : MonoBehaviour
         }
         else
         {
-            Button choice = CreateChoiceView("Close");
+            Button choice = CreateChoiceView("Aizvērt");
             choice.onClick.AddListener(delegate
             {
                 EndDialogue();
@@ -296,6 +296,7 @@ public class InkDialogOnClickIND : MonoBehaviour
         dialogueAudioMap.Add("T_Priesteris_2_N_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Priesteris_2_N_00"));
         dialogueAudioMap.Add("T_Priesteris_2_N_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Priesteris_2_N_01"));
         dialogueAudioMap.Add("T_Priesteris_2_N_02", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Priesteris_2_N_02"));
+        dialogueAudioMap.Add("Priesteris_2_N_Aploksne", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_Aploksne"));
 
 //bomzis Labais
         dialogueAudioMap.Add("Bomzis_3_N_00", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_00"));

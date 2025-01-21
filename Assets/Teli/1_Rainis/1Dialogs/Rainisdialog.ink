@@ -3,18 +3,18 @@ VAR option2 = false
 VAR option3 = false
 VAR option4 = false
 
-Tu nesen ievācies. Redzēju. Labvakar! Ko tu šeit dari? Ej mājās? Domā paspēsi līdz saulrietam?
+Tu nesen ievācies. Redzēju. Labvakar! Ko tu šeit dari? Domā paspēsi līdz saulrietam?
 #audio:Rainis_1_N_00
 
       + [Nē.]
-    Nu, feini. Nav jau no kā baidīties tumsā. 
+    Nav jau no kā baidīties tumsā. 
     Neturēšu tevi ilgi te, skat, jau saule laižas zemāk.
     #audio:Rainis_1_N_01
 
     -> ExploreBranch
 
       + [Jā.]
-    Nu, feini. Nav jau no kā baidīties tumsā. 
+    Nav jau no kā baidīties tumsā. 
     Neturēšu tevi ilgi te, skat, jau saule laižas zemāk.
     #audio:Rainis_1_N_01
     -> ExploreBranch
@@ -22,7 +22,7 @@ Tu nesen ievācies. Redzēju. Labvakar! Ko tu šeit dari? Ej mājās? Domā pasp
 === ExploreBranch ===
 
 + [Viss labi. Es labāk iešu.]
-    Labi. Tad skrien, uz priekšu! Nodod sveicienus vecākiem!
+    Tik ātri? Ko nu, tad, labi. Skrien, uz priekšu! Nodod sveicienus vecākiem! Tikai lūgums, man ne blakus galdiņš. Vari paņemt vēstulīti un nodot manam draugam priesterim? Viņš te pat kaut kur ir. Pateicos.
     #audio:Rainis_1_N_03
     -> END
 
