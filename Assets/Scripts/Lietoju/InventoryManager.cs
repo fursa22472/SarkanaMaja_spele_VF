@@ -14,11 +14,19 @@ public class InventoryManager : MonoBehaviour
         public Vector2 size = new Vector2(0.1f, 0.1f); // Normalized size
     }
 
-    public InventoryItem[] allItems;   // All possible items in the game
-    public GameObject inventoryQuad;   // Quad displaying the inventory background
-    public Texture emptyInventoryImage; // Background when inventory is empty
-    public Camera mainCamera;          // Reference to the main camera
-    public AudioSource audioSource;    // Audio source to play audio clips
+    [System.Serializable]
+    public class InteractableObject
+    {
+        public GameObject targetObject;  // The object to interact with
+        public string requiredItemName; // The name of the required item
+    }
+
+    public InventoryItem[] allItems;           // All possible items in the game
+    public GameObject inventoryQuad;           // Quad displaying the inventory background
+    public Texture emptyInventoryImage;        // Background when inventory is empty
+    public Camera mainCamera;                  // Reference to the main camera
+    public AudioSource audioSource;            // Audio source to play audio clips
+    public List<InteractableObject> interactableObjects = new(); // List of interactable objects
 
     private Renderer inventoryRenderer;
     private bool isInventoryOpen = false;
@@ -47,6 +55,8 @@ public class InventoryManager : MonoBehaviour
         {
             HandleNumberKeyInput();
         }
+
+        HandleObjectInteraction();
     }
 
     private void ToggleInventory()
@@ -81,6 +91,45 @@ public class InventoryManager : MonoBehaviour
                     ShowItemDescription(i); // Show item description
                 }
             }
+        }
+    }
+
+    private void HandleObjectInteraction()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
+                foreach (var interactable in interactableObjects)
+                {
+                    if (hit.collider.gameObject == interactable.targetObject)
+                    {
+                        TryUseItem(interactable);
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    private void TryUseItem(InteractableObject interactable)
+    {
+        InventoryItem itemToUse = currentItems.Find(item => item.itemName == interactable.requiredItemName);
+
+        if (itemToUse != null)
+        {
+            currentItems.Remove(itemToUse);
+            Debug.Log($"Used {itemToUse.itemName} on {interactable.targetObject.name}.");
+
+            // Perform some action with the targetObject (but leave it active)
+            Debug.Log($"Interacted with {interactable.targetObject.name} successfully.");
+
+            ShowInventoryOverview();
+        }
+        else
+        {
+            Debug.LogWarning($"Required item {interactable.requiredItemName} not found in inventory.");
         }
     }
 
@@ -125,26 +174,25 @@ public class InventoryManager : MonoBehaviour
 
         GameObject itemQuad = GameObject.CreatePrimitive(PrimitiveType.Quad);
 
-        Material itemMaterial = new Material(Shader.Find("Standard"));
-        itemMaterial.mainTexture = item.itemImage;
+        Material itemMaterial = new Material(Shader.Find("Standard"))
+        {
+            mainTexture = item.itemImage
+        };
 
-        itemMaterial.SetFloat("_Mode", 3);
+        // Set transparency settings for the material
+        itemMaterial.SetFloat("_Mode", 3); // Transparent mode
         itemMaterial.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
         itemMaterial.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-        itemMaterial.SetInt("_ZWrite", 0);
+        itemMaterial.SetInt("_ZWrite", 0); // Disable depth writing
         itemMaterial.DisableKeyword("_ALPHATEST_ON");
         itemMaterial.EnableKeyword("_ALPHABLEND_ON");
-        itemMaterial.renderQueue = 3000;
-
-        itemMaterial.SetFloat("_Glossiness", 0.5f);
-        itemMaterial.SetFloat("_Metallic", 0.2f);
+        itemMaterial.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+        itemMaterial.renderQueue = 3000; // Transparency render queue
+        itemMaterial.SetFloat("_Glossiness", 0.0f); // No glossiness
+        itemMaterial.SetFloat("_Metallic", 0.0f);   // No metallic shine
 
         Renderer quadRenderer = itemQuad.GetComponent<Renderer>();
         quadRenderer.material = itemMaterial;
-
-        // Enable shadow reception and casting
-        quadRenderer.receiveShadows = true;
-        quadRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
 
         Vector3 scaledSize = new Vector3(
             Mathf.Clamp01(item.size.x) * quadSize.x,
@@ -155,9 +203,8 @@ public class InventoryManager : MonoBehaviour
 
         itemQuad.transform.SetParent(inventoryQuad.transform, false);
         itemQuad.transform.localPosition = localPositionOnQuad;
-        itemQuad.transform.localRotation = Quaternion.identity;
 
-        itemQuads.Add(itemQuad);
+        itemQuads.Add(itemQuad); // Add quad to list
     }
 
     private void ShowItemDescription(int index)
@@ -167,30 +214,14 @@ public class InventoryManager : MonoBehaviour
             showingDescription = true;
             currentDescriptionIndex = index;
 
-            foreach (var quad in itemQuads) quad.SetActive(false);
+            // Hide all item quads
+            foreach (var quad in itemQuads)
+            {
+                quad.SetActive(false); // Disable all item quads
+            }
+
+            // Show the description image
             inventoryRenderer.material.mainTexture = currentItems[index].descriptionImage;
-
-            PlayItemAudio(currentItems[index]);
-        }
-    }
-
-    private void PlayItemAudio(InventoryItem item)
-    {
-        if (item.usageAudio != null && audioSource != null)
-        {
-            audioSource.clip = item.usageAudio;
-            audioSource.Play();
-
-            Invoke(nameof(RemoveUsedItem), item.usageAudio.length);
-        }
-    }
-
-    private void RemoveUsedItem()
-    {
-        if (currentDescriptionIndex >= 0 && currentDescriptionIndex < currentItems.Count)
-        {
-            currentItems.RemoveAt(currentDescriptionIndex);
-            ShowInventoryOverview();
         }
     }
 
@@ -198,9 +229,9 @@ public class InventoryManager : MonoBehaviour
     {
         foreach (var quad in itemQuads)
         {
-            Destroy(quad);
+            Destroy(quad); // Destroy the quads
         }
-        itemQuads.Clear();
+        itemQuads.Clear(); // Clear the list of item quads
     }
 
     private void PositionInventoryQuad()
