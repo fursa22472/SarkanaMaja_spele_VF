@@ -8,6 +8,7 @@ TagManager:
   - Character2
   - CinemachineTarget
   - PickupItem
+  - Grass
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - PP
   - Water
   - UI
-  - 
+  - Interactable
   - 
   - 
   - 
