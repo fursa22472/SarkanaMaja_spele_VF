@@ -268,10 +268,22 @@ public class InkDialogOnClickIND : MonoBehaviour
         dialogueAudioMap.Add("Rainis_1_N_16",Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_16"));
         dialogueAudioMap.Add("Rainis_1_N_17",Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_17"));
 
+       //priesteris
        
+        dialogueAudioMap.Add("Atkal_Priesteris_2_N_000", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_000"));
+        dialogueAudioMap.Add("Atkal_Priesteris_2_N_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_00"));
+        dialogueAudioMap.Add("Atkal_Priesteris_2_N_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_01"));
+        dialogueAudioMap.Add("Atkal_Priesteris_2_N_02", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_02"));
+        dialogueAudioMap.Add("Atkal_Priesteris_2_N_03", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_03"));
+        dialogueAudioMap.Add("Atkal_Priesteris_2_N_04", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_04"));
+        dialogueAudioMap.Add("Atkal_Priesteris_2_N_05", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_05"));
+        dialogueAudioMap.Add("Atkal_Priesteris_2_N_06", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_06"));
+        dialogueAudioMap.Add("Atkal_Priesteris_2_N_07", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_07"));
+        dialogueAudioMap.Add("Atkal_Priesteris_2_N_08", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_08"));
+        dialogueAudioMap.Add("Atkal_Priesteris_2_N_09", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_09"));
+
         dialogueAudioMap.Add("Priesteris_2_N_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_00"));
         dialogueAudioMap.Add("Priesteris_2_N_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_01"));
-        dialogueAudioMap.Add("Priesteris_2_N_02", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_02"));
         dialogueAudioMap.Add("Priesteris_2_N_03", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_03"));
         dialogueAudioMap.Add("Priesteris_2_N_04", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_04"));
         dialogueAudioMap.Add("Priesteris_2_N_05", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_05"));
@@ -293,13 +305,39 @@ public class InkDialogOnClickIND : MonoBehaviour
         dialogueAudioMap.Add("Priesteris_2_N_21", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_21"));
         dialogueAudioMap.Add("Priesteris_2_N_22", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_22"));
         dialogueAudioMap.Add("Priesteris_2_N_23", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_23"));
+        dialogueAudioMap.Add("Priesteris_2_N_24", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_24"));
+        dialogueAudioMap.Add("Priesteris_2_N_25", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_25"));
+        dialogueAudioMap.Add("Priesteris_2_N_26", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_26"));
+        dialogueAudioMap.Add("Priesteris_2_N_27", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_27"));
+
+        dialogueAudioMap.Add("Priesteris_2_N_Aploksne", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_Aploksne"));
+        dialogueAudioMap.Add("Priesteris_2_Piezime_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Piezime_00"));
+        dialogueAudioMap.Add("Priesteris_2_Piezime_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Piezime_01"));
+        dialogueAudioMap.Add("Priesteris_2_Piezime_02", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Piezime_02"));
+
+        dialogueAudioMap.Add("T_Atkal_Priesteris_2_N_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Atkal_Priesteris_2_N_00"));
+        dialogueAudioMap.Add("T_Atkal_Priesteris_2_N_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Atkal_Priesteris_2_N_01"));
+        dialogueAudioMap.Add("T_Atkal_Priesteris_2_N_02", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Atkal_Priesteris_2_N_02"));
+
         dialogueAudioMap.Add("T_Priesteris_2_N_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Priesteris_2_N_00"));
         dialogueAudioMap.Add("T_Priesteris_2_N_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Priesteris_2_N_01"));
         dialogueAudioMap.Add("T_Priesteris_2_N_02", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Priesteris_2_N_02"));
-        dialogueAudioMap.Add("Priesteris_2_N_Aploksne", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_Aploksne"));
 
-//bomzis Labais
+        dialogueAudioMap.Add("Priesteris_2_Kaklarota_000", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Kaklarota_000"));
+        dialogueAudioMap.Add("Priesteris_2_Kaklarota_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Kaklarota_00"));
+        dialogueAudioMap.Add("Priesteris_2_Kaklarota_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Kaklarota_01"));
+
+        
+
+//bomzis 
+    
+        dialogueAudioMap.Add("Bomzis_3_Aploksne_00", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_Aploksne_00"));
+        dialogueAudioMap.Add("Bomzis_3_Aploksne_01", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_Aploksne_01"));
+        dialogueAudioMap.Add("Bomzis_3_Aploksne_02", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_Aploksne_02"));
+
+
         dialogueAudioMap.Add("Bomzis_3_N_00", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_00"));
+        dialogueAudioMap.Add("Bomzis_3_N_01", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_01"));
         dialogueAudioMap.Add("Bomzis_3_N_02", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_02"));
         dialogueAudioMap.Add("Bomzis_3_N_03", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_03"));
         dialogueAudioMap.Add("Bomzis_3_N_04", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_04"));
@@ -335,9 +373,13 @@ public class InkDialogOnClickIND : MonoBehaviour
         dialogueAudioMap.Add("Bomzis_3_N_35", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_35"));
         dialogueAudioMap.Add("Bomzis_3_N_36", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_36"));
         dialogueAudioMap.Add("Bomzis_3_N_37", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_37"));
-        dialogueAudioMap.Add("T_Bomzis_3_N_00", Resources.Load<AudioClip>("Audio/BomzisAudio/T_Bomzis_3_N_00"));
 
-//bomzis Sliktais (paradas ta papildus opcija nakt lidzi??)
+        dialogueAudioMap.Add("T_Bomzis_3_N_00", Resources.Load<AudioClip>("Audio/BomzisAudio/T_Bomzis_3_N_00"));
+        dialogueAudioMap.Add("T_Bomzis_3_N_01", Resources.Load<AudioClip>("Audio/BomzisAudio/T_Bomzis_3_N_01"));
+        dialogueAudioMap.Add("T_Bomzis_3_N_02", Resources.Load<AudioClip>("Audio/BomzisAudio/T_Bomzis_3_N_02"));
+        dialogueAudioMap.Add("T_Bomzis_3_N_03", Resources.Load<AudioClip>("Audio/BomzisAudio/T_Bomzis_3_N_03"));
+
+//makslinieks
 
         dialogueAudioMap.Add("Makslinieks_4_N_00", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_00"));
         dialogueAudioMap.Add("Makslinieks_4_N_01", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_01"));
@@ -351,12 +393,15 @@ public class InkDialogOnClickIND : MonoBehaviour
         dialogueAudioMap.Add("Makslinieks_4_N_09", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_09"));
         dialogueAudioMap.Add("Makslinieks_4_N_10", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_10"));
         dialogueAudioMap.Add("Makslinieks_4_N_11", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_11"));
+        dialogueAudioMap.Add("Makslinieks_4_N_11_1", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_11_1"));
         dialogueAudioMap.Add("Makslinieks_4_N_12", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_12"));
         dialogueAudioMap.Add("Makslinieks_4_N_13", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_13"));
         dialogueAudioMap.Add("Makslinieks_4_N_14", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_14"));
+        dialogueAudioMap.Add("Makslinieks_4_N_14_1", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_14_1"));
         dialogueAudioMap.Add("Makslinieks_4_N_15", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_15"));
         dialogueAudioMap.Add("Makslinieks_4_N_16", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_16"));
         dialogueAudioMap.Add("Makslinieks_4_N_17", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_17"));
+        dialogueAudioMap.Add("Makslinieks_4_N_17_1", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_17_1"));
         dialogueAudioMap.Add("Makslinieks_4_N_18", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_18"));
         dialogueAudioMap.Add("Makslinieks_4_N_19", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_19"));
         dialogueAudioMap.Add("Makslinieks_4_N_20", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_20"));
@@ -364,13 +409,20 @@ public class InkDialogOnClickIND : MonoBehaviour
         dialogueAudioMap.Add("Makslinieks_4_N_22", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_22"));
         dialogueAudioMap.Add("Makslinieks_4_N_23", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_23"));
         dialogueAudioMap.Add("Makslinieks_4_N_24", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_24"));
-        dialogueAudioMap.Add("Makslinieks_4_N_141", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_141"));
+        dialogueAudioMap.Add("Makslinieks_4_N_25", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_25"));
+        dialogueAudioMap.Add("Makslinieks_4_N_26", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_26"));
+        dialogueAudioMap.Add("Makslinieks_4_N_26_1", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_26_1"));
+        dialogueAudioMap.Add("Makslinieks_4_N_27", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_27"));
+        
         dialogueAudioMap.Add("Makslinieks_4_NEG_00", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_NEG_00"));
         dialogueAudioMap.Add("Makslinieks_4_NEG_01", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_NEG_01"));
         dialogueAudioMap.Add("Makslinieks_4_NEG_02", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_NEG_02"));
         dialogueAudioMap.Add("Makslinieks_4_NEG_03", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_NEG_03"));
         dialogueAudioMap.Add("T_Makslinieks_4_N_00", Resources.Load<AudioClip>("Audio/MakslinieksAudio/T_Makslinieks_4_N_00"));
 
+
+
+//tante
         dialogueAudioMap.Add("Tante_5_N_00", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_00"));
         dialogueAudioMap.Add("Tante_5_N_01", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_01"));
         dialogueAudioMap.Add("Tante_5_N_02", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_02"));

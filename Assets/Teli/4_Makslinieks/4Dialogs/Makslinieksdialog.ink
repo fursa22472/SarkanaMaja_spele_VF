@@ -54,7 +54,7 @@ Gara diena?
 
 === N1 ===
 + [Nezinu.]  
-    Tu redzi audeklu? Redzi otas? Ar krāsām sasmērētās rokas? Šis eksistē. Tur ir dvēsele.
+    Tu redzi audeklu? Redzi otas? Ar krāsām sasmērētās rokas? Šis eksistē. Tur ir dvēsele. Uz ekrāna ir tikai nāve. Vēsa un klusa, nereaģējoša. Drebošie pirksti pusmirušam vīrietim uztaisītu skaistāku mākslu nekā….tas..dators.
     #audio:Makslinieks_4_N_09
     -> N2
 
@@ -66,13 +66,19 @@ Gara diena?
 
 === P1 ===
 + [Man liekas, ka es saprotu. ]  
-    Tu redzi audeklu? Redzi otas? Ar krāsām sasmērētās rokas? Šis eksistē. Uz datora nekas neeksistē.
+    Sliktākais ir tas, ka daudzi nesaprot. Zini kāpēc datormāksla ir tik slikta? 
     #audio:Makslinieks_4_N_11
-    -> P2
+    -> P1_1
+    
+ === P1_1 ===
+  + [Jo..viņa nav...īsta?]  
+  Pareizi! Tu vari salauzt sevi kopā ar darbu, tur ir tā jēga.Tu raudi, lai citi varētu raudāt skatoties uz tavu mākslu.
+  #audio:Makslinieks_4_N_11_1
+  -> P2
 
 === P2 ===
 + [Bet cilvēki joprojām strādā]  
-    Ne vienmēr. Bet kad strādā, tad darbam nav jēgas. Tikai pikseļi uz ekrāna. Tas, ko es daru, tas dzīvos ilgāk par mani. Tur ir mūžība. Dators uzsprāgs pēc pāris gadiem.
+   Ne vienmēr. Bet kad strādā, tad darbam nav jēgas. Tikai pikseļi uz ekrāna. Tas, ko es daru, tas dzīvos ilgāk par mani. Tur ir mūžība. Dators pats par sevi nesaprot, kas ir mūžība. Neprasa ēst, nezin kā smaržo zāle.
     #audio:Makslinieks_4_N_12
     -> P3
 
@@ -90,25 +96,31 @@ Gara diena?
 
 + [Es domāju, ka tam nav nozīmes. Ir skaistāka, ir neglīta.]  
     Arī īsti nepalīdz tavs atzinums...
-    #audio:Makslinieks_4_N_141
+    #audio:Makslinieks_4_N_14_1
     -> NN1
 
 === NN1 ===
 + [Tad visa māksla apmēram vienāda.]  
-    Vai mans darbs tev šķiet neglīts?
+    Vai mans darbs tev šķiet neglīts? Zini, kā es viņu taisīju? Nevari iedomāties! Es šeit jau esmu trešo dienu, salauzu ap piecām otām, jo krāsa nevēlējās likties virsū. Rekur stāv mans iepriekšējais audekls, paņēmu tagad jaunu. Viss notiek.
     #audio:Makslinieks_4_N_15
     -> NN2
 
 === NN2 ===
-+ [Jā. Es neredzu kokus un nav zaļš.]  
-    Jā, jo es gleznoju, kā es jūtu nevis kā redzu. Abstrakcionisms.
++ [Netīrs darbs. Nepatīk.]  
+    Tur jau tā doma! Cilvēki kopā ar pasauli ir netīri un nekārtīgi. Vistīrākie ir tikai līķi, kurus jau tūlīt pat bāzīs zārkā. Tīrs un balts. Patīkami, vai ne?
     #audio:Makslinieks_4_N_16
-    -> NN3
+    -> NN3_3
 
 + [Nē, nu, viņš ir īsts.]  
     Jā, tu saprati. Vismaz tu vari pieiet tuvāk un reāli paskatīties. Ar datoriem tā nav.
     #audio:Makslinieks_4_N_17
     -> NN3
+
+=== NN3_3 ===
++ [Bet man patīk tīra māksla….] 
+Tas ir ļoti labi. Tad zīmē, glezno, radi tīru mākslu! Bet neļauj kaut kādai mašīnai darīt to tavā vietā. Bet atdod tikai daļu no dvēseles, jā? Māksla pieder tev līdz viņa piederēs visai pasaulei.
+#audio:Makslinieks_4_N_17_1
+ -> NN3
 
 === NN3 ===
 + [Varbūt. Es nezinu. Laikam. Tad tu esi īsts mākslinieks?]  
@@ -156,7 +168,34 @@ Gara diena?
     -> PP4
 
 === PP4 ===
-+ [Piedodiet, ja es jūs aizskāru.]  
-    Būsim uz tu. Es turpināšu strādāt, saule jau gandrīz paslēpās. Būs jāuzjauc cits tonis.. Atā!
-    #audio:Makslinieks_4_N_20
-    -> Ata
++ [Tad iešu laikam.]  
+Jā. Bet es ļoti novērtēju mūsu sarunu. Kamēr es vēl redzu kaut ko, gribi uzzīmēšu tevi?
+    #audio:Makslinieks_4_N_25
+    -> PP5
+    
+    === PP5 ===
+    + [Kāpēc gan nē?] 
+    Iedod tikai piecas minūtes.
+	#audio:Makslinieks_4_N_26
+-> PP6
+    
+    + [Man jāskriet] 
+    Mums abiem. Skrien tad. Citu reizi.
+	#audio:Makslinieks_4_N_26_1
+-> END
+    
+    === PP6 ===
+   + [Piedodiet, ja es jūs aizskāru.] 
+Būsim uz tu. Es turpināšu strādāt, saule jau gandrīz paslēpās. Būs jāuzjauc cits tonis.. Un par datoriem, ja es redzēšu tevi zīmējot ar to…te... Neko. Māksla ir māksla.
+#audio:Makslinieks_4_N_27
+	-> END
+
+
+    
+    
+    
+    
+    
+    
+    
+    
