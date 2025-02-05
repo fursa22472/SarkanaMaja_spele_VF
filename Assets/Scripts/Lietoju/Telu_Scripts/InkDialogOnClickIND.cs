@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class InkDialogOnClickIND : MonoBehaviour
 {
     public static event Action<Story> OnCreateStory;
+    public static event Action<GameObject> OnDialogueEnd;
+
+
 
     [SerializeField] private TextAsset inkJSONAsset1 = null;  // First JSON file
     [SerializeField] private TextAsset inkJSONAsset2 = null;  // Second JSON file
@@ -191,26 +194,32 @@ public class InkDialogOnClickIND : MonoBehaviour
         RefreshView();
     }
 
-    void EndDialogue()
+void EndDialogue()
+{
+    isDialogueActive = false;
+    RemoveChildren();
+
+    if (characterMovement != null)
     {
-        isDialogueActive = false;
-        RemoveChildren();
-
-        if (characterMovement != null)
-        {
-            characterMovement.enabled = true; // Resume the player's movement
-        }
-
-        if (cameraTransition != null)
-        {
-            cameraTransition.ResetCamera(); // Reset the camera to its original position
-        }
-
-        if (interactiveCharacter != null)
-        {
-            interactiveCharacter.SetDialogueActive(false);
-        }
+        characterMovement.enabled = true; // Resume player movement
     }
+
+    if (cameraTransition != null)
+    {
+        cameraTransition.ResetCamera(); // Reset camera to default position
+    }
+
+    if (interactiveCharacter != null)
+    {
+        interactiveCharacter.SetDialogueActive(false);
+    }
+
+    // ✅ Pass the character that was spoken to
+    OnDialogueEnd?.Invoke(gameObject);
+}
+
+
+
 
     void CreateContentView(string text)
     {

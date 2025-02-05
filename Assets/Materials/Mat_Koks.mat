@@ -65,8 +65,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AO: 2.4
-    - _BaseLight: 0.492
+    - _AO: 2.65
+    - _BaseLight: 0.484
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
@@ -88,7 +88,7 @@ Material:
     - _WindQuality: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.3679245, g: 0.19834204, b: 0.071155205, a: 1}
+    - _Color: {r: 0.24528301, g: 0.13203448, b: 0.04512282, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}

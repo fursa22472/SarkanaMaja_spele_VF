@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ObjektsPazud : MonoBehaviour
 {
@@ -6,41 +7,82 @@ public class ObjektsPazud : MonoBehaviour
     public AudioClip targetClip;    // The specific audio clip that triggers the functionality
     public GameObject targetObject; // The object to make disappear
 
-    private bool audioPlayed = false; // Flag to track if the target audio has been played
-    private bool objectInView = true; // Tracks if the object is currently in the camera's view
+    private bool audioFinished = false; // Flag to track if the audio has finished
+    private bool isVisible = true; // Tracks if the object is visible
 
-    void Update()
+    void Start()
     {
-        // Check if the specific audio clip has finished playing
-        if (audioSource.clip == targetClip && !audioSource.isPlaying && !audioPlayed)
+        if (audioSource == null || targetObject == null || targetClip == null)
         {
-            audioPlayed = true; // Set the flag once the audio has finished playing
+            Debug.LogError("❌ Missing references in ObjektsPazud script!");
+            return;
         }
 
-        // If the audio has played, check if the object is in view
-        if (audioPlayed)
-        {
-            objectInView = IsObjectInView();
+        StartCoroutine(CheckAudioCompletion());
+    }
+    
 
-            // If the object is no longer in view, deactivate it
-            if (!objectInView)
-            {
-                targetObject.SetActive(false);
-            }
+    // Coroutine to check when the specific audio clip finishes playing
+    private IEnumerator CheckAudioCompletion()
+    {
+        Debug.Log("🎵 Waiting for target audio to start...");
+
+        // Wait until the audio source starts playing the target clip
+        yield return new WaitUntil(() => audioSource.clip == targetClip && audioSource.isPlaying);
+
+        Debug.Log("🎶 Target audio started playing...");
+
+        // Wait until the audio clip actually finishes playing
+        yield return new WaitUntil(() => !audioSource.isPlaying);
+
+        audioFinished = true;
+        Debug.Log("✅ Audio has finished playing.");
+
+        // If the object is already invisible, hide it
+        if (!isVisible)
+        {
+            HideObject();
         }
     }
 
-    bool IsObjectInView()
+void Update()
+{
+    if (audioFinished && !IsObjectInView())
     {
-        // Check if the object is in view using the camera's viewport
-        if (targetObject == null) return false;
+        HideObject();
+    }
+}
 
-        Camera mainCamera = Camera.main;
-        Vector3 screenPoint = mainCamera.WorldToViewportPoint(targetObject.transform.position);
+// Manually check if the object is in the camera view
+bool IsObjectInView()
+{
+    Camera mainCamera = Camera.main;
+    Vector3 screenPoint = mainCamera.WorldToViewportPoint(targetObject.transform.position);
 
-        // Check if the object is within the camera's viewport
-        bool isInView = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
+    bool isInView = screenPoint.z > 0 && screenPoint.x > 0 && screenPoint.x < 1 && screenPoint.y > 0 && screenPoint.y < 1;
 
-        return isInView;
+    Debug.Log($"👁️ Object is in view: {isInView}");
+
+    return isInView;
+}
+
+
+    // Called when the object is no longer visible by the camera
+    private void OnBecameInvisible()
+    {
+        isVisible = false;
+        Debug.Log("🙈 Object is no longer visible.");
+
+        // If the audio has already finished, hide the object
+        if (audioFinished)
+        {
+            HideObject();
+        }
+    }
+
+    private void HideObject()
+    {
+        Debug.Log($"🛑 Hiding object: {targetObject.name}");
+        targetObject.SetActive(false);
     }
 }

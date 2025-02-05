@@ -2,47 +2,25 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource audioSource; // Reference to your AudioSource
-    public AudioClip audiopoz; // Reference to your AudioClip 123
-    public AudioClip audioneg; // Reference to your AudioClip 234
+    public AudioSource audioSource; // The AudioSource for character dialogue
+    public AudioClip audioA; // The specific character audio
+    public GameObject objectA; // The character to appear
 
-    public GameObject objectA; // Reference to GameObject A
-    public GameObject objectB; // Reference to GameObject B
+    private bool hasPlayedAudioA = false;
 
     private void Start()
     {
-        // Ensure objects are inactive at the start
-        objectA.SetActive(false);
-        objectB.SetActive(false);
+        objectA.SetActive(false); // Ensure character starts hidden
     }
 
     private void Update()
     {
-        if (audioSource.isPlaying)
+        // If the assigned audio starts playing, show the character
+        if (audioSource.isPlaying && audioSource.clip == audioA && !hasPlayedAudioA)
         {
-            CheckAudioClip();
+            objectA.SetActive(true); // Show the character
+            hasPlayedAudioA = true; // Ensure the character stays visible after the first activation
+            Debug.Log("Character Activated: " + objectA.name);
         }
-    }
-
-    private void CheckAudioClip()
-    {
-        if (audioSource.clip == audiopoz)
-        {
-            ShowObject(objectA);
-        }
-        else if (audioSource.clip == audioneg)
-        {
-            ShowObject(objectB);
-        }
-    }
-
-    private void ShowObject(GameObject obj)
-    {
-        // Hide both objects first (optional, if you want only one visible at a time)
-        objectA.SetActive(false);
-        objectB.SetActive(false);
-
-        // Show the specified object
-        obj.SetActive(true);
     }
 }

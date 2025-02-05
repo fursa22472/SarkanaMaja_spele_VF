@@ -5,7 +5,7 @@ VAR option4 = false
 VAR option5 = false
 
 
-(OBJEKTS NAV) Es redzēju tevi ejam. Tu neapmaldījies?
+Es redzēju tevi ejam. Tu neapmaldījies?
 #audio:Priesteris_2_N_00
     -> A00
 
@@ -112,7 +112,7 @@ VAR option5 = false
 
     
     === VisasIzveles2 ===
-{option3 and option4 and option5:
+{option4 and option5:
     -> A7
 - else:
     -> A6
@@ -120,7 +120,7 @@ VAR option5 = false
 
     === A7 ===
 + [Izklausās, ka Jums ir grūti. Man žēl.]
-   Katram cilvēkam ceļš līdz ticībai ir savs. Man ir šāds. Varbūt man šī saule bija par gaišu, tagad ir jāsēž tumsā, lai atkal kaut ko ieraudzītu. Pasaki man, vai tu tici,... ka mūs kāds pieskata?
+  Katram cilvēkam ceļš līdz ticībai ir savs. Man ir šāds. Varbūt man šī saule bija par gaišu, tagad ir jāsēž tumsā, lai atkal kaut ko ieraudzītu. Pasaki man, vai tu tici,... ka mūs kāds pieskata?
 #audio:Priesteris_2_N_14
     -> A8
 

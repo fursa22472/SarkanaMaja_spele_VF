@@ -6,7 +6,12 @@ using UnityEngine.UI;
 using Ink.Runtime;
 
 public class InteractiveCharacterController : MonoBehaviour
+
 {
+
+public static event Action<GameObject> OnDialogueEnd;
+
+
     [Header("Animation Settings")]
     public Animator animator;
     public string idleAnimation = "Idle";
@@ -14,14 +19,13 @@ public class InteractiveCharacterController : MonoBehaviour
     public string talkAnimation = "Talk";
 
     [Header("Audio Settings")]
-    public AudioSource pianoAudioSource;
-    public AudioClip pianoClip;
     public AudioSource dialogueAudioSource;
-    public float maxAudioDistance = 10f;
-    public float minVolume = 0.1f;
+    public Dictionary<string, AudioClip> dialogueAudioMap;
+    private AudioClip currentDialogueClip;
 
     [Header("Dialogue Settings")]
     public TextAsset inkJSONAsset;
+    public TextAsset inkJSONAsset2;
     public Canvas canvas;
     public Text textPrefab;
     public Button buttonPrefab;
@@ -32,26 +36,16 @@ public class InteractiveCharacterController : MonoBehaviour
     public CharacterMovement2 playerMovement;
 
     private Story story;
-    private Collider characterCollider;
     private CameraTransition cameraTransition;
     private bool isDialogueActive = false;
-    private Dictionary<string, AudioClip> dialogueAudioMap;
-    private AudioClip currentDialogueClip;
-
-    private Vector3 originalPosition;
-    private Quaternion originalRotation;
+    private bool playedFirstDialogue = false;
+    private bool playerInRange = false;
+    private int selectedChoiceIndex = 0;
+    private List<Button> choiceButtons = new List<Button>();
 
     private void Start()
     {
-        characterCollider = GetComponent<Collider>();
-
-        // Set up the piano audio clip
-        if (pianoAudioSource != null && pianoClip != null)
-        {
-            pianoAudioSource.clip = pianoClip;
-            pianoAudioSource.loop = true; // Ensure piano music loops
-            pianoAudioSource.Play();
-        }
+        cameraTransition = Camera.main.GetComponent<CameraTransition>();
 
         if (canvas != null)
         {
@@ -59,144 +53,60 @@ public class InteractiveCharacterController : MonoBehaviour
         }
 
         InitializeDialogueAudioMap();
-
-        // Find and assign the CameraTransition component
-        cameraTransition = Camera.main.GetComponent<CameraTransition>();
-
-        // Store original position and rotation
-        originalPosition = transform.position;
-        originalRotation = transform.rotation;
     }
 
     private void Update()
     {
-        if (playerTransform != null && pianoAudioSource != null)
-        {
-            float distance = Vector3.Distance(playerTransform.position, transform.position);
-            float volume = Mathf.Clamp01(1 - (distance / maxAudioDistance));
-            volume = Mathf.Max(volume, minVolume);
-            pianoAudioSource.volume = volume;
-        }
-    }
-
-    private void OnMouseDown()
-    {
-        if (!isDialogueActive)
+        if (playerInRange && !isDialogueActive && Input.GetKeyDown(KeyCode.E))
         {
             StartDialogue();
         }
-        else
+        else if (isDialogueActive)
         {
-            ForceTalkAnimation();
+            HandleInput();
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
         }
     }
 
     public void StartDialogue()
     {
-        // Stop piano music
-        if (pianoAudioSource != null)
+        isDialogueActive = true;
+
+        if (!playedFirstDialogue)
         {
-            pianoAudioSource.Stop();
+            story = new Story(inkJSONAsset.text);
+            playedFirstDialogue = true;
+        }
+        else
+        {
+            story = new Story(inkJSONAsset2.text);
         }
 
-        // Lock the player in place
         if (playerMovement != null)
         {
             playerMovement.enabled = false;
         }
 
-        // Disable character collider
-        if (characterCollider != null)
-        {
-            characterCollider.enabled = false;
-        }
-
-        // Play stand up animation
-        if (animator != null)
-        {
-            animator.ResetTrigger(idleAnimation);
-            animator.SetTrigger(standUpAnimation);
-            StartCoroutine(WaitForAnimation(standUpAnimation, () =>
-            {
-                PlayTalkingAnimation();
-            }));
-        }
-
-        // Transition the camera to the target position
         if (cameraTransition != null && cameraTargetPosition != null)
         {
             cameraTransition.MoveToTarget(cameraTargetPosition);
         }
 
-        // Initialize and start the story
-        story = new Story(inkJSONAsset.text);
-        if (canvas != null)
-        {
-            canvas.gameObject.SetActive(true);
-        }
-        RefreshView();
-        isDialogueActive = true;
-    }
-
-    public void EndDialogue()
-    {
-        StartCoroutine(SmoothRotateAndMove(originalRotation, originalPosition, () =>
-        {
-            if (animator != null)
-            {
-                animator.ResetTrigger(standUpAnimation);
-                animator.ResetTrigger(talkAnimation);
-                animator.SetTrigger(idleAnimation);
-            }
-
-            if (characterCollider != null)
-            {
-                characterCollider.enabled = true;
-            }
-
-            if (canvas != null)
-            {
-                canvas.gameObject.SetActive(false);
-            }
-
-            if (cameraTransition != null)
-            {
-                cameraTransition.ResetCamera();
-            }
-
-            // Resume piano clip playback
-            if (pianoAudioSource != null && pianoClip != null)
-            {
-                pianoAudioSource.clip = pianoClip;
-                pianoAudioSource.Play();
-            }
-
-            // Unlock the player
-            if (playerMovement != null)
-            {
-                playerMovement.enabled = true;
-            }
-
-            isDialogueActive = false;
-        }));
-    }
-
-    void PlayTalkingAnimation()
-    {
-        if (animator != null)
-        {
-            animator.ResetTrigger(idleAnimation);
-            animator.SetTrigger(talkAnimation);
-        }
-
-        if (playerTransform != null)
-        {
-            StartCoroutine(SmoothRotateToFacePlayer());
-        }
-    }
-
-    void ForceTalkAnimation()
-    {
         if (animator != null)
         {
             animator.ResetTrigger(idleAnimation);
@@ -206,59 +116,68 @@ public class InteractiveCharacterController : MonoBehaviour
                 animator.SetTrigger(talkAnimation);
             }));
         }
-    }
 
-    IEnumerator SmoothRotateToFacePlayer()
-    {
-        Quaternion targetRotation = Quaternion.LookRotation(playerTransform.position - transform.position);
-        targetRotation = Quaternion.Euler(0, targetRotation.eulerAngles.y, 0);
-
-        while (Quaternion.Angle(transform.rotation, targetRotation) > 0.01f)
+        if (canvas != null)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 3f);
-            yield return null;
+            canvas.gameObject.SetActive(true);
         }
 
-        transform.rotation = targetRotation;
+        RefreshView();
     }
 
-    IEnumerator SmoothRotateAndMove(Quaternion targetRotation, Vector3 targetPosition, Action onComplete)
+    void HandleInput()
     {
-        float transitionTime = 1.0f;
-        float elapsedTime = 0;
-
-        Quaternion startingRotation = transform.rotation;
-        Vector3 startingPosition = transform.position;
-
-        while (elapsedTime < transitionTime)
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            transform.position = Vector3.Lerp(startingPosition, targetPosition, elapsedTime / transitionTime);
-            transform.rotation = Quaternion.Lerp(startingRotation, targetRotation, elapsedTime / transitionTime);
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            NavigateChoices(1);
         }
-
-        transform.position = targetPosition;
-        transform.rotation = targetRotation;
-
-        onComplete?.Invoke();
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            NavigateChoices(-1);
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (story.currentChoices.Count > 0)
+            {
+                // Select the currently highlighted choice when pressing E
+                OnClickChoiceButton(story.currentChoices[selectedChoiceIndex]);
+            }
+            else
+            {
+                EndDialogue();
+            }
+        }
     }
 
-    IEnumerator WaitForAnimation(string animationName, Action onComplete)
+    void NavigateChoices(int direction)
     {
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        while (stateInfo.IsName(animationName) && stateInfo.normalizedTime < 1.0f)
-        {
-            stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-            yield return null;
-        }
+        if (choiceButtons.Count == 0) return;
 
-        onComplete?.Invoke();
+        selectedChoiceIndex = (selectedChoiceIndex + direction + choiceButtons.Count) % choiceButtons.Count;
+        HighlightChoiceButton();
+    }
+
+    void HighlightChoiceButton()
+    {
+        for (int i = 0; i < choiceButtons.Count; i++)
+        {
+            var colors = choiceButtons[i].colors;
+            colors.normalColor = (i == selectedChoiceIndex) ? Color.yellow : Color.white;
+            choiceButtons[i].colors = colors;
+        }
+    }
+
+    void OnClickChoiceButton(Choice choice)
+    {
+        story.ChooseChoiceIndex(choice.index);
+        RefreshView();
     }
 
     void RefreshView()
     {
         RemoveChildren();
+        choiceButtons.Clear();
+        selectedChoiceIndex = 0;
 
         while (story.canContinue)
         {
@@ -274,60 +193,90 @@ public class InteractiveCharacterController : MonoBehaviour
                 Choice choice = story.currentChoices[i];
                 Button button = CreateChoiceView(choice.text.Trim());
 
-                button.onClick.AddListener(delegate {
-                    OnClickChoiceButton(choice);
-                });
+                choiceButtons.Add(button);
+
+                int choiceIndex = i;
+                button.onClick.AddListener(() => OnClickChoiceButton(story.currentChoices[choiceIndex]));
             }
+
+            HighlightChoiceButton();
         }
         else
         {
             Button choice = CreateChoiceView("Close");
-            choice.onClick.AddListener(delegate {
-                EndDialogue();
-            });
+            choice.onClick.AddListener(EndDialogue);
+            choiceButtons.Add(choice);
+            HighlightChoiceButton();
         }
     }
 
-    void OnClickChoiceButton(Choice choice)
+    void EndDialogue()
     {
-        story.ChooseChoiceIndex(choice.index);
-        RefreshView();
+        isDialogueActive = false;
+        RemoveChildren();
+
+        if (animator != null)
+        {
+            animator.ResetTrigger(standUpAnimation);
+            animator.ResetTrigger(talkAnimation);
+            animator.SetTrigger(idleAnimation);
+        }
+
+        if (cameraTransition != null)
+        {
+            cameraTransition.ResetCamera();
+        }
+
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = true;
+        }
+
+        if (canvas != null)
+        {
+            canvas.gameObject.SetActive(false);
+        }
+
+
+
+        
+    // ✅ Pass the character that was spoken to
+    OnDialogueEnd?.Invoke(gameObject);
     }
 
-    void CreateContentView(string text)
+    void RemoveChildren()
     {
-        Text storyText = Instantiate(textPrefab) as Text;
+        for (int i = canvas.transform.childCount - 1; i >= 0; i--)
+        {
+            Destroy(canvas.transform.GetChild(i).gameObject);
+        }
+    }
+
+    Text CreateContentView(string text)
+    {
+        Text storyText = Instantiate(textPrefab);
         storyText.text = text;
         storyText.transform.SetParent(canvas.transform, false);
+        return storyText;
     }
 
     Button CreateChoiceView(string text)
     {
-        Button choice = Instantiate(buttonPrefab) as Button;
+        Button choice = Instantiate(buttonPrefab);
         choice.transform.SetParent(canvas.transform, false);
 
         Text choiceText = choice.GetComponentInChildren<Text>();
         choiceText.text = text;
 
-        HorizontalLayoutGroup layoutGroup = choice.GetComponent<HorizontalLayoutGroup>();
-        layoutGroup.childForceExpandHeight = false;
-
         return choice;
-    }
-
-    void RemoveChildren()
-    {
-        int childCount = canvas.transform.childCount;
-        for (int i = childCount - 1; i >= 0; --i)
-        {
-            Destroy(canvas.transform.GetChild(i).gameObject);
-        }
     }
 
     void InitializeDialogueAudioMap()
     {
         dialogueAudioMap = new Dictionary<string, AudioClip>();
 
+        // Example mappings
+    
         dialogueAudioMap.Add("Pianiste_7_N_00", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_00"));
         dialogueAudioMap.Add("Pianiste_7_N_01", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_01"));
         dialogueAudioMap.Add("Pianiste_7_N_02", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_02"));
@@ -354,8 +303,8 @@ public class InteractiveCharacterController : MonoBehaviour
         dialogueAudioMap.Add("Pianiste_7_N_23", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_23"));
         dialogueAudioMap.Add("Pianiste_7_N_24", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_24"));
         dialogueAudioMap.Add("Pianiste_7_N_25", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_25"));
+        dialogueAudioMap.Add("Pianiste_7_N_26", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_26"));
 
-        dialogueAudioMap.Add("Pianiste_7_Neg_00", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Neg_00"));
         dialogueAudioMap.Add("Pianiste_7_Neg_01", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Neg_01"));
         dialogueAudioMap.Add("Pianiste_7_Neg_02", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Neg_02"));
 
@@ -368,6 +317,26 @@ public class InteractiveCharacterController : MonoBehaviour
         dialogueAudioMap.Add("Pianiste_7_GO_06", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_06"));
         dialogueAudioMap.Add("Pianiste_7_GO_07", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_07"));
         dialogueAudioMap.Add("Pianiste_7_GO_08", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_08"));
+
+        dialogueAudioMap.Add("Pianiste_7_Cimds_00", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Cimds_00"));
+        dialogueAudioMap.Add("Pianiste_7_Cimds_01", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Cimds_01"));
+        dialogueAudioMap.Add("Pianiste_7_Cimds_02", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Cimds_02"));
+
+        dialogueAudioMap.Add("Pianiste_7_Ziedi_00", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Ziedi_00"));
+        dialogueAudioMap.Add("Pianiste_7_Ziedi_01", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Ziedi_01"));
+        dialogueAudioMap.Add("Pianiste_7_Ziedi_02", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Ziedi_02"));
+
+        dialogueAudioMap.Add("humming", Resources.Load<AudioClip>("Audio/PianisteAudio/humming"));
+
+
+
+
+
+
+
+
+
+
     }
 
     void PlayDialogueAudioFromTags(List<string> tags)
@@ -397,5 +366,17 @@ public class InteractiveCharacterController : MonoBehaviour
         {
             Debug.LogError("Audio tag not found or audio source is null: " + audioTag);
         }
+    }
+
+    IEnumerator WaitForAnimation(string animationName, Action onComplete)
+    {
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        while (stateInfo.IsName(animationName) && stateInfo.normalizedTime < 1.0f)
+        {
+            stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            yield return null;
+        }
+
+        onComplete?.Invoke();
     }
 }

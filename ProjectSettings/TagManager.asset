@@ -8,7 +8,13 @@ TagManager:
   - Character2
   - CinemachineTarget
   - PickupItem
-  - Grass
+  - Rainis
+  - Priesteris
+  - Bomzis
+  - Makslinieks
+  - Tante
+  - Panks
+  - Pianiste
   layers:
   - Default
   - TransparentFX

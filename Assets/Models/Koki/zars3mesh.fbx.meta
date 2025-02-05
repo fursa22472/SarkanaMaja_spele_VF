@@ -3,7 +3,12 @@ guid: 16183f98d21abc34f9317714ea25d220
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Koks
+    second: {fileID: 2100000, guid: 2cc1239ae1d2e0246a7d28fc5dbd4b2f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
