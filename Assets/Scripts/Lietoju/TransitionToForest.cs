@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class TransitionToForest : MonoBehaviour
 {
@@ -12,98 +14,113 @@ public class TransitionToForest : MonoBehaviour
     public float fadeDistance = 5f; // Distance at which the music starts fading
     public float fadeSpeed = 1f; // Speed of the fade effect
 
+    [Header("UI Settings")]
+    public Image fadeScreen; // UI Image for fade effect
+    public float fadeDuration = 1.5f;
+
     private GameObject player;
+    private InkDialogOnClickIND dialogueManager;
+    private bool hasTeleported = false; // Ensures teleportation happens only once
 
     void Start()
     {
-        // Find the player by tag
         player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
         {
             Debug.LogError("Player not found! Please tag the player as 'Player'.");
         }
 
-        // Ensure the background music starts playing
+        dialogueManager = FindObjectOfType<InkDialogOnClickIND>();
+        if (dialogueManager == null)
+        {
+            Debug.LogError("InkDialogueManager not found in scene!");
+        }
+
+        // Subscribe to dialogue end event
+        InkDialogOnClickIND.OnDialogueEnd += HandleDialogueEnd;
+
         if (backgroundMusic != null)
         {
-            backgroundMusic.volume = 1f; // Start at full volume
+            backgroundMusic.volume = 1f;
             backgroundMusic.Play();
         }
 
-        // Ensure teleport music is not playing initially
         if (teleportMusic != null)
         {
             teleportMusic.Stop();
         }
-    }
 
-    void Update()
-    {
-        if (player == null || backgroundMusic == null) return;
-
-        // Adjust background music volume based on distance, fading smoothly
-        float distance = Vector3.Distance(transform.position, player.transform.position);
-        float targetVolume = 1f;
-
-        // Calculate target volume based on distance, but only start fading when within fadeDistance
-        if (distance <= fadeDistance)
+        if (fadeScreen == null)
         {
-            targetVolume = Mathf.Clamp01(1f - (distance / fadeDistance));
+            fadeScreen = GameObject.Find("FadeScreen")?.GetComponent<Image>();
+            if (fadeScreen == null)
+            {
+                Debug.LogError("FadeScreen UI Image not found! Make sure it's in the scene.");
+            }
         }
-        
-        // Smoothly interpolate to the target volume
-        backgroundMusic.volume = Mathf.Lerp(backgroundMusic.volume, targetVolume, fadeSpeed * Time.deltaTime);
 
-        // Check if the player is close enough to teleport
-        if (distance <= interactionDistance && Input.GetKeyDown(KeyCode.E))
+        if (fadeScreen != null)
         {
-            TeleportPlayer();
+            fadeScreen.color = new Color(0, 0, 0, 0);
         }
     }
 
-    void TeleportPlayer()
+    void HandleDialogueEnd(GameObject character)
     {
-        if (teleportTarget == null) return;
+        if (hasTeleported) return; // Prevent multiple teleports
 
-        // Stop the background music
-        if (backgroundMusic.isPlaying)
-        {
-            backgroundMusic.Stop();
-        }
+        Debug.Log("Dialogue ended. Checking teleport conditions...");
 
-        // Play the teleport music
-        if (teleportMusic != null)
-        {
-            teleportMusic.Play();
-        }
+        // Ensure teleport only happens once
+        hasTeleported = true;
 
-        // Teleport the player
-        CharacterController controller = player.GetComponent<CharacterController>();
-        Rigidbody rb = player.GetComponent<Rigidbody>();
+        // Unsubscribe from the event so it won't trigger again
+        InkDialogOnClickIND.OnDialogueEnd -= HandleDialogueEnd;
 
-        if (controller != null)
-        {
-            controller.enabled = false;
-            player.transform.position = teleportTarget.position;
-            controller.enabled = true;
-        }
-        else if (rb != null)
-        {
-            rb.position = teleportTarget.position;
-        }
-        else
-        {
-            player.transform.position = teleportTarget.position;
-        }
-
-        Debug.Log("Player teleported to " + teleportTarget.position);
+        StartCoroutine(FadeAndTeleport());
     }
 
-    void OnDrawGizmosSelected()
+    IEnumerator FadeAndTeleport()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, interactionDistance);
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, fadeDistance);
+        yield return StartCoroutine(FadeScreen(1f));
+
+        if (backgroundMusic.isPlaying) backgroundMusic.Stop();
+        if (teleportMusic != null) teleportMusic.Play();
+
+        if (teleportTarget != null)
+        {
+            CharacterController controller = player.GetComponent<CharacterController>();
+            Rigidbody rb = player.GetComponent<Rigidbody>();
+            if (controller != null)
+            {
+                controller.enabled = false;
+                player.transform.position = teleportTarget.position;
+                controller.enabled = true;
+            }
+            else if (rb != null)
+            {
+                rb.position = teleportTarget.position;
+            }
+            else
+            {
+                player.transform.position = teleportTarget.position;
+            }
+        }
+
+        yield return StartCoroutine(FadeScreen(0f));
+    }
+
+    IEnumerator FadeScreen(float targetAlpha)
+    {
+        float startAlpha = fadeScreen.color.a;
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float newAlpha = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / fadeDuration);
+            fadeScreen.color = new Color(0, 0, 0, newAlpha);
+            yield return null;
+        }
+        fadeScreen.color = new Color(0, 0, 0, targetAlpha);
     }
 }

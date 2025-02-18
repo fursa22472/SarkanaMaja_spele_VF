@@ -515,4 +515,17 @@ void EndDialogue()
             audioSource.Play();
         }
     }
+
+
+
+
+
+
+
+
+public bool IsFirstStory()
+{
+    return isFirstStory;
+}
+
 }

@@ -10,12 +10,15 @@ public class InkDialogOverlapTrig : MonoBehaviour
 
     private Story story;
     private Text currentText; // Holds the reference to the instantiated text object
+    private bool hasInteracted = false; // Track if the player has interacted
+    private bool playerInRange = false; // Track if player is inside the trigger
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && inkJSONAsset != null)
+        if (other.CompareTag("Player") && inkJSONAsset != null && !hasInteracted)
         {
             ShowText();
+            playerInRange = true; // Player entered trigger
         }
     }
 
@@ -24,12 +27,16 @@ public class InkDialogOverlapTrig : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             HideText();
+            playerInRange = false; // Player left trigger
         }
     }
 
-    private void OnDisable()
+    private void Update()
     {
-        HideText(); // Make sure the text disappears when the object is disabled
+        if (playerInRange && !hasInteracted && Input.GetKeyDown(KeyCode.E))
+        {
+            StartDialogue();
+        }
     }
 
     private void ShowText()
@@ -53,5 +60,32 @@ public class InkDialogOverlapTrig : MonoBehaviour
             Destroy(currentText.gameObject);
             currentText = null;
         }
+    }
+
+    private void StartDialogue()
+    {
+        HideText(); // Hide text when dialogue starts
+        hasInteracted = true; // Mark as interacted so it won’t show again
+        InkDialogOnClickIND.OnDialogueEnd += HandleDialogueEnd; // Listen for dialogue end
+    }
+
+    private void HandleDialogueEnd(GameObject character)
+    {
+        if (character == gameObject) // Ensure it's the correct object
+        {
+            hasInteracted = true; // Ensure text never appears again
+            HideText();
+            InkDialogOnClickIND.OnDialogueEnd -= HandleDialogueEnd; // Unsubscribe event
+        }
+    }
+
+    private void OnDisable()
+    {
+        HideText(); // Make sure the text disappears when the object is disabled
+    }
+
+    private void OnDestroy()
+    {
+        HideText(); // Ensure the text is removed if the object is destroyed
     }
 }
