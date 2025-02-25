@@ -1,181 +1,247 @@
-VAR option1 = false
-VAR option2 = false
 
-
-Tu, bērns! Ko tu dari, ložņādama kā kāda žurka? Runā ar mani. Hallo! Nevienam nav laika spēlēm! Tu taču, kaut ko spēlē?
+Joprojām te klaiņo. 
+Kur i tav vecāki? Tādim meiteņim kā tev jau sen mājās jābūt.
 #audio:Tante_5_N_00
 
-+ [Es tikai eju garām. Piedodiet.]
-    Tad ej garām.
++ [Es jau eju…]
+Bērnim nau ko pa tumsu vazāties.
     #audio:Tante_5_N_01
-    -> END
+    -> A1
 
-+ [Kādēļ kliegt uz mani..]
-    
-   Kliedzu? Tu domā? Eu nu, vēl neesi dzirdējusi mani kliedzam. Kā jūs visus tagad audzina? Nevar pat parunāt ar jums normāli.
++ [Tev arī.]
+Brīvlaistais uzradies. Ja man būtu, kur iet, tad tu manis šeit neredzētu.
    #audio:Tante_5_N_02
     -> A1
 
++ [Man ir vienalga.]
+Vienaldzīgā paaudze. Tu esi gan pierādījums, gan atgādinājums tam.
+   #audio:Tante_5_N_03
+    -> A1
+
+
 === A1 ===
-+ [Mēs? Kas mēs?]
-    
-    Jūs - jaunā paaudze. Traki ar jums. Grūti pat. Es saku, tā ir tā jaunā audzināšanas metode pie vainas.
-    # audio:Tante_5_N_03
++ [...]
+Dzīvē vajag kārtību, savādāk viss sabrūk. Ja ne es… Ja ne mana  paaudze, visa valsts jau būtu sabrukusi… un jūs sīkie knaušļi visi paliktu bez mājām.
+    #audio:Tante_5_N_04
     -> A2
 
 === A2 ===
-+ [Es nesaprotu, kāpēc vajag tā dusmoties...]
-    Slinki cilvēki mani sadusmo. Es priecātos tikai, ja mani kāds novērtētu šajā pasaulē. Neviens tagad pavisam pat nebrauc ciemos. Saka, ka aizņemti. Visu laiku melo. 
-    # audio:Tante_5_N_04
++ [Dzīve ir nekārtīga.]
+Kad būsi manā vecumā nožēlosi to, ka nepaliki ilgāk mājās un nesadraudzējies ar saviem kaimiņiem
+    #audio:Tante_5_N_05
     -> C1
-
-+ [Mani audzināja tēvs. Viņš nav slikts...]
-    Tavs tēvs nebūs dzīvojis tik ilgi, cik es. Tu arī esi tikai bērns, izaugtu - saprastu. Viss tik ātri skrien uz priekšu, bet es palieku, visi atstāj mani šeit. Neviens nerunā. 
-    # audio:Tante_5_N_05
-    -> C2
+    
+    + [Jā… laikam…]
+Kad būsi manā vecumā nožēlosi to, ka nepaliki ilgāk mājās un nesadraudzējies ar saviem kaimiņiem
+    #audio:Tante_5_N_05
+    -> C1
 
 === C1 ===
-+ [Dažreiz arī tā gadās, kad nepietiek laika sarunām. Es domāju tevi neviens neaizmirsa.]
-    Daudz tu zini, ha? Spiest podiņas laika pietiek, skatīties tos video jūtubē arī laiks ir, bet pazvanīt man nav. Manā jaunība vispār bija grūti pazvanīt kādam, mēs tikāmies, runājām. Tagad tikai telefona lodziņš labākais draugs.
-    # audio:Tante_5_N_06
-    -> C3
-
-=== C3 ===
-+ [Varbūt tev vajag hobiju? Dažreiz, es zīmēju. Man nesanāk, bet es to daru sev.]
-    Sev? Kur vispār manā vecumā var kaut ko darīt sev? Man ir jāstrādā šeit, neviens taču to nedara, traukus nemazgā, ogas nevāc, nepalīdz ar māju.
-    # audio:Tante_5_N_07
-    -> C6
-
-+ [Man neliekas, ka tā ir slikta lieta. Es skatos bildes internetā. Jūsu laikā tā nevarēja, bildes arī pazuda.]
-    Un ko tu tur par manu laiku stāsti? Nav jau tikai tajā internetā problēma. Visi cilvēki palika nejauki un neizpalīdzīgi. Tādi...ļoti. Ļoti aizņemti..
-    # audio:Tante_5_N_08
-    -> C6
-
-=== C2 ===
-+ [Man žēl. Man dažreiz arī liekas, ka neviens neklausās. Man tas nepatīk. Laikam visi ir nejauki...Varbūt man melo arī?]
-    Es nomiršu, un viņi pat nepamanītu. Tā arī drīz būs. Tu arī tagad esi šeit un šaubos, ka kāds padomā par tevi. Tava ģimene gan jau, ka šobrīt skatās kādu seriālu. Tāpat labu seriālu nav šodien.
-    # audio:Tante_5_N_09
-    -> C4
-
-=== C4 ===
-+ [Jums tiešām tā liekas? Es negribētu nomirt vientulībā]
-    Redzi, šajā pasaulē nekas nav atkarīgs no tevis. Pat Dievs vairs neskatās līdzi. Man liekas viņam riebjas tas, kur mēs nonācām. Viņš izveidoja pasauli dusmās.
-    # audio:Tante_5_N_10
-    -> C5
-
-+ [Es neskatos seriālus.]
-    Nav jau arī jāskatās. Ir jāmācās, jālasa grāmatas
-    # audio:Tante_5_N_11
-    -> C5
-
-=== C5 ===
-* [...]
-~ option1 = true
++ [Aha...?]
+Jūs jaunieši nenovērtē vietu, kur jūs dzīvo. Mūs laikos nekad nezināj, kur rīt dzīvosi.
+    #audio:Tante_5_N_06
     -> CC1
 
-=== C6 ===
-* [...]
-~ option2 = true
-    -> CC2
 
-
-    === CC1 ===
-{option1 and option2:
-    -> A3
-- else:
-    -> C1
-}
-
-    === CC2 ===
-{option1 and option2:
-    -> A3
-- else:
+=== CC1 ===
++ [...]
+Vien dien krievs, otru vācietis. Daudzus aizveda. Un tiem kas palika, bij tikai atmiņas.
+    #audio:Tante_5_N_07
     -> C2
-}
+
+=== C2 ===
++ [Es visu novērtēju, bet nezinu kur ir… tās mājas.]
+Saproti…  cilvēki ir nolādēti dzimt ar kājām un galvu. 
+    #audio:Tante_5_N_09
+    -> CC3
+    
+    + [Vabūt tikai jūsu dzīve bija nestabila]
+Saproti…  cilvēki ir nolādēti dzimt ar kājām un galvu. 
+    #audio:Tante_5_N_09
+    -> CC3
+    
+    + [Kāpēc jūs neejat mājās?]
+Vai die, vai die...
+    #audio:Tante_5_N_08
+    -> CC4
+    
+    === CC4 ===
+    + [...]
+Saproti…  cilvēki ir nolādēti dzimt ar kājām un galvu. 
+    #audio:Tante_5_N_09
+    -> CC3
+    
+
+=== CC3 ===
++ [Nolādēti?]
+Viens dod tev ceļu priekš dzīves un otrs to atņem. Jums bērnim velns i prātiņā ļaunumu iesējis.
+# audio:Tante_5_N_10
+-> C4
+
++ [Labāk došos...]
+Ej. Tavs pienākums, kā bērnam ir vienmēr atgriezties laicīgi.
+ #audio:Tante_5_beigas
+ -> END
+
+=== C4 ===
++ [Man galva nav ļauna.]
+Tad ko tu te klaiņo, ja ne citiem traucēt vai musināt uz nedarbiem, koa? 
+   # audio:Tante_5_N_11
+-> CC51
+
++ [Kā cilvēks prātā tur ļaunumu?]
+Ak manu bērn, pēc mans tač pieredzes, vismaz puse domā, ka domas deniņos ir vislielākā nelaime – velna balss aiz ausīm.
+   # audio:Tante_5_N_12
+-> CC52
+
++ [Tie esat jūs, pieaugušie, kuri ir ļauni. ]
+Nabaga cilvēks. Tava dzīve pildīta ar naidu, kā dārgs eklērs. Pazini daudz ļaunu cilvēku?
+  #audio:Tante_5_N_13
+ -> CC53
+
+
+=== CC51 ===
++ [Es meklēju pareizo ceļu ]
+Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. Tagad pat te šķiet… pretīgi. 
+   # audio:Tante_5_N_14
+-> CM4
+
++ [Labāk došos...]
+Ej. Tavs pienākums, kā bērnam ir vienmēr atgriezties laicīgi.
+ #audio:Tante_5_beigas
+ -> END
+ 
+ 
+ 
+ === CC52 ===
++ [Man tā nebūs]
+Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. Tagad pat te šķiet… pretīgi. 
+   # audio:Tante_5_N_14
+-> CM4
+
++ [Es negribu zināt.]
+Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. Tagad pat te šķiet… pretīgi. 
+   # audio:Tante_5_N_14
+-> CM4
+
++ [Labāk došos...]
+Ej. Tavs pienākums, kā bērnam ir vienmēr atgriezties laicīgi.
+ #audio:Tante_5_beigas
+ -> END
+
+
+
+ === CC53 ===
++ [Jā]
+Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. Tagad pat te šķiet… pretīgi. 
+   # audio:Tante_5_N_14
+-> CM4
+
++ [Es nezinu, varbūt ]
+Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. Tagad pat te šķiet… pretīgi. 
+   # audio:Tante_5_N_14
+-> CM4
+
++ [Labāk došos...]
+Ej. Tavs pienākums, kā bērnam ir vienmēr atgriezties laicīgi.
+ #audio:Tante_5_beigas
+ -> END
 
 
 
 
 
-=== A3 ===
-+ [Es satiku priesteri. Viņš netic Dievam. Bet viņš neteica, ka viss tik slikti. Kaut kas ir tomēr atkarīgs no mums.]
-    Priesteri, kurš netic Dievam? Tas nav priesteris tad. Labāk, ja vinš tepat bez darba staigā, lai palīdz man ar dārzu. Atradīšu darba cimdus un lāpstu. 
-Un šitā tu arī visu nākotni esi gatava darboties? Nekas labs nav patīkams. Ja gribi kaut ko sasniegt, ir jāstrādā.
-# audio:Tante_5_N_12
-    -> A4
+=== CM4 ===
++ [Man žēl.]
+Cilvēki bij laipnāki. Vis zināja viens otru kā radiniekus. Sveicinājās, smaidīja, ciemojās...
+    # audio:Tante_5_N_15
+    -> C5
+
++ [Visiem nevar vienmēr būt labi]
+Cilvēki bij laipnāki. Vis zināja viens otru kā radiniekus. Sveicinājās, smaidīja, ciemojās...
+    # audio:Tante_5_N_15
+    -> C5
+    
++ [Laiki mainās, cilvēki arī]
+Cilvēki bij laipnāki. Vis zināja viens otru kā radiniekus. Sveicinājās, smaidīja, ciemojās...
+    # audio:Tante_5_N_15
+    -> C5
+
+
+=== C5 ===
+    + [Pastāstiet vēl.]
+Neviens tā vairs nedzīvo un negrib. Es vairs nezinu ko no šīs dzīves var gribēt.
+    # audio:Tante_5_N_16
+    -> C6
+
+
+=== C6 ===
+    + [Es jums nevaru palīdzēt ar šo.]
+Tad, tu iesi mājās vai nē? Sen kā jau teicu, lai ej mājās!
+    # audio:Tante_5_N_17
+    -> C7
+
+    + [Es arī…]
+Tad, tu iesi mājās vai nē? Sen kā jau teicu, lai ej mājās!
+    # audio:Tante_5_N_17
+    -> C7
+
+    + [Tāda ir dzīve...?]
+Tad, tu iesi mājās vai nē? Sen kā jau teicu, lai ej mājās!
+    # audio:Tante_5_N_17
+    -> C7
 
 
 
-=== A4 ===
-+ [Es vēl tikai mācos.]
-    Tad labi. Galvenais nenonākt līdz tādai nelaimei, kā man. Gribētos aizbraukt kaut kur tālu, kur ir silti. Bet tā pensija jau nav nauda. 
-    # audio:Tante_5_N_13
+=== C7 ===
++ [Es jau eju.]
+Ej. Tavs pienākums, kā bērnam ir vienmēr atgriezties laicīgi.
+# audio:Tante_5_N_beigas
+    -> END
+
++ [Nezinu, kā.]
+Es jau teicu, kur tev iet! Tu zini, kas notiek ar tiem, kuri neklausās?
+# audio:Tante_5_N_18
+    -> C8
+
+=== C8 ===
++ [Viņi nekad neatrod ceļu līdz mājām?]
+Tieš tā. Tagad beidz tēlot gudro. Tu zini, ko tev jādara.
+    # audio:Tante_5_N_19
+    -> A5
+    
++ [Es neklausīšos jūsu šausmu stāstus.]
+Ej kad saka. Savādāk redzēsi, paliksi par jaunu šausmu stāstu pārējiem.
+    # audio:Tante_5_N_20
+    -> A5
+    
+ + [Bet jūs neiedevāt man norādījumus…]
+Ej un neliec vecākiem uztraukties! Tūlīt pat!
+    # audio:Tante_5_N_21
     -> A5
 
 
 === A5 ===
-+ [Un kas jums traucē aizbraukt?]
-   Visu naudu aizsūtu saviem bērniņiem. Viņiem taču jāmācās. Arī jāmaksā par māju. Apkure paliek dārgāka. Ai... tu taču nezini. 
-   # audio:Tante_5_N_14
++ [...]
+Pasteidzies! Būt mājas ir tavs pienākums. Tu nevari vienkārši aizbēgt prom, saproti?
+   # audio:Tante_5_N_22
     -> A6
-
-+ [A, skaidrs...jā.]
-   Un galvenais, Latvijai jau nav ne vainas. Es šeit uzaugu, mani vecāki un vecvecāki arī. Cilvēki ir tā galvenā problēma. Skaļi. Šeit nav vietas, kur dzīvot. Un visu laiku tā steiga!
-   # audio:Tante_5_N_15
-    -> A6
-    
     
     === A6 ===
-+ [Tāda sajūta, it kā jūs vienkārši negribat neko mainīt.]
-    Man jau nav nekas jāmaina. Paskaties, ir jau pietiekami daudz cilvēku, kas visu laiku kaut ko maina. Man bērni nopirka jaunu televizoru, un kam? Es neprasīju
-    # audio:Tante_5_N_16
++ [Jums taisnība, mani jau gaida.]
+Nu taču skrien mājās! Es netaisos ar tevi runāt visu nakti.
+    # audio:Tante_5_N_23
+    -> A7
+    
++ [Es neko nesaprotu… Kādas mājas…]
+Nu taču skrien mājās! Es netaisos ar tevi runāt visu nakti.
+    # audio:Tante_5_N_23
     -> A7
     
      === A7 ===
-+ [Man žēl...]
-    Tas nav viss! Es izeju ārā, speciāli apejot visas tās jauniešu vietas... Un viņi tāpat parādās. Nepieklājīgi, ar savu skaļo mūziku, un tie mati! Tu nevari iedomāties, kāds man šoks, kad skaistas meitenes staigā ar īsiem matiem. Nogriež visu skaistumu un vēl uzliek to šausmīgo grimu pa virsu. Kā kaut kādi klauni. Mani mazbērni jau grib tā staigāt, es neļauju.
-    # audio:Tante_5_N_17
-    -> A8
++ [Atā!]
+Pirms tu aizej, paņem šos cepumus. Man viņi riebjas. Aiznes tos Rainim - vīrietim brūnā mētelī.
+    # audio:Tante_5_IedodCepumus
+    -> END
     
     
-    === A8 ===
-+ [Bet man liekas skaisti..]
-    Kas tur skaists? Un vēl uz rokām visādi uzraksti. Manos laikos par to sita. Viņus tas tumšais spēks kaut kad dabūs. Biežāk tādiem uz baznīcu. Kā tev liekas?
-    # audio:Tante_5_N_18
-    -> A9    
-    
-    
-    === A9 ===
-+ [Es nedomāju, ka viņi dara kaut ko ļaunu.]
-   Viņi apzīmē ēkas, posta, nedod vietu trolejbusā un pat neklausās. Man tas traucē. Visur tikai jaunieši. 
-   # audio:Tante_5_N_19
-    -> A10     
-    
-    
-     === A10 ===
-+ [Neredzu neko sliktu tajā. Nejau visi ir nejauki pret jums...]
-   Ar tevi viss skaidrs. Es padodos. Būs jāmirst te, vientulībā.  
-   # audio:Tante_5_N_20
-    -> A11    
-    
-    
-+ [Godīgi sakot, man arī tādi nepatīk. Manam tēvam arī. ]
-   Jo tu esi labi audzināts bērns! Zini kā, paliek jau tumšs. Nevēlies ienākt ciemos, es tieši izvārīju zupu? Ko saki? 
-   # audio:Tante_5_N_21
-    -> A12   
-    
-    
-    
-    === A11 ===
-+ [Man liekas, jums jāparunā ar kādu citu. Piedodiet, es iešu mājās. Lai jums jauks vakars!]
-    -> END     
-    
-    === A12 ===
-+ [Nē, piedodiet, labāk iešu. Jāskrien mājās.]
-Nu, skaties meitiņ. Ja kaut kas notiek ģimenē, vienmēr vari atrast mani un parunāties. Labi? Nu, attā!
-# audio:Tante_5_N_22
-    -> END  
-    
-+ [Varētu. Kāpēc gan ne? Paldies!]
-#audio:Gongs
-    -> END     

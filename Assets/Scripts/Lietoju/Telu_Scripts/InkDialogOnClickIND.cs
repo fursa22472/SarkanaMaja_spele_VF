@@ -432,6 +432,10 @@ void EndDialogue()
 
 
 //tante
+        dialogueAudioMap.Add("Tante_5_beigas", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_beigas"));
+        dialogueAudioMap.Add("Tante_5_IedodCepumus", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_IedodCepumus"));
+        dialogueAudioMap.Add("Tante_5_Loop_01", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_Loop_01"));
+        dialogueAudioMap.Add("Tante_5_Loop_02", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_Loop_02"));
         dialogueAudioMap.Add("Tante_5_N_00", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_00"));
         dialogueAudioMap.Add("Tante_5_N_01", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_01"));
         dialogueAudioMap.Add("Tante_5_N_02", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_02"));
@@ -455,9 +459,17 @@ void EndDialogue()
         dialogueAudioMap.Add("Tante_5_N_20", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_20"));
         dialogueAudioMap.Add("Tante_5_N_21", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_21"));
         dialogueAudioMap.Add("Tante_5_N_22", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_22"));
-        dialogueAudioMap.Add("T_Tante_5_N_00", Resources.Load<AudioClip>("Audio/TanteAudio/T_Tante_5_N_00"));
-        dialogueAudioMap.Add("T_Tante_5_N_01", Resources.Load<AudioClip>("Audio/TanteAudio/T_Tante_5_N_01"));
-        dialogueAudioMap.Add("T_Tante_5_N_02", Resources.Load<AudioClip>("Audio/TanteAudio/T_Tante_5_N_02"));
+        dialogueAudioMap.Add("Tante_5_N_23", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_N_23"));
+        dialogueAudioMap.Add("Tante_5_OBJ_01", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_OBJ_01"));
+        dialogueAudioMap.Add("Tante_5_OBJ_02", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_OBJ_02"));
+        dialogueAudioMap.Add("Tante_5_OBJ_03", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_OBJ_03"));
+        dialogueAudioMap.Add("Tante_5_OBJ_04", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_OBJ_04"));
+        dialogueAudioMap.Add("Tante_5_OBJ_05", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_OBJ_05"));
+        dialogueAudioMap.Add("Tante_5_OBJPAP_01", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_OBJPAP_01"));
+        dialogueAudioMap.Add("Tante_5_OBJPAP_02", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_OBJPAP_02"));
+        dialogueAudioMap.Add("Tante_5_OBJPAP_03", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_OBJPAP_03"));
+        dialogueAudioMap.Add("Tante_5_OBJPAP_04", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_OBJPAP_04"));
+        
 
         dialogueAudioMap.Add("Panks_5_N_00", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_00"));
         dialogueAudioMap.Add("Panks_5_N_01", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_01"));

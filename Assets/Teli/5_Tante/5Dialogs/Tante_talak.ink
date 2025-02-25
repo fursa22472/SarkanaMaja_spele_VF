@@ -1,12 +1,7 @@
-Paliek vēsāks... Nakts būs auksta. Būtu labi sameklēt Muri...
-#audio:T_Tante_5_N_00
+Ej mājās!
+#audio:Tante_5_Loop_01
 
-+ [Tas ir jūsu kaķis?]
-   Jā, sīkais palaidnis. Nevaru nekur atrast. Pavisam neklausās...
-   #audio:T_Tante_5_N_01
-    -> END
-
-+ [Ceru, ka atradīsiet.]
-Es ceru, ka neatrada jaunu saimnieku. Viņam patīk klīst un meklēt nepatikšanas.
-#audio:T_Tante_5_N_02
++ [Es tikai pagāju garām...]
+   Nu ej taču!
+   #audio:Tante_5_Loop_02
     -> END
