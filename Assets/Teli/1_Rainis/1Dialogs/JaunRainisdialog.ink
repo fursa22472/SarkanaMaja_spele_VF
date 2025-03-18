@@ -1,0 +1,241 @@
+VAR option1 = false
+VAR option2 = false
+VAR option3 = false
+VAR option4 = false
+VAR option5 = false
+
+Ak jaunība, ak jaunība… Un vēl tas acu mirzums! 
+#audio:Rainis_1_00
+
+      + [Sveiki?]
+Es tavā vecumā domāju, ka visa pasaule piederēs man. Ak naivā gara varenība…
+#audio:Rainis_1_01
+    -> A1
+    
+=== A1 ===
++ [Jūs šeit dzīvojat?]
+Es? ... Nē. Es vienkārši neskrienu nekur.. Viss pats atnāks. 
+#audio:Rainis_1_02
+    -> A2
+
+=== A2===
++ [Interesanti.]
+Tu ej mājās?
+#audio:Rainis_1_03
+    -> A3
+
+=== A3 ===
++ [Jā…]
+Izskaties pagalam nobijusies… Mīdies... grozies. Laikam nezini, kur iet.
+#audio:Rainis_1_04
+    -> A4
+    
++ [Nē]
+Tiešām? Nu nezinu, nezinu.
+#audio:Rainis_1_05
+    -> A4
+    
++ [Kādēļ jautā?]
+Eh.. Jo bērns parasti māk tikai apmaldīties.
+#audio:Rainis_1_06
+    -> A4
+
+
+=== A4 ===
++ [...]
+Vai tad tev pulksteņa nav? Redzi, saule jau tā kā uz rietu. 
+#audio:Rainis_1_07
+   -> A5
+   
+ === A5 ===
++ [Es zinu.]
+Šis man atgādina, kad tiku labi tālu prom no mājām.
+#audio:Rainis_1_08
+   -> A6
+   
+=== A6 ===
++ [Pastāstiet.]
+Domāju, aizbēgšu, redzēšu pasauli. Nē, nē. Iekarošu to! Bet… tur jau nevar aizbēgt. 
+#audio:Rainis_1_N_03
+   -> A7
+   
+=== A7 ===
++ [Kādā veidā?]
+Es tālu neaizskrēju. Un neko nesasniedzu.  Skrēju, bet.. Nezinu. Kāda jēga? Es tāpat atgriezos mājās. Varēju arī neiet nekur.
+#audio:Rainis_1_N_03
+   -> A8
+   
++ [Es iešu.]
+Ja vajag, tad ej. Es labāk nekur neietu…
+#audio:Rainis_1_N_03
+   -> END
+   
+=== A8 ===
+* [Kāpēc atgriezāties?]
+ ~ option1 = true
+Cilvēki aug un baidās. Baidās no pārmaiņām. Viņi paliek pie zināmā, runā kā vecāki, atkārto brāļus un māsas..
+#audio:Rainis_1_N_03
+   -> Atkartojums1
+
+* [Kāpēc skrējāt prom?]
+ ~ option2 = true
+Es neatceros. Atceros, man gribējās aizskriet. Skan smieklīgi, bet jau tad likās, ka māja ir būris. Saproti? .
+#audio:Rainis_1_N_03
+   -> Atkartojums1
+   
+* [Kam skrējāt pretī?]
+ ~ option3 = true
+Skrēju pretī gaišākajam pasaules stūrītim. Labākus laikapstākļus …neatradu.
+#audio:Rainis_1_N_03
+   -> Atkartojums1
+   
+   
+   === Atkartojums1 ===
+{option1 and option2 and option3:
+    -> A10
+- else:
+    -> A8
+}
+   
+ === A10 ===
+  + […]
+Visur, kur eju, man pakaļ velkas sasodītais būris. Un gaida. 
+#audio:Rainis_1_N_03
+   -> A11
+
+ === A11 ===
+  + [Kāds būris?]
+Tas tāds viltīgs būris. Jo tālāk eju, jo ātrāk viņš skrien pakaļ. Šitā! 
+#audio:Rainis_1_N_03
+   -> A12
+   
+=== A12 ===
++ [Un ko darījāt?]
+Nu es, kā cilvēks gluži vienkāršs, izspriedu, ka jāstāv uz vietas. Tad viņš tikai tā, pa gabalu. Te stūrītī.
+#audio:Rainis_1_N_03
+   -> A13
+   
+=== A13 ===
++ [Jāstāv šeit…?]
+Nav jau izvēles. Tā sanāk dzīvot. Es neko nevaru darīt.
+#audio:Rainis_1_N_03
+   -> A14
+
+=== A14 ===
+* [Kā nav izvēles?.]
+ ~ option4 = true
+Mēs izvēlamies neizvēlēties... Tāda tauta... Tāpat pārmaiņas nenotiek pēc mūsu pavēles. 
+#audio:Rainis_1_N_03
+   -> Atkartojums2
+
+* [Cilvēks nevar stāvēt visu laiku uz vietas.]
+ ~ option5 = true
+Cilvēkiem kājas, lai stāvētu. Ēkas pārbūvē, tehnoloģijas.. ui kā attītās. Bet cilvēks, ko viņš, viņš nekad nemainās. Cilvēks nav mašīna. 
+#audio:Rainis_1_N_03
+   -> Atkartojums2
+   
+   
+=== Atkartojums2 ===
+{option4 and option5:
+    -> A15
+- else:
+    -> A14
+}
+
+=== A15 ===
++ [Jūs neviens negaida?]
+Ko nu, ko nu. Es nevienu negaidu. Vai tevi gaida?
+#audio:Rainis_1_N_03
+   -> A16
+
+=== A16 ===
++ [Es nezinu.]
+Ehhh… Nu varētu arī palikt ar mani. Divatā būrī miertīgāk..
+#audio:Rainis_1_N_03
+   -> A17
+   
++ [Varbūt.]
+Ehhh… Nu varētu arī palikt ar mani. Divatā būrī miertīgāk..
+#audio:Rainis_1_N_03
+   -> A17
+   
+=== A17 ===
++ [Nē, paldies.]
+Nu, kā vēlies. Vienam būrī tomēr brīvāk. Tad skrien!.
+#audio:Rainis_1_N_03
+   -> A18
+   
+=== A18 ===
++ [Es nezinu, kur iet!]
+Tādi mēs cilvēciņi… nezinīgi. Ko tad man tev teikt…? 
+#audio:Rainis_1_N_03
+   -> A19
+   
+=== A19 ===
++ [Jūs nevarat palīdzēt?]
+Ko es? Kā līdzēšu? 
+#audio:Rainis_1_N_03
+   -> A20
+   
+=== A20 ===
++ [Varbūt jūs parādītu pareizo virzienu..]
+Es nevaru neko, man ar savām problēmām pietiek. Paprasi kādam vēl. Kādam jaunietim…
+#audio:Rainis_1_N_03
+   -> A21
+
+=== A21 ===
++ [Bet taču-!]
+Ne, ne, ne. Kuš. Nebļauj! 
+#audio:Rainis_1_N_03
+   -> A22
+
++ [Kādas tev tur problēmas???]
+Ne, ne, ne. Kuš. Nebļauj!
+#audio:Rainis_1_N_03
+   -> A22
+
+=== A22 ===
++ [Es nebļauju.]
+Neatkarīgi no tā, ko darīsi, viss atrisināsies. Paliec un uzspēlēsim šahu. Aiziesi, arī nebūs pasaules gals..
+#audio:Rainis_1_N_03
+   -> A23
+   
++ [Jo tu esi kurls kā zābaks.]
+Neatkarīgi no tā, ko darīsi, viss atrisināsies. Paliec un uzspēlēsim šahu. Aiziesi, arī nebūs pasaules gals..
+#audio:Rainis_1_N_03
+   -> A23
+   
++ [Piedod.]
+Neatkarīgi no tā, ko darīsi, viss atrisināsies. Paliec un uzspēlēsim šahu. Aiziesi, arī nebūs pasaules gals..
+#audio:Rainis_1_N_03
+   -> A23
+   
+=== A23 ===
++ [Domājat labāk neiet mājās?]
+Atkarībā no tā, kādā būrī gribi atrasties. Es jau labprāt dzīvotu kādā smalkā, bet kā ir, tā ir. Nu es teiktu, labāk paliec te. Dzīve būs vieglāka.
+#audio:Rainis_1_N_03
+   -> A24
+
+=== A24 ===
++ [Es nevaru stāvēt uz vietas. Mani gaida mājās.]
+Tad tu izvēlies iet tālāk? Tu šauj sev kājā. Nekur tālāk par mani netiksi… Bet vismaz būs tev dzīves pieredze.
+#audio:Rainis_1_N_03
+   -> A25
+   
+ + [Laikam... jums ir taisnība. Man nevajag nekur skriet. Tāpat būs labi]
+Es zinu. Bet nekas. Svarīgi samierinaties ar to, ka pasaule mums sasēja rokas un iemeta jūrā jau no dzimšanas. Un tā vienkārši tas ir. 
+#audio:Rainis_1_N_03
+   -> A25
+   
+ === A25 ===
++ [Es tad došos.]
+Uz galda ielūgums. Paņem to un aiznes priesterim. 
+#audio:Rainis_1_N_03
+   -> A26
+
+ === A26 ===
++ [Kāpēc?]
+Lai viņš nesēž tur viens brīvdienās. 
+#audio:Rainis_1_N_03
+   -> END
+

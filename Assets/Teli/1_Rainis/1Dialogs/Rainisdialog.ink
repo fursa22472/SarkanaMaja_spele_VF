@@ -4,7 +4,7 @@ VAR option3 = false
 VAR option4 = false
 
 Tu nesen ievācies. Redzēju. Labvakar! Ko tu šeit dari? Domā paspēsi līdz saulrietam?
-#audio:Rainis_1_N_00
+#audio:Rainis_1_N_00_1
 
       + [Nē.]
     Nav jau no kā baidīties tumsā. 

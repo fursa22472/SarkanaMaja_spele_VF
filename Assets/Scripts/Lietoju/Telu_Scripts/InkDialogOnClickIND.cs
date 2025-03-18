@@ -277,6 +277,7 @@ void EndDialogue()
         dialogueAudioMap.Add("Rainis_1_N_16",Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_16"));
         dialogueAudioMap.Add("Rainis_1_N_17",Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_17"));
 
+
        //priesteris
        
         dialogueAudioMap.Add("Atkal_Priesteris_2_N_000", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_000"));

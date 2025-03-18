@@ -1,8 +1,7 @@
-Ej, nu ej.
-#audio:Rainis_1_N_16
+Nenoguri no skraidīšanas? Pameklē kādu, kuram vairāk spēka izklaidei.
+#audio:Rainis_1_N_00_1
+    -> A1
 
-      + [...]
-    Tur tālāk ir taciņa. Nevar nepamanīt.
-    #audio:Rainis_1_N_17
-
-    -> END
+=== A1 ===
++ [Labi. Atā]
+-> END
