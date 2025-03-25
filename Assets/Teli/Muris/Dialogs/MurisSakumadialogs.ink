@@ -102,13 +102,13 @@ Bet ja no tavām mājām būs tikai skabargas, atpazīsi?
    
  === A13 ===
  + [Kā nebūs–? …]
-–Hipotētiski spriežot, pumpuriņ.
+–Hipotētiski spriežot.
  #audio:Muris_0_s_18
    -> A14
    
   === A14 ===
  + [Kur man iet???]
-Izvēlies to ceļu, kas tev patīk
+Izvēlies to ceļu, kas tev patīk.
  #audio:Muris_0_s_19
    -> A15
    
@@ -132,17 +132,17 @@ Bet... kā tu zināsi, ka esi uz pareizā ceļa?
    
  === A17 ===
  + [Vienmēr var pajautāt kādam.]
-Vai ar to pietiks? Tu tāpat apmaldīsies
+Vai ar to pietiks? Tu tāpat apmaldīsies.
 #audio:Muris_0_s_23
 -> A18
 
  + [Pēc sajūtām.]
-Vai ar to pietiks? Tu tāpat apmaldīsies
+Vai ar to pietiks? Tu tāpat apmaldīsies.
 #audio:Muris_0_s_23
 -> A18
 
  + [Kaut kā racionāli izštukošu.]
-Vai ar to pietiks? Tu tāpat apmaldīsies
+Vai ar to pietiks? Tu tāpat apmaldīsies.
 #audio:Muris_0_s_23
 -> A18
 

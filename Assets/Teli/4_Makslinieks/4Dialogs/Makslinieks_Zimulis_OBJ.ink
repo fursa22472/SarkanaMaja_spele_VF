@@ -1,21 +1,52 @@
 Nu, nu? 
-#audio:Makslinieks_4_Zimulis_00
+#audio:Makslinieks_4_OBJ_ZIMUL_01
+-> A1
 
-      + [Jūs nepazaudējāt zīmuli? Pianiste prasīja atdot.]
-It kā man trūst zīmuļu. Bet šis ir viens no tiem labajiem. Labi, paldies.
-#audio:Makslinieks_4_Zimulis_01
+=== A1 ===
++ [Jūs nepazaudējāt zīmuli? ]
+It kā man trūst zīmuļu. Bet šis ir labais. 
+Dod šurp.
+#audio:Makslinieks_4_OBJ_ZIMUL_02
+    -> A2
 
-    -> A
 
-
-=== A ===
-
-+ [Man teica, ka iesprūda klavierēs.]
-Jā, tā notiek. Tieši tāpēc nepabeidzu to zīmējumu. Nolieku zīmuli, pagriežos, nav. Nav un viss.
-#audio:Makslinieks_4_Zimulis_02
+=== A2 ===
++ [Tev patīk zīmēt?]
+Jā. Patīk, kad sanāk.
+#audio:Makslinieks_4_OBJ_ZIMUL_03
+    -> A3
+    
+=== A3 ===
++ [Bet kad nesanāk?]
+Tad nesanāk. Zīmulis nav vainīgs…
+#audio:Makslinieks_4_OBJ_ZIMUL_04
+    -> A4
+    
+=== A4 ===
++ [Kāpēc tur ir 2B?]
+Kāpēc tu neesi jau mājās?
+#audio:Makslinieks_4_OBJ_ZIMUL_05
+    -> A5
+    
+=== A5 ===
++ [...]
+Es nezinu, kāpēc 2B. 
+Varētu būt arī 7P.
+#audio:Makslinieks_4_OBJ_ZIMUL_06
+    -> A6
+    
+=== A6 ===
++ [Es iešu.]
+Ej tad. 
+#audio:Makslinieks_4_OBJ_ZIMUL_07
     -> END
-
-+ [Tu arī viņu zīmēji?]
-Jā, tā notiek. Tieši tāpēc nepabeidzu to zīmējumu. Nolieku zīmuli, pagriežos, nav. Nav un viss.
-#audio:Makslinieks_4_Zimulis_02
+    
++ [Kāpēc 7P?]
+Dante.
+#audio:Makslinieks_4_OBJ_ZIMUL_08
     -> END
+    
+    
+
+
+

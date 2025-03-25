@@ -1,21 +1,15 @@
-Tu man visu laiku traucē. Kāpēc?
-#audio:Pianiste_7_Ziedi_00
+Jāmmm?
+#audio:Pianiste_7_OBJ_Zied_1
 
-      + [Ziedi no...eeem]
-Zinu, no kura. Interesanti, kāpēc Pudiņš turpina šo pasākumu ar ziediem.
-#audio:Pianiste_7_Ziedi_01
-
++ [Ziedi. Jums.]
+Ā…. No Pētera?
+#audio:Pianiste_7_OBJ_Zied_2
     -> A
 
-
 === A ===
-
-+ [Turpina?]
-Nu jā, man jau nav nekas pret puķēm. Pat šis pirksta izmēra pušķis ir skaists. Un tomēr... Dažas lietas nemainās, bet viss tāpat mainās. Viņš nemainās. Paldies.
-#audio:Pianiste_7_Ziedi_02
++ [Jā, laikam.]
+Njām... Dažas lietas nemainās, bet viss tāpat mainās. 
+Viņš nemainās. Paldies.
+#audio:Pianiste_7_OBJ_Zied_3
     -> END
 
-+ [Tu negribi puķes?]
-  Nu jā, man jau nav nekas pret puķēm. Pat šis pirksta izmēra pušķis ir skaists. Un tomēr... Dažas lietas nemainās, bet viss tāpat mainās. Viņš nemainās. Paldies.
-#audio:Pianiste_7_Ziedi_02
-    -> END

@@ -35,6 +35,15 @@ public static event Action<GameObject> OnDialogueEnd;
     public Transform playerTransform;
     public CharacterMovement2 playerMovement;
 
+    
+
+    [Header("Ambient Audio")]
+public AudioSource ambientAudioSource;
+public float ambientMaxVolume = 1f;
+public float ambientFadeSpeed = 2f;
+public float ambientMaxDistance = 10f; //sis mergis atbild par to piano skanas fade in and out kad pieet tuvak (nonemt ja viss slikti)
+
+
     private Story story;
     private CameraTransition cameraTransition;
     private bool isDialogueActive = false;
@@ -65,6 +74,34 @@ public static event Action<GameObject> OnDialogueEnd;
         {
             HandleInput();
         }
+
+        
+
+
+//sis mergis atbild par to piano skanas fade in and out kad pieet tuvak(nonemt ja viss slikti)
+        if (playerInRange && !isDialogueActive)
+{
+    if (!ambientAudioSource.isPlaying)
+    {
+        ambientAudioSource.Play();
+    }
+
+    float distance = Vector3.Distance(playerTransform.position, transform.position);
+    float targetVolume = Mathf.Clamp01(1f - (distance / ambientMaxDistance)) * ambientMaxVolume;
+    ambientAudioSource.volume = Mathf.MoveTowards(ambientAudioSource.volume, targetVolume, ambientFadeSpeed * Time.deltaTime);
+}
+else if (ambientAudioSource.isPlaying && (isDialogueActive || !playerInRange))
+{
+    ambientAudioSource.volume = Mathf.MoveTowards(ambientAudioSource.volume, 0f, ambientFadeSpeed * Time.deltaTime);
+    if (ambientAudioSource.volume <= 0.01f)
+    {
+        ambientAudioSource.Stop();
+    }
+    
+//beidzas mergis
+}
+
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -277,63 +314,50 @@ public static event Action<GameObject> OnDialogueEnd;
 
         // Example mappings
     
-        dialogueAudioMap.Add("Pianiste_7_N_00", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_00"));
-        dialogueAudioMap.Add("Pianiste_7_N_01", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_01"));
-        dialogueAudioMap.Add("Pianiste_7_N_02", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_02"));
-        dialogueAudioMap.Add("Pianiste_7_N_03", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_03"));
-        dialogueAudioMap.Add("Pianiste_7_N_04", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_04"));
-        dialogueAudioMap.Add("Pianiste_7_N_05", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_05"));
-        dialogueAudioMap.Add("Pianiste_7_N_06", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_06"));
-        dialogueAudioMap.Add("Pianiste_7_N_07", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_07"));
-        dialogueAudioMap.Add("Pianiste_7_N_08", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_08"));
-        dialogueAudioMap.Add("Pianiste_7_N_09", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_09"));
-        dialogueAudioMap.Add("Pianiste_7_N_10", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_10"));
-        dialogueAudioMap.Add("Pianiste_7_N_11", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_11"));
-        dialogueAudioMap.Add("Pianiste_7_N_12", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_12"));
-        dialogueAudioMap.Add("Pianiste_7_N_13", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_13"));
-        dialogueAudioMap.Add("Pianiste_7_N_14", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_14"));
-        dialogueAudioMap.Add("Pianiste_7_N_15", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_15"));
-        dialogueAudioMap.Add("Pianiste_7_N_16", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_16"));
-        dialogueAudioMap.Add("Pianiste_7_N_17", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_17"));
-        dialogueAudioMap.Add("Pianiste_7_N_18", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_18"));
-        dialogueAudioMap.Add("Pianiste_7_N_19", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_19"));
-        dialogueAudioMap.Add("Pianiste_7_N_20", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_20"));
-        dialogueAudioMap.Add("Pianiste_7_N_21", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_21"));
-        dialogueAudioMap.Add("Pianiste_7_N_22", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_22"));
-        dialogueAudioMap.Add("Pianiste_7_N_23", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_23"));
-        dialogueAudioMap.Add("Pianiste_7_N_24", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_24"));
-        dialogueAudioMap.Add("Pianiste_7_N_25", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_25"));
-        dialogueAudioMap.Add("Pianiste_7_N_26", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_N_26"));
+        dialogueAudioMap.Add("Pianiste_7_01", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_01"));
+        dialogueAudioMap.Add("Pianiste_7_02", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_02"));
+        dialogueAudioMap.Add("Pianiste_7_03", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_03"));
+        dialogueAudioMap.Add("Pianiste_7_04", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_04"));
+        dialogueAudioMap.Add("Pianiste_7_05", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_05"));
+        dialogueAudioMap.Add("Pianiste_7_06", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_06"));
+        dialogueAudioMap.Add("Pianiste_7_07", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_07"));
+        dialogueAudioMap.Add("Pianiste_7_08", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_08"));
+        dialogueAudioMap.Add("Pianiste_7_09", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_09"));
+        dialogueAudioMap.Add("Pianiste_7_10", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_10"));
+        dialogueAudioMap.Add("Pianiste_7_11", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_11"));
+        dialogueAudioMap.Add("Pianiste_7_12", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_12"));
+        dialogueAudioMap.Add("Pianiste_7_13", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_13"));
+        dialogueAudioMap.Add("Pianiste_7_14", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_14"));
+        dialogueAudioMap.Add("Pianiste_7_15_beigas", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_15_beigas"));
+        dialogueAudioMap.Add("Pianiste_7_16", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_16"));
+        dialogueAudioMap.Add("Pianiste_7_17", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_17"));
+        dialogueAudioMap.Add("Pianiste_7_18", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_18"));
+        dialogueAudioMap.Add("Pianiste_7_19", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_19"));
+        dialogueAudioMap.Add("Pianiste_7_20", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_20"));
+        dialogueAudioMap.Add("Pianiste_7_21", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_21"));
+        dialogueAudioMap.Add("Pianiste_7_22", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_22"));
+        dialogueAudioMap.Add("Pianiste_7_23_V2", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_23_V2"));
+        dialogueAudioMap.Add("Pianiste_7_24", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_24"));
+        dialogueAudioMap.Add("Pianiste_7_25_V2", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_25_V2"));
+        dialogueAudioMap.Add("Pianiste_7_26", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_26"));
+        dialogueAudioMap.Add("Pianiste_7_27", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_27"));
+        dialogueAudioMap.Add("Pianiste_7_28", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_28"));
+        dialogueAudioMap.Add("Pianiste_7_29", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_29"));
+        dialogueAudioMap.Add("Pianiste_7_30", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_30"));
+        dialogueAudioMap.Add("Pianiste_7_31", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_31"));
+        dialogueAudioMap.Add("Pianiste_7_32_Piekritibeigas", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_32_Piekritibeigas"));
+        dialogueAudioMap.Add("Pianiste_7_33_Nepiekritibeigas", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_33_Nepiekritibeigas"));
+        dialogueAudioMap.Add("Pianiste_7_beigas2", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_beigas2"));
 
-        dialogueAudioMap.Add("Pianiste_7_Neg_01", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Neg_01"));
-        dialogueAudioMap.Add("Pianiste_7_Neg_02", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Neg_02"));
+        dialogueAudioMap.Add("Pianiste_7_OBJ_Cimd_1", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_OBJ_Cimd_1"));
+        dialogueAudioMap.Add("Pianiste_7_OBJ_Cimd_2", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_OBJ_Cimd_2"));
+        dialogueAudioMap.Add("Pianiste_7_OBJ_Cimd_3", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_OBJ_Cimd_3"));
 
-        dialogueAudioMap.Add("Pianiste_7_GO_00", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_00"));
-        dialogueAudioMap.Add("Pianiste_7_GO_01", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_01"));
-        dialogueAudioMap.Add("Pianiste_7_GO_02", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_02"));
-        dialogueAudioMap.Add("Pianiste_7_GO_03", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_03"));
-        dialogueAudioMap.Add("Pianiste_7_GO_04", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_04"));
-        dialogueAudioMap.Add("Pianiste_7_GO_05", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_05"));
-        dialogueAudioMap.Add("Pianiste_7_GO_06", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_06"));
-        dialogueAudioMap.Add("Pianiste_7_GO_07", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_07"));
-        dialogueAudioMap.Add("Pianiste_7_GO_08", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_GO_08"));
-
-        dialogueAudioMap.Add("Pianiste_7_Cimds_00", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Cimds_00"));
-        dialogueAudioMap.Add("Pianiste_7_Cimds_01", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Cimds_01"));
-        dialogueAudioMap.Add("Pianiste_7_Cimds_02", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Cimds_02"));
-
-        dialogueAudioMap.Add("Pianiste_7_Ziedi_00", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Ziedi_00"));
-        dialogueAudioMap.Add("Pianiste_7_Ziedi_01", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Ziedi_01"));
-        dialogueAudioMap.Add("Pianiste_7_Ziedi_02", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_Ziedi_02"));
+        dialogueAudioMap.Add("Pianiste_7_OBJ_Zied_1", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_OBJ_Zied_1"));
+        dialogueAudioMap.Add("Pianiste_7_OBJ_Zied_2", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_OBJ_Zied_2"));
+        dialogueAudioMap.Add("Pianiste_7_OBJ_Zied_3", Resources.Load<AudioClip>("Audio/PianisteAudio/Pianiste_7_OBJ_Zied_3"));
 
         dialogueAudioMap.Add("humming", Resources.Load<AudioClip>("Audio/PianisteAudio/humming"));
-
-
-
-
-
-
-
 
 
 

@@ -1,1 +1,1 @@
-﻿{"inkVersion":21,"root":[["^Ughh… beidz lūrēt.","\n","#","^audio:T_Bomzis_3_N_00","/#","ev","str","^Piedodiet.","/str","/ev",{"*":"0.c-0","flg":20},{"c-0":["\n",{"->":"0.g-0"},{"#f":5}],"g-0":["done",{"#f":5}]}],"done",{"#f":1}],"listDefs":{}}
+﻿{"inkVersion":21,"root":[["^Ughh... Beidz lūrēt.","\n","#","^audio:Bomzis_3_Loop","/#",{"->":"A1"},["done",{"#f":5,"#n":"g-0"}],null],"done",{"A1":[["ev","str","^Piedodiet.","/str","/ev",{"*":".^.c-0","flg":4},{"c-0":["\n","end",{"#f":5}]}],{"#f":1}],"#f":1}],"listDefs":{}}

@@ -1,26 +1,24 @@
-Man nevajag tavus dokumentus...
-#audio:Panks_6_Etalons_00
+Ko tu man bāz savus dokumentus.
+#audio:Panks_6_OBJ_ETAL_1
+    -> A1
 
-      + [Man liekas, šis ir tavs.]
+
+=== A1 ===
++ [Man liekas, šis ir tavs.]
 Aaa... M-jā. Tad tomēr pazaudēju.
-#audio:Panks_6_Etalons_01
+#audio:Panks_6_OBJ_ETAL_2
+    -> A2
 
-    -> A
 
-
-=== A ===
-
-+ [Tepat mētājās.]
-Man jau ir jauna karte, bet ok. Jāizdomā, ko ar viņu tagad darīt.
-#audio:Panks_6_Etalons_02
-    -> END
-
+=== A2 ===
 + [Tu viņu meklēji?]
-Man jau ir jauna karte, bet ok. Jāizdomā, ko ar viņu tagad darīt.
-#audio:Panks_6_Etalons_02
+Man jau ir jauna karte, bet ok. 
+Paldies… laikam
+#audio:Panks_6_OBJ_ETAL_3
     -> END
     
 + [...Tevi sauc Pēteris?]
-Nē.
-#audio:Panks_6_Etalons_03
+Nē. Mani sen tā vairs nesauc. 
+Tas vārds nepieder man.
+#audio:Panks_6_OBJ_ETAL_4
     -> END

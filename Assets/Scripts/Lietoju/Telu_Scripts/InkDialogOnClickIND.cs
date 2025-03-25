@@ -259,177 +259,181 @@ void EndDialogue()
         dialogueAudioMap = new Dictionary<string, AudioClip>();
 
         // Example mapping (replace with your actual mappings)
-        dialogueAudioMap.Add("Rainis_1_N_00", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_00"));
-        dialogueAudioMap.Add("Rainis_1_N_01", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_01"));
-        dialogueAudioMap.Add("Rainis_1_N_03", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_03"));
-        dialogueAudioMap.Add("Rainis_1_N_04", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_04"));
-        dialogueAudioMap.Add("Rainis_1_N_05", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_05"));
-        dialogueAudioMap.Add("Rainis_1_N_06", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_06"));
-        dialogueAudioMap.Add("Rainis_1_N_07", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_07"));
-        dialogueAudioMap.Add("Rainis_1_N_08", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_08"));
-        dialogueAudioMap.Add("Rainis_1_N_09", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_09"));
-        dialogueAudioMap.Add("Rainis_1_N_10", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_10"));
-        dialogueAudioMap.Add("Rainis_1_N_11", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_11"));
-        dialogueAudioMap.Add("Rainis_1_N_12", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_12"));
-        dialogueAudioMap.Add("Rainis_1_N_13", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_13"));
-        dialogueAudioMap.Add("Rainis_1_N_14", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_14"));
-        dialogueAudioMap.Add("Rainis_1_N_15", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_15"));
-        dialogueAudioMap.Add("Rainis_1_N_16",Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_16"));
-        dialogueAudioMap.Add("Rainis_1_N_17",Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_N_17"));
+        
+        dialogueAudioMap.Add("Rainis_1_00", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_00"));
+        dialogueAudioMap.Add("Rainis_1_01", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_01"));
+        dialogueAudioMap.Add("Rainis_1_02", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_02"));
+        dialogueAudioMap.Add("Rainis_1_03", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_03"));
+        dialogueAudioMap.Add("Rainis_1_04", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_04"));
+        dialogueAudioMap.Add("Rainis_1_05", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_05"));
+        dialogueAudioMap.Add("Rainis_1_06", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_06"));
+        dialogueAudioMap.Add("Rainis_1_07", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_07"));
+        dialogueAudioMap.Add("Rainis_1_08", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_08"));
+        dialogueAudioMap.Add("Rainis_1_09", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_09"));
+        dialogueAudioMap.Add("Rainis_1_10", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_10"));
+        dialogueAudioMap.Add("Rainis_1_11", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_11"));
+        dialogueAudioMap.Add("Rainis_1_12", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_12"));
+        dialogueAudioMap.Add("Rainis_1_13", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_13"));
+        dialogueAudioMap.Add("Rainis_1_14", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_14"));
+        dialogueAudioMap.Add("Rainis_1_15", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_15"));
+        dialogueAudioMap.Add("Rainis_1_16", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_16"));
+        dialogueAudioMap.Add("Rainis_1_17", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_17"));
+        dialogueAudioMap.Add("Rainis_1_18", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_18"));
+        dialogueAudioMap.Add("Rainis_1_19", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_19"));
+        dialogueAudioMap.Add("Rainis_1_20", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_20"));
+        dialogueAudioMap.Add("Rainis_1_21", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_21"));
+        dialogueAudioMap.Add("Rainis_1_22", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_22"));
+        dialogueAudioMap.Add("Rainis_1_23", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_23"));
+        dialogueAudioMap.Add("Rainis_1_24", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_24"));
+        dialogueAudioMap.Add("Rainis_1_25", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_25"));
+        dialogueAudioMap.Add("Rainis_1_26", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_26"));
+        dialogueAudioMap.Add("Rainis_1_27", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_27"));
+        dialogueAudioMap.Add("Rainis_1_28", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_28"));
+        dialogueAudioMap.Add("Rainis_1_29", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_29"));
+        dialogueAudioMap.Add("Rainis_1_30", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_30"));
+        dialogueAudioMap.Add("Rainis_1_31", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_31"));
+        dialogueAudioMap.Add("Rainis_1_32", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_32"));
+        dialogueAudioMap.Add("Rainis_1_33_beigas", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_33_beigas"));
 
+        dialogueAudioMap.Add("Rainis_1_OBJ_Cepums_1", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_OBJ_Cepums_1"));
+        dialogueAudioMap.Add("Rainis_1_OBJ_Cepums_2", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_OBJ_Cepums_2"));
+
+        dialogueAudioMap.Add("Rainis_1_Loop_1", Resources.Load<AudioClip>("Audio/RainisAudio/Rainis_1_Loop_1"));
 
        //priesteris
-       
-        dialogueAudioMap.Add("Atkal_Priesteris_2_N_000", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_000"));
-        dialogueAudioMap.Add("Atkal_Priesteris_2_N_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_00"));
-        dialogueAudioMap.Add("Atkal_Priesteris_2_N_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_01"));
-        dialogueAudioMap.Add("Atkal_Priesteris_2_N_02", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_02"));
-        dialogueAudioMap.Add("Atkal_Priesteris_2_N_03", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_03"));
-        dialogueAudioMap.Add("Atkal_Priesteris_2_N_04", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_04"));
-        dialogueAudioMap.Add("Atkal_Priesteris_2_N_05", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_05"));
-        dialogueAudioMap.Add("Atkal_Priesteris_2_N_06", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_06"));
-        dialogueAudioMap.Add("Atkal_Priesteris_2_N_07", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_07"));
-        dialogueAudioMap.Add("Atkal_Priesteris_2_N_08", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_08"));
-        dialogueAudioMap.Add("Atkal_Priesteris_2_N_09", Resources.Load<AudioClip>("Audio/PriesterisAudio/Atkal_Priesteris_2_N_09"));
 
-        dialogueAudioMap.Add("Priesteris_2_N_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_00"));
-        dialogueAudioMap.Add("Priesteris_2_N_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_01"));
-        dialogueAudioMap.Add("Priesteris_2_N_03", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_03"));
-        dialogueAudioMap.Add("Priesteris_2_N_04", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_04"));
-        dialogueAudioMap.Add("Priesteris_2_N_05", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_05"));
-        dialogueAudioMap.Add("Priesteris_2_N_06", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_06"));
-        dialogueAudioMap.Add("Priesteris_2_N_07", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_07"));
-        dialogueAudioMap.Add("Priesteris_2_N_08", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_08"));
-        dialogueAudioMap.Add("Priesteris_2_N_09", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_09"));
-        dialogueAudioMap.Add("Priesteris_2_N_10", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_10"));
-        dialogueAudioMap.Add("Priesteris_2_N_11", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_11"));
-        dialogueAudioMap.Add("Priesteris_2_N_12", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_12"));
-        dialogueAudioMap.Add("Priesteris_2_N_13", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_13"));
-        dialogueAudioMap.Add("Priesteris_2_N_14", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_14"));
-        dialogueAudioMap.Add("Priesteris_2_N_15", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_15"));
-        dialogueAudioMap.Add("Priesteris_2_N_16", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_16"));
-        dialogueAudioMap.Add("Priesteris_2_N_17", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_17"));
-        dialogueAudioMap.Add("Priesteris_2_N_18", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_18"));
-        dialogueAudioMap.Add("Priesteris_2_N_19", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_19"));
-        dialogueAudioMap.Add("Priesteris_2_N_20", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_20"));
-        dialogueAudioMap.Add("Priesteris_2_N_21", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_21"));
-        dialogueAudioMap.Add("Priesteris_2_N_22", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_22"));
-        dialogueAudioMap.Add("Priesteris_2_N_23", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_23"));
-        dialogueAudioMap.Add("Priesteris_2_N_24", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_24"));
-        dialogueAudioMap.Add("Priesteris_2_N_25", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_25"));
-        dialogueAudioMap.Add("Priesteris_2_N_26", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_26"));
-        dialogueAudioMap.Add("Priesteris_2_N_27", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_27"));
+        dialogueAudioMap.Add("Priesteris_2_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_00"));
+        dialogueAudioMap.Add("Priesteris_2_001", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_001"));
+        dialogueAudioMap.Add("Priesteris_2_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_01"));
+        dialogueAudioMap.Add("Priesteris_2_02_beigas1", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_02_beigas1"));
+        dialogueAudioMap.Add("Priesteris_2_03", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_03"));
+        dialogueAudioMap.Add("Priesteris_2_04", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_04"));
+        dialogueAudioMap.Add("Priesteris_2_05", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_05"));
+        dialogueAudioMap.Add("Priesteris_2_06", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_06"));
+        dialogueAudioMap.Add("Priesteris_2_07", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_07"));
+        dialogueAudioMap.Add("Priesteris_2_08", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_08"));
+        dialogueAudioMap.Add("Priesteris_2_09", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_09"));
+        dialogueAudioMap.Add("Priesteris_2_10", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_10"));
+        dialogueAudioMap.Add("Priesteris_2_11", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_11"));
+        dialogueAudioMap.Add("Priesteris_2_12", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_12"));
+        dialogueAudioMap.Add("Priesteris_2_13", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_13"));
+        dialogueAudioMap.Add("Priesteris_2_14", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_14"));
+        dialogueAudioMap.Add("Priesteris_2_15", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_15"));
+        dialogueAudioMap.Add("Priesteris_2_16", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_16"));
+        dialogueAudioMap.Add("Priesteris_2_17", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_17"));
+        dialogueAudioMap.Add("Priesteris_2_18", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_18"));
+        dialogueAudioMap.Add("Priesteris_2_19", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_19"));
+        dialogueAudioMap.Add("Priesteris_2_20", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_20"));
+        dialogueAudioMap.Add("Priesteris_2_21", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_21"));
+        dialogueAudioMap.Add("Priesteris_2_22", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_22"));
+        dialogueAudioMap.Add("Priesteris_2_23", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_23"));
+        dialogueAudioMap.Add("Priesteris_2_24", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_24"));
+        dialogueAudioMap.Add("Priesteris_2_25", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_25"));
+        dialogueAudioMap.Add("Priesteris_2_26", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_26"));
+        dialogueAudioMap.Add("Priesteris_2_27_beigas", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_27_beigas"));
 
-        dialogueAudioMap.Add("Priesteris_2_N_Aploksne", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_N_Aploksne"));
-        dialogueAudioMap.Add("Priesteris_2_Piezime_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Piezime_00"));
-        dialogueAudioMap.Add("Priesteris_2_Piezime_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Piezime_01"));
-        dialogueAudioMap.Add("Priesteris_2_Piezime_02", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Piezime_02"));
+        dialogueAudioMap.Add("Priesteris_2_OBJ_PIEZ_1", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_OBJ_PIEZ_1"));
+        dialogueAudioMap.Add("Priesteris_2_OBJ_PIEZ_2", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_OBJ_PIEZ_2"));
+        dialogueAudioMap.Add("Priesteris_2_OBJ_PIEZ_3", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_OBJ_PIEZ_3"));
 
-        dialogueAudioMap.Add("T_Atkal_Priesteris_2_N_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Atkal_Priesteris_2_N_00"));
-        dialogueAudioMap.Add("T_Atkal_Priesteris_2_N_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Atkal_Priesteris_2_N_01"));
-        dialogueAudioMap.Add("T_Atkal_Priesteris_2_N_02", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Atkal_Priesteris_2_N_02"));
+        dialogueAudioMap.Add("Priesteris_2_OBJ_KAK_1", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_OBJ_KAK_1"));
+        dialogueAudioMap.Add("Priesteris_2_OBJ_KAK_2", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_OBJ_KAK_2"));
+        dialogueAudioMap.Add("Priesteris_2_OBJ_KAK_3", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_OBJ_KAK_3"));
+        dialogueAudioMap.Add("Priesteris_2_OBJ_KAK_4", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_OBJ_KAK_4"));
+        dialogueAudioMap.Add("Priesteris_2_OBJ_KAK_5", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_OBJ_KAK_5"));
+        dialogueAudioMap.Add("Priesteris_2_OBJ_KAK_6", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_OBJ_KAK_6"));
 
-        dialogueAudioMap.Add("T_Priesteris_2_N_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Priesteris_2_N_00"));
-        dialogueAudioMap.Add("T_Priesteris_2_N_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Priesteris_2_N_01"));
-        dialogueAudioMap.Add("T_Priesteris_2_N_02", Resources.Load<AudioClip>("Audio/PriesterisAudio/T_Priesteris_2_N_02"));
-
-        dialogueAudioMap.Add("Priesteris_2_Kaklarota_000", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Kaklarota_000"));
-        dialogueAudioMap.Add("Priesteris_2_Kaklarota_00", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Kaklarota_00"));
-        dialogueAudioMap.Add("Priesteris_2_Kaklarota_01", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Kaklarota_01"));
+        dialogueAudioMap.Add("Priesteris_2_Loop_1", Resources.Load<AudioClip>("Audio/PriesterisAudio/Priesteris_2_Loop_1"));
 
         
 
 //bomzis 
     
-        dialogueAudioMap.Add("Bomzis_3_Aploksne_00", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_Aploksne_00"));
-        dialogueAudioMap.Add("Bomzis_3_Aploksne_01", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_Aploksne_01"));
-        dialogueAudioMap.Add("Bomzis_3_Aploksne_02", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_Aploksne_02"));
+        dialogueAudioMap.Add("Bomzis_3_00", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_00"));
+        dialogueAudioMap.Add("Bomzis_3_01", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_01"));
+        dialogueAudioMap.Add("Bomzis_3_02", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_02"));
+        dialogueAudioMap.Add("Bomzis_3_03", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_03"));
+        dialogueAudioMap.Add("Bomzis_3_04", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_04"));
+        dialogueAudioMap.Add("Bomzis_3_04_V2", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_04_V2"));
+        dialogueAudioMap.Add("Bomzis_3_05", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_05"));
+        dialogueAudioMap.Add("Bomzis_3_06_beigas1", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_06_beigas1"));
+        dialogueAudioMap.Add("Bomzis_3_07", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_07"));
+        dialogueAudioMap.Add("Bomzis_3_08", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_08"));
+        dialogueAudioMap.Add("Bomzis_3_09", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_09"));
+        dialogueAudioMap.Add("Bomzis_3_09_V2", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_09_V2"));
+        dialogueAudioMap.Add("Bomzis_3_10", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_10"));
+        dialogueAudioMap.Add("Bomzis_3_11", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_11"));
+        dialogueAudioMap.Add("Bomzis_3_12", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_12"));
+        dialogueAudioMap.Add("Bomzis_3_13", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_13"));
+        dialogueAudioMap.Add("Bomzis_3_13_V2", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_13_V2"));
+        dialogueAudioMap.Add("Bomzis_3_14", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_14"));
+        dialogueAudioMap.Add("Bomzis_3_15", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_15"));
+        dialogueAudioMap.Add("Bomzis_3_16", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_16"));
+        dialogueAudioMap.Add("Bomzis_3_17_beigas2", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_17_beigas2"));
+        dialogueAudioMap.Add("Bomzis_3_18", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_18"));
+        dialogueAudioMap.Add("Bomzis_3_19", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_19"));
+        dialogueAudioMap.Add("Bomzis_3_20", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_20"));
+        dialogueAudioMap.Add("Bomzis_3_21", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_21"));
+        dialogueAudioMap.Add("Bomzis_3_22_Piekritibeigas", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_22_Piekritibeigas"));
+        dialogueAudioMap.Add("Bomzis_3_22_Piekritibeigas_V2", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_22_Piekritibeigas_V2"));
+        dialogueAudioMap.Add("Bomzis_3_23_Nepiekritibeigas", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_23_Nepiekritibeigas"));
 
+        dialogueAudioMap.Add("Bomzis_3_OBJ_APL_1", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_OBJ_APL_1"));
+        dialogueAudioMap.Add("Bomzis_3_OBJ_APL_2", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_OBJ_APL_2"));
+        dialogueAudioMap.Add("Bomzis_3_OBJ_APL_3", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_OBJ_APL_3"));
 
-        dialogueAudioMap.Add("Bomzis_3_N_00", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_00"));
-        dialogueAudioMap.Add("Bomzis_3_N_01", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_01"));
-        dialogueAudioMap.Add("Bomzis_3_N_02", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_02"));
-        dialogueAudioMap.Add("Bomzis_3_N_03", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_03"));
-        dialogueAudioMap.Add("Bomzis_3_N_04", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_04"));
-        dialogueAudioMap.Add("Bomzis_3_N_05", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_05"));
-        dialogueAudioMap.Add("Bomzis_3_N_06", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_06"));
-        dialogueAudioMap.Add("Bomzis_3_N_07", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_07"));
-        dialogueAudioMap.Add("Bomzis_3_N_08", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_08"));
-        dialogueAudioMap.Add("Bomzis_3_N_09", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_09"));
-        dialogueAudioMap.Add("Bomzis_3_N_10", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_10"));
-        dialogueAudioMap.Add("Bomzis_3_N_11", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_11"));
-        dialogueAudioMap.Add("Bomzis_3_N_12", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_12"));
-        dialogueAudioMap.Add("Bomzis_3_N_13", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_13"));
-        dialogueAudioMap.Add("Bomzis_3_N_14", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_14"));
-        dialogueAudioMap.Add("Bomzis_3_N_15", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_15"));
-        dialogueAudioMap.Add("Bomzis_3_N_16", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_16"));
-        dialogueAudioMap.Add("Bomzis_3_N_17", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_17"));
-        dialogueAudioMap.Add("Bomzis_3_N_18", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_18"));
-        dialogueAudioMap.Add("Bomzis_3_N_19", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_19"));
-        dialogueAudioMap.Add("Bomzis_3_N_20", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_20"));
-        dialogueAudioMap.Add("Bomzis_3_N_21", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_21"));
-        dialogueAudioMap.Add("Bomzis_3_N_23", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_23"));
-        dialogueAudioMap.Add("Bomzis_3_N_24", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_24"));
-        dialogueAudioMap.Add("Bomzis_3_N_25", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_25"));
-        dialogueAudioMap.Add("Bomzis_3_N_26", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_26"));
-        dialogueAudioMap.Add("Bomzis_3_N_27", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_27"));
-        dialogueAudioMap.Add("Bomzis_3_N_28", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_28"));
-        dialogueAudioMap.Add("Bomzis_3_N_29", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_29"));
-        dialogueAudioMap.Add("Bomzis_3_N_30", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_30"));
-        dialogueAudioMap.Add("Bomzis_3_N_31", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_31"));
-        dialogueAudioMap.Add("Bomzis_3_N_32", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_32"));
-        dialogueAudioMap.Add("Bomzis_3_N_33", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_33"));
-        dialogueAudioMap.Add("Bomzis_3_N_34", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_34"));
-        dialogueAudioMap.Add("Bomzis_3_N_35", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_35"));
-        dialogueAudioMap.Add("Bomzis_3_N_36", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_36"));
-        dialogueAudioMap.Add("Bomzis_3_N_37", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_N_37"));
-
-        dialogueAudioMap.Add("T_Bomzis_3_N_00", Resources.Load<AudioClip>("Audio/BomzisAudio/T_Bomzis_3_N_00"));
-        dialogueAudioMap.Add("T_Bomzis_3_N_01", Resources.Load<AudioClip>("Audio/BomzisAudio/T_Bomzis_3_N_01"));
-        dialogueAudioMap.Add("T_Bomzis_3_N_02", Resources.Load<AudioClip>("Audio/BomzisAudio/T_Bomzis_3_N_02"));
-        dialogueAudioMap.Add("T_Bomzis_3_N_03", Resources.Load<AudioClip>("Audio/BomzisAudio/T_Bomzis_3_N_03"));
+        dialogueAudioMap.Add("Bomzis_3_Loop", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_Loop"));
+        dialogueAudioMap.Add("Bomzis_3_Loop_V2", Resources.Load<AudioClip>("Audio/BomzisAudio/Bomzis_3_Loop_V2"));
+    
 
 //makslinieks
 
-        dialogueAudioMap.Add("Makslinieks_4_N_00", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_00"));
-        dialogueAudioMap.Add("Makslinieks_4_N_01", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_01"));
-        dialogueAudioMap.Add("Makslinieks_4_N_02", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_02"));
-        dialogueAudioMap.Add("Makslinieks_4_N_03", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_03"));
-        dialogueAudioMap.Add("Makslinieks_4_N_04", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_04"));
-        dialogueAudioMap.Add("Makslinieks_4_N_05", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_05"));
-        dialogueAudioMap.Add("Makslinieks_4_N_06", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_06"));
-        dialogueAudioMap.Add("Makslinieks_4_N_07", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_07"));
-        dialogueAudioMap.Add("Makslinieks_4_N_08", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_08"));
-        dialogueAudioMap.Add("Makslinieks_4_N_09", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_09"));
-        dialogueAudioMap.Add("Makslinieks_4_N_10", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_10"));
-        dialogueAudioMap.Add("Makslinieks_4_N_11", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_11"));
-        dialogueAudioMap.Add("Makslinieks_4_N_11_1", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_11_1"));
-        dialogueAudioMap.Add("Makslinieks_4_N_12", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_12"));
-        dialogueAudioMap.Add("Makslinieks_4_N_13", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_13"));
-        dialogueAudioMap.Add("Makslinieks_4_N_14", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_14"));
-        dialogueAudioMap.Add("Makslinieks_4_N_14_1", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_14_1"));
-        dialogueAudioMap.Add("Makslinieks_4_N_15", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_15"));
-        dialogueAudioMap.Add("Makslinieks_4_N_16", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_16"));
-        dialogueAudioMap.Add("Makslinieks_4_N_17", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_17"));
-        dialogueAudioMap.Add("Makslinieks_4_N_17_1", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_17_1"));
-        dialogueAudioMap.Add("Makslinieks_4_N_18", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_18"));
-        dialogueAudioMap.Add("Makslinieks_4_N_19", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_19"));
-        dialogueAudioMap.Add("Makslinieks_4_N_20", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_20"));
-        dialogueAudioMap.Add("Makslinieks_4_N_21", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_21"));
-        dialogueAudioMap.Add("Makslinieks_4_N_22", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_22"));
-        dialogueAudioMap.Add("Makslinieks_4_N_23", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_23"));
-        dialogueAudioMap.Add("Makslinieks_4_N_24", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_24"));
-        dialogueAudioMap.Add("Makslinieks_4_N_25", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_25"));
-        dialogueAudioMap.Add("Makslinieks_4_N_26", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_26"));
-        dialogueAudioMap.Add("Makslinieks_4_N_26_1", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_26_1"));
-        dialogueAudioMap.Add("Makslinieks_4_N_27", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_N_27"));
-        
-        dialogueAudioMap.Add("Makslinieks_4_NEG_00", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_NEG_00"));
-        dialogueAudioMap.Add("Makslinieks_4_NEG_01", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_NEG_01"));
-        dialogueAudioMap.Add("Makslinieks_4_NEG_02", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_NEG_02"));
-        dialogueAudioMap.Add("Makslinieks_4_NEG_03", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_NEG_03"));
-        dialogueAudioMap.Add("T_Makslinieks_4_N_00", Resources.Load<AudioClip>("Audio/MakslinieksAudio/T_Makslinieks_4_N_00"));
+        dialogueAudioMap.Add("Makslinieks_4_00", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_00"));
+        dialogueAudioMap.Add("Makslinieks_4_01", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_01"));
+        dialogueAudioMap.Add("Makslinieks_4_02", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_02"));
+        dialogueAudioMap.Add("Makslinieks_4_03", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_03"));
+        dialogueAudioMap.Add("Makslinieks_4_04", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_04"));
+        dialogueAudioMap.Add("Makslinieks_4_05", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_05"));
+        dialogueAudioMap.Add("Makslinieks_4_06", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_06"));
+        dialogueAudioMap.Add("Makslinieks_4_07", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_07"));
+        dialogueAudioMap.Add("Makslinieks_4_08", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_08"));
+        dialogueAudioMap.Add("Makslinieks_4_09", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_09"));
+        dialogueAudioMap.Add("Makslinieks_4_10_beigas1", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_10_beigas1"));
+        dialogueAudioMap.Add("Makslinieks_4_11", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_11"));
+        dialogueAudioMap.Add("Makslinieks_4_12", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_12"));
+        dialogueAudioMap.Add("Makslinieks_4_13", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_13"));
+        dialogueAudioMap.Add("Makslinieks_4_14", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_14"));
+        dialogueAudioMap.Add("Makslinieks_4_15", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_15"));
+        dialogueAudioMap.Add("Makslinieks_4_16", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_16"));
+        dialogueAudioMap.Add("Makslinieks_4_17", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_17"));
+        dialogueAudioMap.Add("Makslinieks_4_18", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_18"));
+        dialogueAudioMap.Add("Makslinieks_4_19", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_19"));
+        dialogueAudioMap.Add("Makslinieks_4_20", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_20"));
+        dialogueAudioMap.Add("Makslinieks_4_21", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_21"));
+        dialogueAudioMap.Add("Makslinieks_4_22", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_22"));
+        dialogueAudioMap.Add("Makslinieks_4_23", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_23"));
+        dialogueAudioMap.Add("Makslinieks_4_24", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_24"));
+        dialogueAudioMap.Add("Makslinieks_4_25", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_25"));
+        dialogueAudioMap.Add("Makslinieks_4_26", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_26"));
+        dialogueAudioMap.Add("Makslinieks_4_27", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_27"));
+        dialogueAudioMap.Add("Makslinieks_4_28_Piekritibeigas", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_28_Piekritibeigas"));
+        dialogueAudioMap.Add("Makslinieks_4_29_Nepiekritibeigas", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_29_Nepiekritibeigas"));
 
+        dialogueAudioMap.Add("Makslinieks_4_OBJ_ZIMEJ_01", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_OBJ_ZIMEJ_01"));
+        dialogueAudioMap.Add("Makslinieks_4_OBJ_ZIMEJ_02", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_OBJ_ZIMEJ_02"));
+        dialogueAudioMap.Add("Makslinieks_4_OBJ_ZIMEJ_03", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_OBJ_ZIMEJ_03"));
+
+        dialogueAudioMap.Add("Makslinieks_4_OBJ_ZIMUL_01", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_OBJ_ZIMUL_01"));
+        dialogueAudioMap.Add("Makslinieks_4_OBJ_ZIMUL_02", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_OBJ_ZIMUL_02"));
+        dialogueAudioMap.Add("Makslinieks_4_OBJ_ZIMUL_03", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_OBJ_ZIMUL_03"));
+        dialogueAudioMap.Add("Makslinieks_4_OBJ_ZIMUL_04", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_OBJ_ZIMUL_04"));
+        dialogueAudioMap.Add("Makslinieks_4_OBJ_ZIMUL_05", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_OBJ_ZIMUL_05"));
+        dialogueAudioMap.Add("Makslinieks_4_OBJ_ZIMUL_06", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_OBJ_ZIMUL_06"));
+        dialogueAudioMap.Add("Makslinieks_4_OBJ_ZIMUL_07", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_OBJ_ZIMUL_07"));
+        dialogueAudioMap.Add("Makslinieks_4_OBJ_ZIMUL_08", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_OBJ_ZIMUL_08"));
+
+        dialogueAudioMap.Add("Makslinieks_4_Loop_1", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_Loop_1"));
+        dialogueAudioMap.Add("Makslinieks_4_Loop_2", Resources.Load<AudioClip>("Audio/MakslinieksAudio/Makslinieks_4_Loop_2"));
 
 
 //tante
@@ -471,38 +475,104 @@ void EndDialogue()
         dialogueAudioMap.Add("Tante_5_OBJPAP_03", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_OBJPAP_03"));
         dialogueAudioMap.Add("Tante_5_OBJPAP_04", Resources.Load<AudioClip>("Audio/TanteAudio/Tante_5_OBJPAP_04"));
         
+//panks
 
-        dialogueAudioMap.Add("Panks_5_N_00", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_00"));
-        dialogueAudioMap.Add("Panks_5_N_01", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_01"));
-        dialogueAudioMap.Add("Panks_5_N_02", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_02"));
-        dialogueAudioMap.Add("Panks_5_N_03", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_03"));
-        dialogueAudioMap.Add("Panks_5_N_04", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_04"));
-        dialogueAudioMap.Add("Panks_5_N_05", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_05"));
-        dialogueAudioMap.Add("Panks_5_N_06", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_06"));
-        dialogueAudioMap.Add("Panks_5_N_07", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_07"));
-        dialogueAudioMap.Add("Panks_5_N_08", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_08"));
-        dialogueAudioMap.Add("Panks_5_N_09", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_09"));
-        dialogueAudioMap.Add("Panks_5_N_10", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_10"));
-        dialogueAudioMap.Add("Panks_5_N_11", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_11"));
-        dialogueAudioMap.Add("Panks_5_N_12", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_12"));
-        dialogueAudioMap.Add("Panks_5_N_13", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_13"));
-        dialogueAudioMap.Add("Panks_5_N_14", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_14"));
-        dialogueAudioMap.Add("Panks_5_N_15", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_15"));
-        dialogueAudioMap.Add("Panks_5_N_16", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_16"));
-        dialogueAudioMap.Add("Panks_5_N_17", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_17"));
-        dialogueAudioMap.Add("Panks_5_N_18", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_N_18"));
-        dialogueAudioMap.Add("Panks_5_Neg_19", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_Neg_19"));
-        dialogueAudioMap.Add("Panks_5_Neg_20", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_Neg_20"));
-        dialogueAudioMap.Add("Panks_5_Neg_21", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_Neg_21"));
-        dialogueAudioMap.Add("Panks_5_Neg_22", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_Neg_22"));
-        dialogueAudioMap.Add("Panks_5_Neg_23", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_Neg_23"));
-        dialogueAudioMap.Add("Panks_5_Neg_24", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_Neg_24"));
-        dialogueAudioMap.Add("Panks_5_Neg_25", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_5_Neg_25"));
-        dialogueAudioMap.Add("T_Panks_5_N_00", Resources.Load<AudioClip>("Audio/PanksAudio/T_Panks_5_N_00"));
-        dialogueAudioMap.Add("T_Panks_5_N_01", Resources.Load<AudioClip>("Audio/PanksAudio/T_Panks_5_N_01"));
-        dialogueAudioMap.Add("T_Panks_5_N_02", Resources.Load<AudioClip>("Audio/PanksAudio/T_Panks_5_N_02"));
+        dialogueAudioMap.Add("Panks_6_00", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_00"));
+        dialogueAudioMap.Add("Panks_6_01", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_01"));
+        dialogueAudioMap.Add("Panks_6_02", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_02"));
+        dialogueAudioMap.Add("Panks_6_03", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_03"));
+        dialogueAudioMap.Add("Panks_6_04", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_04"));
+        dialogueAudioMap.Add("Panks_6_05", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_05"));
+        dialogueAudioMap.Add("Panks_6_06_beigas", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_06_beigas"));
+        dialogueAudioMap.Add("Panks_6_07", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_07"));
+        dialogueAudioMap.Add("Panks_6_08", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_08"));
+        dialogueAudioMap.Add("Panks_6_09", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_09"));
+        dialogueAudioMap.Add("Panks_6_10", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_10"));
+        dialogueAudioMap.Add("Panks_6_11", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_11"));
+        dialogueAudioMap.Add("Panks_6_12", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_12"));
+        dialogueAudioMap.Add("Panks_6_13", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_13"));
+        dialogueAudioMap.Add("Panks_6_14", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_14"));
+        dialogueAudioMap.Add("Panks_6_15", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_15"));
+        dialogueAudioMap.Add("Panks_6_16", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_16"));
+        dialogueAudioMap.Add("Panks_6_17", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_17"));
+        dialogueAudioMap.Add("Panks_6_18", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_18"));
+        dialogueAudioMap.Add("Panks_6_19", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_19"));
+        dialogueAudioMap.Add("Panks_6_20", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_20"));
+        dialogueAudioMap.Add("Panks_6_20_V2", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_20_V2"));
+        dialogueAudioMap.Add("Panks_6_21", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_21"));
+        dialogueAudioMap.Add("Panks_6_22", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_22"));
+        dialogueAudioMap.Add("Panks_6_23", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_23"));
+        dialogueAudioMap.Add("Panks_6_24", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_24"));
+        dialogueAudioMap.Add("Panks_6_24_V2", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_24_V2"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas"));
+
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_1", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_1"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_2", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_2"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_3", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_3"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_4", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_4"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_5", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_5"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_6", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_6"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_7", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_7"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_8", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_8"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_9", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_9"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_10", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_10"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_11", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_11"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_12", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_12"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_13", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_13"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_14", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_14"));
+        dialogueAudioMap.Add("Panks_6_25_Nepiekritbeigas_V2_15", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_25_Nepiekritbeigas_V2_15"));
+        dialogueAudioMap.Add("Panks_6_26_Piekritbeigas", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_26_Piekritbeigas"));
+
+        dialogueAudioMap.Add("Panks_6_OBJ_PUK_1", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_OBJ_PUK_1"));
+        dialogueAudioMap.Add("Panks_6_OBJ_PUK_2", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_OBJ_PUK_2"));
+        dialogueAudioMap.Add("Panks_6_OBJ_PUK_3", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_OBJ_PUK_3"));
+
+        dialogueAudioMap.Add("Panks_6_OBJ_ETAL_1", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_OBJ_ETAL_1"));
+        dialogueAudioMap.Add("Panks_6_OBJ_ETAL_2", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_OBJ_ETAL_2"));
+        dialogueAudioMap.Add("Panks_6_OBJ_ETAL_3", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_OBJ_ETAL_3"));
+        dialogueAudioMap.Add("Panks_6_OBJ_ETAL_4", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_OBJ_ETAL_4"));
+
+        dialogueAudioMap.Add("Panks_6_OBJ_ROKAS_1", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_OBJ_ROKAS_1"));
+        dialogueAudioMap.Add("Panks_6_OBJ_ROKAS_2", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_OBJ_ROKAS_2"));
+        dialogueAudioMap.Add("Panks_6_OBJ_ROKAS_3", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_OBJ_ROKAS_3"));
+        dialogueAudioMap.Add("Panks_6_OBJ_ROKAS_4", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_OBJ_ROKAS_4"));
+
+        dialogueAudioMap.Add("Panks_6_Loop_1", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_Loop_1"));
+        dialogueAudioMap.Add("Panks_6_Loop_2", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_Loop_2"));
+    
 
         dialogueAudioMap.Add("Gongs", Resources.Load<AudioClip>("Audio/PapildusSkana/Gongs"));
+
+
+        // Muris
+
+        dialogueAudioMap.Add("Muris_0_s_01", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_01"));
+        dialogueAudioMap.Add("Muris_0_s_02", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_02"));
+        dialogueAudioMap.Add("Muris_0_s_03", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_03"));
+        dialogueAudioMap.Add("Muris_0_s_04", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_04"));
+        dialogueAudioMap.Add("Muris_0_s_05", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_05"));
+        dialogueAudioMap.Add("Muris_0_s_06", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_06"));
+        dialogueAudioMap.Add("Muris_0_s_07", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_07"));
+        dialogueAudioMap.Add("Muris_0_s_08", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_08"));
+        dialogueAudioMap.Add("Muris_0_s_09", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_09"));
+        dialogueAudioMap.Add("Muris_0_s_10", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_10"));
+        dialogueAudioMap.Add("Muris_0_s_11", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_11"));
+        dialogueAudioMap.Add("Muris_0_s_12", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_12"));
+        dialogueAudioMap.Add("Muris_0_s_13", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_13"));
+        dialogueAudioMap.Add("Muris_0_s_14", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_14"));
+        dialogueAudioMap.Add("Muris_0_s_15", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_15"));
+        dialogueAudioMap.Add("Muris_0_s_16", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_16"));
+        dialogueAudioMap.Add("Muris_0_s_17", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_17"));
+        dialogueAudioMap.Add("Muris_0_s_18", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_18"));
+        dialogueAudioMap.Add("Muris_0_s_19", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_19"));
+        dialogueAudioMap.Add("Muris_0_s_20", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_20"));
+        dialogueAudioMap.Add("Muris_0_s_21", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_21"));
+        dialogueAudioMap.Add("Muris_0_s_22", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_22"));
+        dialogueAudioMap.Add("Muris_0_s_23", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_23"));
+        dialogueAudioMap.Add("Muris_0_s_24", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_24"));
+        dialogueAudioMap.Add("Muris_0_s_25", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_25"));
+        dialogueAudioMap.Add("Muris_0_s_26", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_26"));
+        dialogueAudioMap.Add("Muris_0_s_27", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_27"));
 
 
 

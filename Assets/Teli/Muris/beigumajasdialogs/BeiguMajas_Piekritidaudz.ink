@@ -1,0 +1,4 @@
+Atvērt durvis?
+
++ [Jā]
+-> END

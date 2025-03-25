@@ -1,5 +1,10 @@
-Tā glezna...nebūs mana labākā.
-#audio:T_Makslinieks_4_N_00
+Tik jocīgs tonis.
+#audio:Makslinieks_4_Loop_1
+-> A1
 
-+ [Man žēl...]  
+
+=== A1 ===
++ [Kā iet?]  
+Ar kājām, draudziņ.
+#audio:Makslinieks_4_Loop_2
     -> END

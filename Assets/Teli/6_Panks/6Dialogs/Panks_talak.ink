@@ -1,12 +1,7 @@
 Ko? 
-#audio:T_Panks_5_N_00
+#audio:Panks_6_Loop_1
 
 + [Neko.]
-    Ah... Nu labi.
-    #audio:T_Panks_5_N_01
-    -> END
-
-+ [Vienkārši domāju.]
-   Tu domā pārāk daudz...
-   #audio:T_Panks_5_N_02
+    Skaidrs.
+    #audio:Panks_6_Loop_2
     -> END

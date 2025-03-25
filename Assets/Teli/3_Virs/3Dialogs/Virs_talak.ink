@@ -1,4 +1,8 @@
-Ughh… beidz lūrēt.
-#audio:T_Bomzis_3_N_00
+Ughh... Beidz lūrēt.
+#audio:Bomzis_3_Loop
+-> A1
 
-* [Piedodiet.]
+
+=== A1 ===
++ [Piedodiet.]
+-> END
