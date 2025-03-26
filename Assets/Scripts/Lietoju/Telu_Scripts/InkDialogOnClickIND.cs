@@ -574,6 +574,56 @@ void EndDialogue()
         dialogueAudioMap.Add("Muris_0_s_26", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_26"));
         dialogueAudioMap.Add("Muris_0_s_27", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_s_27"));
 
+        dialogueAudioMap.Add("Muris_0_b_01", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_01"));
+        dialogueAudioMap.Add("Muris_0_b_02", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_02"));
+        dialogueAudioMap.Add("Muris_0_b_03", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_03"));
+        dialogueAudioMap.Add("Muris_0_b_04", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_04"));
+        dialogueAudioMap.Add("Muris_0_b_05", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_05"));
+        dialogueAudioMap.Add("Muris_0_b_06", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_06"));
+        dialogueAudioMap.Add("Muris_0_b_07", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_07"));
+        dialogueAudioMap.Add("Muris_0_b_08", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_08"));
+        dialogueAudioMap.Add("Muris_0_b_09", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_09"));
+        dialogueAudioMap.Add("Muris_0_b_10", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_10"));
+
+        dialogueAudioMap.Add("Muris_0_b_Priest_P", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Priest_P"));
+        dialogueAudioMap.Add("Muris_0_b_Priest_N", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Priest_N"));
+        dialogueAudioMap.Add("Muris_0_b_Bomz_P", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Bomz_P"));
+        dialogueAudioMap.Add("Muris_0_b_Bomz_N", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Bomz_N"));
+        dialogueAudioMap.Add("Muris_0_b_Maksl_P", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Maksl_P"));
+        dialogueAudioMap.Add("Muris_0_b_Maksl_N", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Maksl_N"));
+        dialogueAudioMap.Add("Muris_0_b_Tante_P", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Tante_P"));
+        dialogueAudioMap.Add("Muris_0_b_Tante_N", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Tante_N"));
+        dialogueAudioMap.Add("Muris_0_b_Panks_P", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Panks_P"));
+        dialogueAudioMap.Add("Muris_0_b_Panks_N", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Panks_N"));
+        dialogueAudioMap.Add("Muris_0_b_Pianiste_P", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Pianiste_P"));
+        dialogueAudioMap.Add("Muris_0_b_Pianiste_N", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_Pianiste_N"));
+        dialogueAudioMap.Add("Muris_0_b_labas_11", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_11"));
+        dialogueAudioMap.Add("Muris_0_b_labas_12", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_12"));
+        dialogueAudioMap.Add("Muris_0_b_labas_13", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_13"));
+        dialogueAudioMap.Add("Muris_0_b_labas_14", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_14"));
+        dialogueAudioMap.Add("Muris_0_b_labas_15_beigas", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_15_beigas"));
+        dialogueAudioMap.Add("Muris_0_b_labas_16_beigas", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_16_beigas"));
+        dialogueAudioMap.Add("Muris_0_b_labas_17", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_17"));
+        dialogueAudioMap.Add("Muris_0_b_labas_18", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_18"));
+        dialogueAudioMap.Add("Muris_0_b_labas_19", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_19"));
+        dialogueAudioMap.Add("Muris_0_b_labas_20", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_20"));
+        dialogueAudioMap.Add("Muris_0_b_labas_21", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_21"));
+        dialogueAudioMap.Add("Muris_0_b_labas_22_pareizs_BEIGAS", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_22_pareizs_BEIGAS"));
+        dialogueAudioMap.Add("Muris_0_b_labas_23_nepareizs_BEIGAS", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_labas_23_nepareizs_BEIGAS"));
+
+
+        dialogueAudioMap.Add("Muris_0_b_sliktas_01", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_01"));
+        dialogueAudioMap.Add("Muris_0_b_sliktas_02", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_02"));
+        dialogueAudioMap.Add("Muris_0_b_sliktas_03", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_03"));
+        dialogueAudioMap.Add("Muris_0_b_sliktas_04", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_04"));
+        dialogueAudioMap.Add("Muris_0_b_sliktas_05", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_05"));
+        dialogueAudioMap.Add("Muris_0_b_sliktas_06", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_06"));
+        dialogueAudioMap.Add("Muris_0_b_sliktas_07", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_07"));
+        dialogueAudioMap.Add("Muris_0_b_sliktas_08", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_08"));
+        dialogueAudioMap.Add("Muris_0_b_sliktas_09", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_09"));
+        dialogueAudioMap.Add("Muris_0_b_sliktas_10", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_10"));
+        dialogueAudioMap.Add("Muris_0_b_sliktas_11", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_11"));
+        dialogueAudioMap.Add("Muris_0_b_sliktas_12_BEIGAS", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_12_BEIGAS"));
 
 
     }

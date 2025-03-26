@@ -3255,6 +3255,7 @@ GameObject:
   - component: {fileID: 334729627}
   - component: {fileID: 334729626}
   - component: {fileID: 334729628}
+  - component: {fileID: 334729629}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -3396,6 +3397,22 @@ AudioReverbFilter:
   m_LFReference: 250
   m_ReflectionsDelay: 0
   m_ReverbPreset: 7
+--- !u!114 &334729629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334729625}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b20a0ec5dafae4c8b80d73b14940fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 334729626}
+  targetClip: {fileID: 8300000, guid: 933ec049a4797eb4f8adb74f0c344352, type: 3}
+  inkVariableName: aaa
+  variableSet: 0
 --- !u!1 &335957932
 GameObject:
   m_ObjectHideFlags: 0
@@ -14812,7 +14829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a93b8ae49290d44e805c3056728ea55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSONAsset1: {fileID: 4900000, guid: 3a4c44576529d21479a21d6fdae1e607, type: 3}
+  inkJSONAsset1: {fileID: 4900000, guid: 143bd68599192764bba3f17caf723cbe, type: 3}
   inkJSONAsset2: {fileID: 4900000, guid: 58d9a6bc199ce5e4ca2c2a4ca888c72c, type: 3}
   canvas: {fileID: 166331252}
   textPrefab: {fileID: 11456674, guid: 96a1a960d4c99ba448bd91d938fef0a5, type: 3}

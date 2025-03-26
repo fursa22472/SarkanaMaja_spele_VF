@@ -1,1 +1,1 @@
-﻿{"inkVersion":21,"root":[["^Atvērt durvis?","\n","ev","str","^Jā","/str","/ev",{"*":"0.c-0","flg":4},{"c-0":["\n","end",{"->":"0.g-0"},{"#f":5}],"g-0":["done",{"#f":5}]}],"done",{"#f":1}],"listDefs":{}}
+﻿{"inkVersion":21,"root":[["ev",{"VAR?":"aaa"},"/ev",[{"->":".^.b","c":true},{"b":["\n","^This is written if true","\n",{"->":"0.5"},null]}],[{"->":".^.b"},{"b":["\n","^This is written if false","\n",{"->":"0.5"},null]}],"nop","\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"global decl":["ev",false,{"VAR=":"aaa"},"/ev","end",null],"#f":1}],"listDefs":{}}
