@@ -1,1 +1,0 @@
-Uzspiediet E, lai paņemtu objektu.

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Ink.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
+
 
 public class InkDialogOnClickIND : MonoBehaviour
 {
@@ -81,38 +83,66 @@ public class InkDialogOnClickIND : MonoBehaviour
         }
     }
 
-    public void StartStoryOnClick()
+public void StartStoryOnClick() 
+{
+    if (interactiveCharacter != null)
+        interactiveCharacter.SetDialogueActive(true);
+
+    if (characterMovement != null)
+        characterMovement.enabled = false;
+
+    if (cameraTransition != null && cameraTargetPosition != null)
+        cameraTransition.MoveToTarget(cameraTargetPosition);
+
+    if (characterAnimator != null && !string.IsNullOrEmpty(animationTrigger))
+        characterAnimator.SetTrigger(animationTrigger);
+
+    // ✅ Load the first story from the updated JSON on disk
+    if (isFirstStory)
     {
-        if (interactiveCharacter != null)
+#if UNITY_EDITOR
+        if (inkJSONAsset1 != null)
         {
-            interactiveCharacter.SetDialogueActive(true);
-        }
+            string assetPath = UnityEditor.AssetDatabase.GetAssetPath(inkJSONAsset1);
+            string fullPath = Application.dataPath + "/" + assetPath.Replace("Assets/", "");
 
-        if (characterMovement != null)
+            if (File.Exists(fullPath))
+            {
+                string updatedJson = File.ReadAllText(fullPath);
+                story = new Story(updatedJson);
+
+                Debug.Log("🤖 PiekritiPriesterim = " + story.variablesState["PiekritiPriesterim"]);
+            }
+            else
+            {
+                Debug.LogError("❌ JSON file not found: " + fullPath);
+            }
+        }
+        else
         {
-            characterMovement.enabled = false; // Stop the player's movement
+            Debug.LogError("❌ inkJSONAsset1 is not assigned in the inspector!");
         }
-
-        if (cameraTransition != null && cameraTargetPosition != null)
-        {
-            cameraTransition.MoveToTarget(cameraTargetPosition); // Move the camera to the target position
-        }
-
-        if (characterAnimator != null && !string.IsNullOrEmpty(animationTrigger))
-        {
-            characterAnimator.SetTrigger(animationTrigger); // Play the character's animation
-        }
-
-        story = new Story(isFirstStory ? inkJSONAsset1.text : inkJSONAsset2.text);
-
-        if (OnCreateStory != null)
-            OnCreateStory(story);
-
-        isFirstStory = false; // After the first story, toggle to the second JSON file
-        isDialogueActive = true;
-
-        RefreshView();
+#else
+        story = new Story(inkJSONAsset1.text); // fallback for builds
+#endif
     }
+    else
+    {
+        // ✅ Use the loop file as-is
+        story = new Story(inkJSONAsset2.text);
+        Debug.Log("🤖 (Loop file) PiekritiPriesterim = " + story.variablesState["PiekritiPriesterim"]);
+    }
+
+    if (OnCreateStory != null)
+        OnCreateStory(story);
+
+    isFirstStory = false;
+    isDialogueActive = true;
+
+    RefreshView();
+}
+
+
 
     void RefreshView()
     {

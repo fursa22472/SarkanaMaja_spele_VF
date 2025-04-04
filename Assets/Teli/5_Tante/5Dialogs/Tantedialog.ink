@@ -234,8 +234,8 @@ Nu taču skrien mājās! Es netaisos ar tevi runāt visu nakti.
     -> A7
     
 + [Es neko nesaprotu… Kādas mājas…]
-Nu taču skrien mājās! Es netaisos ar tevi runāt visu nakti.
-    # audio:Tante_5_N_23
+Ej un neliec vecākiem uztraukties! Tūlīt pat!
+     # audio:Tante_5_N_21
     -> A7
     
      === A7 ===

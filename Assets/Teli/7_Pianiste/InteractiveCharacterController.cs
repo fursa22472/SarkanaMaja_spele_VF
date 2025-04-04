@@ -56,6 +56,9 @@ public float ambientMaxDistance = 10f; //sis mergis atbild par to piano skanas f
     {
         cameraTransition = Camera.main.GetComponent<CameraTransition>();
 
+        animator.applyRootMotion = false;
+
+
         if (canvas != null)
         {
             canvas.gameObject.SetActive(false);

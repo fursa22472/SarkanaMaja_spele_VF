@@ -3,15 +3,18 @@ using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
-    [System.Serializable]
-    public class InventoryItem
-    {
-        public string itemName;
-        public Texture itemImage;
-        public Texture descriptionImage;
-        public Vector2 position;
-        public Vector2 size = new Vector2(0.1f, 0.1f);
-    }
+   [System.Serializable]
+public class InventoryItem
+{
+    public string itemName;
+    public Texture itemImage;
+    public Texture descriptionImage;
+    public Vector2 position;
+    public Vector2 size = new Vector2(0.1f, 0.1f);
+    
+    // ✅ New: Assign a material per item
+    public Material customMaterial;
+}
 
     public InventoryItem[] allItems;
     public GameObject inventoryQuad;
@@ -139,37 +142,45 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    private void CreateItemQuad(InventoryItem item)
+private void CreateItemQuad(InventoryItem item)
+{
+    GameObject itemQuad = GameObject.CreatePrimitive(PrimitiveType.Quad);
+    Renderer quadRenderer = itemQuad.GetComponent<Renderer>();
+
+    // 🔄 Load your transparent lit material from Resources folder
+    Material baseMat = Resources.Load<Material>("Materials/InterObj_Etalons_Mat");
+
+    if (baseMat == null)
     {
-        GameObject itemQuad = GameObject.CreatePrimitive(PrimitiveType.Quad);
-        Renderer quadRenderer = itemQuad.GetComponent<Renderer>();
-
-        // ✅ Transparency Fix: Make Material Transparent
-        Material itemMaterial = new Material(Shader.Find("Standard"))
-        {
-            mainTexture = item.itemImage
-        };
-        itemMaterial.SetFloat("_Mode", 3);
-        itemMaterial.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
-        itemMaterial.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-        itemMaterial.SetInt("_ZWrite", 0);
-        itemMaterial.DisableKeyword("_ALPHATEST_ON");
-        itemMaterial.EnableKeyword("_ALPHABLEND_ON");
-        itemMaterial.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-        itemMaterial.renderQueue = 3000;
-
-        quadRenderer.material = itemMaterial;
-
-        itemQuad.transform.SetParent(inventoryQuad.transform, false);
-        itemQuad.transform.localPosition = new Vector3(
-            (item.position.x - 0.5f) * inventoryQuad.transform.localScale.x,
-            (item.position.y - 0.5f) * inventoryQuad.transform.localScale.y,
-            -0.01f
-        );
-
-        itemQuad.transform.localScale = new Vector3(item.size.x, item.size.y, 1);
-        itemQuads.Add(itemQuad);
+        Debug.LogError("❌ Could not load 'InterObj_Etalons_Mat' from Resources/Materials.");
+        return;
     }
+
+    // 🧬 Clone to safely assign unique texture
+    Material mat = new Material(baseMat);
+    mat.mainTexture = item.itemImage;
+
+    // 🪄 Apply material to quad
+    quadRenderer.material = mat;
+
+    // 🧯 Disable shadows
+    quadRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+    quadRenderer.receiveShadows = false;
+
+    // 🧭 Position inside inventory
+    itemQuad.transform.SetParent(inventoryQuad.transform, false);
+    itemQuad.transform.localPosition = new Vector3(
+        (item.position.x - 0.5f) * inventoryQuad.transform.localScale.x,
+        (item.position.y - 0.5f) * inventoryQuad.transform.localScale.y,
+        -0.01f
+    );
+    itemQuad.transform.localScale = new Vector3(item.size.x, item.size.y, 1);
+
+    itemQuads.Add(itemQuad);
+
+    Debug.Log("✅ Loaded and applied material with texture: " + item.itemName);
+}
+
 
     private void HandleNumberKeyInput()
     {
