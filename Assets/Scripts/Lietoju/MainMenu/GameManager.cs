@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     private Button[] buttons;
     private int selectedButtonIndex = 0;
 
-    private string gameSceneName = "SarkanaMajaIstais"; // Ensure this matches Unity's Build Settings
+ 
 
     private bool isTutorialOpen = false; // Tracks tutorial visibility
 
@@ -108,11 +108,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void StartNewGame()
-    {
-        Debug.Log("Starting new game... Loading scene: " + gameSceneName);
-        SceneManager.LoadScene(gameSceneName);
-    }
+public void StartNewGame()
+{
+    Debug.Log("Starting new game... Loading LoadingScene first...");
+    SceneManager.LoadScene("LoadingScene"); // <-- change this to your actual loading scene name
+}
+
 
     public void OpenTutorial()
     {

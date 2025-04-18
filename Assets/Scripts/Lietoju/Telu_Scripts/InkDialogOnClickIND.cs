@@ -83,7 +83,7 @@ public class InkDialogOnClickIND : MonoBehaviour
         }
     }
 
-public void StartStoryOnClick() 
+public void StartStoryOnClick()
 {
     if (interactiveCharacter != null)
         interactiveCharacter.SetDialogueActive(true);
@@ -97,50 +97,59 @@ public void StartStoryOnClick()
     if (characterAnimator != null && !string.IsNullOrEmpty(animationTrigger))
         characterAnimator.SetTrigger(animationTrigger);
 
-    // ✅ Load the first story from the updated JSON on disk
-    if (isFirstStory)
+    // Decide which JSON to use (first or second)
+    TextAsset selectedAsset = isFirstStory ? inkJSONAsset1 : inkJSONAsset2;
+
+    if (selectedAsset == null)
     {
-#if UNITY_EDITOR
-        if (inkJSONAsset1 != null)
-        {
-            string assetPath = UnityEditor.AssetDatabase.GetAssetPath(inkJSONAsset1);
-            string fullPath = Application.dataPath + "/" + assetPath.Replace("Assets/", "");
+        Debug.LogError("❌ No Ink JSON assigned for the current state!");
+        return;
+    }
 
-            if (File.Exists(fullPath))
-            {
-                string updatedJson = File.ReadAllText(fullPath);
-                story = new Story(updatedJson);
+    // Try to get the AudioInkFlagSetter from the same GameObject
+    var flagSetter = GetComponent<AudioInkFlagSetter>();
+    string jsonPath = "";
 
-                Debug.Log("🤖 PiekritiPriesterim = " + story.variablesState["PiekritiPriesterim"]);
-            }
-            else
-            {
-                Debug.LogError("❌ JSON file not found: " + fullPath);
-            }
-        }
-        else
-        {
-            Debug.LogError("❌ inkJSONAsset1 is not assigned in the inspector!");
-        }
-#else
-        story = new Story(inkJSONAsset1.text); // fallback for builds
-#endif
+    // If the AudioInkFlagSetter exists and its assigned JSON matches the selected asset, use its runtime file path
+    if (flagSetter != null && flagSetter.assignedJsonFile == selectedAsset)
+    {
+        jsonPath = flagSetter.GetRuntimeJsonPath();
     }
     else
     {
-        // ✅ Use the loop file as-is
-        story = new Story(inkJSONAsset2.text);
-        Debug.Log("🤖 (Loop file) PiekritiPriesterim = " + story.variablesState["PiekritiPriesterim"]);
+        // Fallback: generate the runtime path directly from the selected asset
+        string filename = selectedAsset.name + "_runtime.json";
+        jsonPath = System.IO.Path.Combine(Application.persistentDataPath, filename);
+
+        // Create the runtime file if it doesn’t exist
+        if (!File.Exists(jsonPath))
+        {
+            File.WriteAllText(jsonPath, selectedAsset.text);
+            Debug.Log("📄 Created runtime JSON for alternate file: " + jsonPath);
+        }
     }
 
-    if (OnCreateStory != null)
-        OnCreateStory(story);
+    // Load and initialize the Ink story from the runtime file
+    if (File.Exists(jsonPath))
+    {
+        string json = File.ReadAllText(jsonPath);
+        story = new Ink.Runtime.Story(json);
+        Debug.Log("✅ Loaded Ink story from: " + jsonPath);
+        Debug.Log("🤖 PiekritiPriesterim = " + story.variablesState["PiekritiPriesterim"]);
+    }
+    else
+    {
+        Debug.LogError("❌ Runtime Ink JSON not found: " + jsonPath);
+        return;
+    }
 
-    isFirstStory = false;
+    OnCreateStory?.Invoke(story);
+    isFirstStory = false; // Next time, it'll use the second file
     isDialogueActive = true;
 
     RefreshView();
 }
+
 
 
 
@@ -654,6 +663,9 @@ void EndDialogue()
         dialogueAudioMap.Add("Muris_0_b_sliktas_10", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_10"));
         dialogueAudioMap.Add("Muris_0_b_sliktas_11", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_11"));
         dialogueAudioMap.Add("Muris_0_b_sliktas_12_BEIGAS", Resources.Load<AudioClip>("Audio/MurisAudio/Muris_0_b_sliktas_12_BEIGAS"));
+
+        dialogueAudioMap.Add("sfxmajacymbal", Resources.Load<AudioClip>("Audio/MurisAudio/sfxmajacymbal"));
+        dialogueAudioMap.Add("sfxmajacymbalBad", Resources.Load<AudioClip>("Audio/MurisAudio/sfxmajacymbalBad"));
 
 
     }

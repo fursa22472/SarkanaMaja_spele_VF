@@ -2,8 +2,6 @@ using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
 using SimpleJSON;
-using UnityEditor;
-
 
 public class AudioInkFlagSetter : MonoBehaviour
 {
@@ -16,181 +14,158 @@ public class AudioInkFlagSetter : MonoBehaviour
 
     public List<AudioSource> audioSources;
     public List<AudioFlag> audioFlags;
+    public TextAsset assignedJsonFile; // ✅ Drag the same JSON file here as on the Ink character
 
-    public TextAsset inkJsonFile; // 🎯 DRAG THE JSON FILE HERE!
     private string fullFilePath = "";
-
     private string lastPlayed = "";
 
-void Start()
-{
-    if (inkJsonFile == null)
+    void Start()
     {
-        Debug.LogError("❌ You forgot to drag your Ink JSON file into the inspector!");
-        return;
-    }
-
-    // Get the full file path
-    fullFilePath = Application.dataPath + "/" + GetRelativePath(inkJsonFile);
-
-#if UNITY_EDITOR
-    ResetAllFlagsOnPlay(); // ✅ Reset the variable at Play start (Editor only)
-#endif
-}
-
-
-    void Update()
-{
-    if (audioSources == null || audioSources.Count == 0)
-        return;
-
-    foreach (var source in audioSources)
-    {
-        if (source == null || source.clip == null || !source.isPlaying)
-            continue;
-
-        string currentName = source.clip.name;
-
-        if (currentName != lastPlayed)
+        if (assignedJsonFile == null)
         {
-            lastPlayed = currentName;
-
-            foreach (var flag in audioFlags)
-            {
-                if (flag.clip.name == currentName)
-                {
-                    Debug.Log("🎧 Matched sound: " + currentName + " → Setting: " + flag.inkVariableName);
-                    SetInkFlag(flag.inkVariableName);
-                    break;
-                }
-            }
-        }
-    }
-}
-
-
-    void SetInkFlag(string variableName)
-{
-    if (string.IsNullOrEmpty(fullFilePath) || !File.Exists(fullFilePath))
-    {
-        Debug.LogError("❌ Cannot find file at: " + fullFilePath);
-        return;
-    }
-
-    string jsonText = File.ReadAllText(fullFilePath);
-    var root = JSON.Parse(jsonText);
-    var rootArray = root["root"].AsArray;
-
-    // Find the global decl section
-    for (int i = 0; i < rootArray.Count; i++)
-    {
-        var item = rootArray[i];
-        if (item != null && item["global decl"] != null)
-        {
-            var globalDecl = item["global decl"].AsArray;
-
-            // Go through every value and check for VAR= match
-            for (int j = 0; j < globalDecl.Count; j++)
-            {
-                var entry = globalDecl[j];
-                if (entry != null && entry.IsObject && entry["VAR="] != null)
-                {
-                    string foundVar = entry["VAR="];
-                    if (foundVar == variableName)
-                    {
-                        // The boolean value is right before this entry
-                        int boolIndex = j - 1;
-                        if (boolIndex >= 0 && globalDecl[boolIndex].IsBoolean)
-                        {
-                            globalDecl[boolIndex].AsBool = true;
-                            File.WriteAllText(fullFilePath, root.ToString(2));
-                            Debug.Log($"✅ Successfully changed {variableName} to true in Ink JSON!");
-                            return;
-                        }
-                    }
-                }
-            }
-
-            Debug.LogWarning($"⚠️ Could not find variable '{variableName}' in global decl array.");
+            Debug.LogError("❌ You forgot to assign your Ink JSON in the Inspector!");
             return;
         }
-    }
 
-    Debug.LogWarning($"⚠️ No 'global decl' section found in Ink JSON.");
-}
+        // ✅ This is the only path we’ll use
+        string filename = assignedJsonFile.name + "_runtime.json";
+        fullFilePath = Path.Combine(Application.persistentDataPath, filename);
 
-
-
-    // Converts Unity TextAsset path to actual filesystem path
-    private string GetRelativePath(TextAsset asset)
-    {
-        string path = UnityEditor.AssetDatabase.GetAssetPath(asset);
-        return path.Replace("Assets/", "");
-    }
-
-private void ResetAllFlagsOnPlay()
-{
-    if (!File.Exists(fullFilePath))
-    {
-        Debug.LogWarning("⚠️ Ink JSON file not found for reset: " + fullFilePath);
-        return;
-    }
-
-    string jsonText = File.ReadAllText(fullFilePath);
-    var root = JSON.Parse(jsonText);
-    var rootArray = root["root"].AsArray;
-
-    List<string> flagsToReset = new List<string>
-    {
-        "PiekritiPriesterim",
-        "PiekritiBomzim",
-        "PiekritiMaksliniekam",
-        "PiekritiTantei",
-        "PiekritiPankam",
-        "PiekritiPianistei"
-    };
-
-    bool changedSomething = false;
-
-    for (int i = 0; i < rootArray.Count; i++)
-    {
-        var item = rootArray[i];
-        if (item != null && item["global decl"] != null)
+        // ✅ Create the writable version only once
+        if (!File.Exists(fullFilePath))
         {
-            var globalDecl = item["global decl"].AsArray;
+            File.WriteAllText(fullFilePath, assignedJsonFile.text);
+            Debug.Log("📄 Created runtime JSON: " + fullFilePath);
+        }
 
-            for (int j = 0; j < globalDecl.Count; j++)
+        ResetAllFlagsOnPlay();
+    }
+
+    void Update()
+    {
+        if (audioSources == null || audioSources.Count == 0)
+            return;
+
+        foreach (var source in audioSources)
+        {
+            if (source == null || source.clip == null || !source.isPlaying)
+                continue;
+
+            string currentName = source.clip.name;
+
+            if (currentName != lastPlayed)
             {
-                var entry = globalDecl[j];
-                if (entry != null && entry.IsObject && entry["VAR="] != null)
+                lastPlayed = currentName;
+
+                foreach (var flag in audioFlags)
                 {
-                    string foundVar = entry["VAR="];
-                    if (flagsToReset.Contains(foundVar))
+                    if (flag.clip.name == currentName)
                     {
-                        int boolIndex = j - 1;
-                        if (boolIndex >= 0 && globalDecl[boolIndex].IsBoolean)
-                        {
-                            globalDecl[boolIndex].AsBool = false;
-                            changedSomething = true;
-                            Debug.Log($"🔄 Reset {foundVar} to FALSE at Play start");
-                        }
+                        SetInkFlag(flag.inkVariableName);
+                        break;
                     }
                 }
             }
         }
     }
 
-    if (changedSomething)
+    void SetInkFlag(string variableName)
     {
-        File.WriteAllText(fullFilePath, root.ToString(2));
-        Debug.Log("💾 All matching variables reset and saved.");
+        if (!File.Exists(fullFilePath))
+        {
+            Debug.LogError("❌ JSON not found: " + fullFilePath);
+            return;
+        }
+
+        string jsonText = File.ReadAllText(fullFilePath);
+        var root = JSON.Parse(jsonText);
+        var rootArray = root["root"].AsArray;
+
+        for (int i = 0; i < rootArray.Count; i++)
+        {
+            var item = rootArray[i];
+            if (item != null && item["global decl"] != null)
+            {
+                var globalDecl = item["global decl"].AsArray;
+
+                for (int j = 0; j < globalDecl.Count; j++)
+                {
+                    var entry = globalDecl[j];
+                    if (entry != null && entry.IsObject && entry["VAR="] != null)
+                    {
+                        string foundVar = entry["VAR="];
+                        if (foundVar == variableName)
+                        {
+                            int boolIndex = j - 1;
+                            if (boolIndex >= 0 && globalDecl[boolIndex].IsBoolean)
+                            {
+                                globalDecl[boolIndex].AsBool = true;
+                                File.WriteAllText(fullFilePath, root.ToString(2));
+                                Debug.Log($"✅ Set {variableName} to TRUE");
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        Debug.LogWarning($"⚠️ Couldn't find variable: {variableName}");
     }
-    else
+
+    void ResetAllFlagsOnPlay()
     {
-        Debug.Log("⚠️ No matching flags were found to reset.");
+        if (!File.Exists(fullFilePath)) return;
+
+        string jsonText = File.ReadAllText(fullFilePath);
+        var root = JSON.Parse(jsonText);
+        var rootArray = root["root"].AsArray;
+
+        List<string> flagsToReset = new List<string>
+        {
+            "PiekritiPriesterim", "PiekritiBomzim", "PiekritiMaksliniekam",
+            "PiekritiTantei", "PiekritiPankam", "PiekritiPianistei"
+        };
+
+        bool changed = false;
+
+        for (int i = 0; i < rootArray.Count; i++)
+        {
+            var item = rootArray[i];
+            if (item != null && item["global decl"] != null)
+            {
+                var globalDecl = item["global decl"].AsArray;
+                for (int j = 0; j < globalDecl.Count; j++)
+                {
+                    var entry = globalDecl[j];
+                    if (entry != null && entry.IsObject && entry["VAR="] != null)
+                    {
+                        string foundVar = entry["VAR="];
+                        if (flagsToReset.Contains(foundVar))
+                        {
+                            int boolIndex = j - 1;
+                            if (boolIndex >= 0 && globalDecl[boolIndex].IsBoolean)
+                            {
+                                globalDecl[boolIndex].AsBool = false;
+                                changed = true;
+                                Debug.Log($"🔄 Reset {foundVar} to FALSE");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if (changed)
+        {
+            File.WriteAllText(fullFilePath, root.ToString(2));
+            Debug.Log("💾 Saved reset JSON");
+        }
     }
-}
 
-
-
+    // 🔁 Used by the Ink system to get the same JSON path
+    public string GetRuntimeJsonPath()
+    {
+        return fullFilePath;
+    }
 }

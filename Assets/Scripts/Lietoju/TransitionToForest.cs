@@ -1,82 +1,75 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class TransitionToForest : MonoBehaviour
 {
     [Header("Teleport Settings")]
-    public Transform teleportTarget; // The point to teleport the player to
-    public float interactionDistance = 3f; // Maximum distance for interaction
+    public Transform teleportTarget;
 
     [Header("Audio Settings")]
-    public AudioSource backgroundMusic; // The initial background music
-    public AudioSource teleportMusic; // The music to play after teleporting
-    public float fadeDistance = 5f; // Distance at which the music starts fading
-    public float fadeSpeed = 1f; // Speed of the fade effect
-
-    [Header("UI Settings")]
-    public Image fadeScreen; // UI Image for fade effect
+    public AudioClip teleportMusic; // Only the clip now
     public float fadeDuration = 1.5f;
 
+    [Header("UI Settings")]
+    public Image fadeScreen;
+    public float fadeScreenDuration = 1.5f;
+
+    [Header("Zone Music Settings")]
+    public List<ZoneMusicData> zones = new List<ZoneMusicData>();
+
     private GameObject player;
+    private bool hasTeleported = false;
+    private string currentZone = "";
+
     private InkDialogOnClickIND dialogueManager;
-    private bool hasTeleported = false; // Ensures teleportation happens only once
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
         {
-            Debug.LogError("Player not found! Please tag the player as 'Player'.");
+            Debug.LogError("Player not found! Tag it as 'Player'.");
+            return;
         }
 
         dialogueManager = FindObjectOfType<InkDialogOnClickIND>();
         if (dialogueManager == null)
         {
-            Debug.LogError("InkDialogueManager not found in scene!");
+            Debug.LogError("InkDialogOnClickIND not found!");
+            return;
         }
 
-        // Subscribe to dialogue end event
         InkDialogOnClickIND.OnDialogueEnd += HandleDialogueEnd;
-
-        if (backgroundMusic != null)
-        {
-            backgroundMusic.volume = 1f;
-            backgroundMusic.Play();
-        }
-
-        if (teleportMusic != null)
-        {
-            teleportMusic.Stop();
-        }
 
         if (fadeScreen == null)
         {
             fadeScreen = GameObject.Find("FadeScreen")?.GetComponent<Image>();
             if (fadeScreen == null)
-            {
-                Debug.LogError("FadeScreen UI Image not found! Make sure it's in the scene.");
-            }
+                Debug.LogError("FadeScreen UI Image not found!");
         }
 
         if (fadeScreen != null)
-        {
             fadeScreen.color = new Color(0, 0, 0, 0);
+
+        RenderSettings.fog = false;
+    }
+
+    void Update()
+    {
+        if (hasTeleported)
+        {
+            CheckZoneMusic();
         }
     }
 
     void HandleDialogueEnd(GameObject character)
     {
-        if (hasTeleported) return; // Prevent multiple teleports
-
-        Debug.Log("Dialogue ended. Checking teleport conditions...");
-
-        // Ensure teleport only happens once
+        if (hasTeleported) return;
         hasTeleported = true;
 
-        // Unsubscribe from the event so it won't trigger again
         InkDialogOnClickIND.OnDialogueEnd -= HandleDialogueEnd;
-
         StartCoroutine(FadeAndTeleport());
     }
 
@@ -84,13 +77,18 @@ public class TransitionToForest : MonoBehaviour
     {
         yield return StartCoroutine(FadeScreen(1f));
 
-        if (backgroundMusic.isPlaying) backgroundMusic.Stop();
-        if (teleportMusic != null) teleportMusic.Play();
+        // Play teleport music using persistent manager
+        if (teleportMusic != null && PersistentMusicManager.Instance != null)
+        {
+            PersistentMusicManager.Instance.PlayMusic(teleportMusic);
+        }
 
+        // Move the player
         if (teleportTarget != null)
         {
-            CharacterController controller = player.GetComponent<CharacterController>();
-            Rigidbody rb = player.GetComponent<Rigidbody>();
+            var controller = player.GetComponent<CharacterController>();
+            var rb = player.GetComponent<Rigidbody>();
+
             if (controller != null)
             {
                 controller.enabled = false;
@@ -105,6 +103,8 @@ public class TransitionToForest : MonoBehaviour
             {
                 player.transform.position = teleportTarget.position;
             }
+
+            RenderSettings.fog = true;
         }
 
         yield return StartCoroutine(FadeScreen(0f));
@@ -113,14 +113,43 @@ public class TransitionToForest : MonoBehaviour
     IEnumerator FadeScreen(float targetAlpha)
     {
         float startAlpha = fadeScreen.color.a;
-        float elapsedTime = 0f;
-        while (elapsedTime < fadeDuration)
+        float elapsed = 0f;
+
+        while (elapsed < fadeScreenDuration)
         {
-            elapsedTime += Time.deltaTime;
-            float newAlpha = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / fadeDuration);
-            fadeScreen.color = new Color(0, 0, 0, newAlpha);
+            elapsed += Time.deltaTime;
+            float alpha = Mathf.Lerp(startAlpha, targetAlpha, elapsed / fadeScreenDuration);
+            fadeScreen.color = new Color(0, 0, 0, alpha);
             yield return null;
         }
+
         fadeScreen.color = new Color(0, 0, 0, targetAlpha);
+    }
+
+    void CheckZoneMusic()
+    {
+        foreach (var zone in zones)
+        {
+            if (zone.zoneCollider == null || zone.musicClip == null) continue;
+
+            if (zone.zoneCollider.bounds.Contains(player.transform.position))
+            {
+                if (currentZone != zone.zoneID)
+                {
+                    currentZone = zone.zoneID;
+                    PersistentMusicManager.Instance?.PlayMusic(zone.musicClip);
+                }
+
+                return; // early exit if inside a zone
+            }
+        }
+    }
+
+    [System.Serializable]
+    public class ZoneMusicData
+    {
+        public string zoneID;
+        public Collider zoneCollider;
+        public AudioClip musicClip;
     }
 }
