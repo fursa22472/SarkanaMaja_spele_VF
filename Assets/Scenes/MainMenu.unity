@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a6ccba545817c694f91029167e38d363, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ddae5a4fc95d9734388e3866ddb0f775, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -989,7 +989,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ab1e1c50a7de2e64d9d527f01beb0cde, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3577aaf00f601e14483e7ac8a3a9dee6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1150,8 +1150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeDuration: 2
   targetVolume: 1
-  videoA: {fileID: 32900000, guid: bea529778b353414abb482694e689cf5, type: 3}
-  videoB: {fileID: 32900000, guid: 3eba0144099fb64409072c00d1b91c2f, type: 3}
+  videoA: {fileID: 32900000, guid: 1f0d1fc0a04ac4a4cb6bf1833177cc06, type: 3}
+  videoB: {fileID: 32900000, guid: 0977485627d461c4b998dbe709f7f748, type: 3}
 --- !u!1 &1558157897
 GameObject:
   m_ObjectHideFlags: 0
