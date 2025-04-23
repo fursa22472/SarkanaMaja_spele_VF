@@ -27,7 +27,7 @@ Nevaru un negribu to vilkt, bet es saprotu, ka šī rīcība nebija pareiza no m
     
 === A3 ===
 + [Vai jūs gribat par to parunāt?]
-Es jau esmu pateicis pietiekami.
+Es tev jau esmu pateicis pietiekami.
    #audio:Priesteris_2_OBJ_KAK_5
     -> END
     

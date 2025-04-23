@@ -5,13 +5,15 @@ VAR option4 = false
 VAR option5 = false
 
 
-Man liekas, ka šeit ir pārāk maz cilvēku? Tukši soli... Izdegušas sveces... Zelta krusti zaudējuši savu spodrumu. 
+Man liekas, ka šeit ir pārāk maz cilvēku. Tukši soli... Izdegušas sveces... 
+Zelta krusti zaudējuši savu spodrumu. 
 #audio:Priesteris_2_00
     -> A1
 
 === A1 ===
 + [Kā baznīcā.]
-Pārliecība. Stabilitāte. Skaidrība. Tā visa vairs nav.
+Pārliecība. Stabilitāte. Skaidrība. 
+Tā visa vairs nav.
 #audio:Priesteris_2_01
     -> A2
     
@@ -29,8 +31,7 @@ Protams. Ar dievu, mans bērns.
 === A3 ===
 + [Kāds joks?]
 Manas vērtības ir balstītas uz veca slima suņa murgiem.
-Bībele mani nav glābusi. Tikai pārliecināja, 
-ka viss ko daru ir bezjēdzīgi.
+Bībele mani nav glābusi. Tikai pārliecināja, ka viss ko daru ir bezjēdzīgi.
   #audio:Priesteris_2_04 
     -> A4
 
@@ -49,18 +50,20 @@ Dievs ir mūs pametis, viņa mājas... tukšas.
      -> A6
      
 === A6 ===
-+ [Dievs neko neatņēma ]
-Ticība ir dāvana. Varbūt tev ir, kur atgriezties. Bet man... Dievs man iedeva un atņēma visu.
++ [Dievs neko neatņēma.]
+Ticība ir dāvana. Varbūt tev ir, kur atgriezties. 
+Bet man... Dievs man iedeva un atņēma visu.
 #audio:Priesteris_2_07
      -> A7_1
  
  + [Dieva nav. Mājas ir.]
-Nav nekā. Mēs esam atstāti un bez ticības - visi jumti gāzīsies...
+Nav nekā. Mēs esam atstāti un bez ticības. Visi jumti gāzīsies...
 #audio:Priesteris_2_08
      -> A7_2
 
 + [Kas ir tas Dievs?]
-Tas nav kaut kas, uz ko ir iespējams atbildēt vienā teikumā. Viņš nebūtu Dievs, ja es varētu skaidri apgalvot par viņu.
+Tas nav kaut kas, uz ko ir iespējams atbildēt vienā teikumā. 
+Viņš nebūtu Dievs, ja es varētu skaidri apgalvot par viņu.
 #audio:Priesteris_2_09
      -> A7_3
 
@@ -74,8 +77,7 @@ Cilvēks ir vājš. Ja viņš tic, ka ir viens un nevajadzīgs, veidojas vēlme 
 === A7_2 ===
 + [Kāpēc?]
 Es solīju būt paklausīgs un dzīvot saskaņā ar likumu. 
-Es darīju visu, ko Dievs un mans skolotājs no 
-manis bija prasījis.
+Es darīju visu, ko Dievs un mans skolotājs no manis bija prasījis.
     #audio:Priesteris_2_11
     -> A8
     
@@ -88,8 +90,8 @@ Tas ir kā debesu milzums, kas aizpilda telpu.
 
 === A8 ===
 + [...]
- Es nespēju dzīvot tur, kur nav neviena iemesla palikt.. 
- Tāpat arī … neredzu iemeslu palikt šeit ticības dēļ.
+ Es nespēju dzīvot tur, kur nav neviena iemesla palikt... 
+ Tāpat arī neredzu iemeslu palikt šeit ticības dēļ.
     #audio:Priesteris_2_13
     -> A9
 
@@ -130,27 +132,28 @@ Esi daudz zaudējusi un ar visu to arī ceļu mājup.
 
 === A13 ===
 + [Es neesmu neko zaudējusi]
-Cilvēki meklē atbildi, bet kad atrod atsakās pieņemt to.
+Cilvēki meklē atbildi, bet kad atrod - atsakās pieņemt to.
 Viņiem vajag tikai mierinājumu...
 #audio:Priesteris_2_19
 -> A14
 
 + [Jūs esat zaudētājs.]
-Cilvēki meklē atbildi, bet kad atrod atsakās pieņemt to. Viņiem vajag tikai mierinājumu, ka viss būs labi.
+Cilvēki meklē atbildi, bet kad atrod - atsakās pieņemt to.
+Viņiem vajag tikai mierinājumu...
 #audio:Priesteris_2_19
 -> A14
 
 
 + [Njā. Varbūt es zaudēju visu.]
-Cilvēki meklē atbildi, bet kad atrod atsakās pieņemt to. Viņiem vajag tikai mierinājumu, ka viss būs labi.
+Cilvēki meklē atbildi, bet kad atrod - atsakās pieņemt to.
+Viņiem vajag tikai mierinājumu...
 #audio:Priesteris_2_19
 -> A14
 
 
 === A14 ===
 + [Tad ko man darīt? ]
-Es pārāk bieži saku, ko citiem darīt. 
-Šoreiz izvēlies pati. 
+Es pārāk bieži saku, ko citiem darīt. Šoreiz izvēlies pati. 
 #audio:Priesteris_2_20
 -> A15
 
@@ -162,14 +165,14 @@ Protams. Ar dievu, mans bērns.
 -> END
 
 + [Jums liekas ir jēga turpināt?]
-Vai tu tici Dieva klātbūtnei? Tikai viņš ir spējīgs atbildēt uz taviem jautājumiem.
+Vai tu tici Dieva klātbūtnei? Tikai Viņš ir spējīgs atbildēt uz taviem jautājumiem.
 #audio:Priesteris_2_21
 -> A16
 
 
 === A16 ===
-+ [Nu bet Jūs esat priesteris, jums ir jāzina atbilde!!]
-Es… Es nevaru. Atvainojos, nespēšu tev palīdzēt. Tu vari paļauties tikai uz Dievu. 
++ [Nu bet Jūs esat priesteris, jums ir jāzina atbilde!]
+Es… Es nevaru. Atvainojos, nespēšu tev palīdzēt.
 #audio:Priesteris_2_22
 -> A16_1
 
@@ -179,7 +182,8 @@ Ar ticību sevī nekad nepietiek... Vienīgā atšķirība starp mums ir tas, ka
 -> A17
 
 + [Varbūt jums ir taisnība... varbūt man jāsāk ticēt...]
-Tā nav izvēle, tas nav mētelis, ko uzvilksi,kad paliks auksti. Ja tu tikai tagad par šo aizdomājeis, tad tu nevaresi atrast pareizo ceļu.
+Tā nav izvēle. Tas nav mētelis, ko uzvilksi, kad paliks auksti. 
+Ja tu tikai tagad par šo aizdomājies, tad tu nevarēsi atrast pareizo ceļu.
 #audio:Priesteris_2_24
 
 -> A17
@@ -192,8 +196,8 @@ Ar ticību sevī nekad nepietiek... Vienīgā atšķirība starp mums ir tas, ka
 -> A17
 
 + [Varbūt jums ir taisnība... varbūt man jāsāk ticēt...]
-Tā nav izvēle, tas nav mētelis, ko uzvilksi, kad paliks auksti.
-Ja tu tikai tagad par šo aizdomājies, tad tu nevaresi atrast pareizo ceļu.
+Tā nav izvēle. Tas nav mētelis, ko uzvilksi, kad paliks auksti. 
+Ja tu tikai tagad par šo aizdomājies, tad tu nevarēsi atrast pareizo ceļu.
 #audio:Priesteris_2_24
 -> A17
 

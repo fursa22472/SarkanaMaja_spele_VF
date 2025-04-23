@@ -14,7 +14,7 @@ Es tavā vecumā domāju, ka visa pasaule piederēs man. Ak naivā gara varenīb
     
 === A1 ===
 + [Jūs šeit dzīvojat?]
-Es? ... Nē. Es vienkārši neskrienu nekur.. Viss pats atnāks. 
+Es? ... Nē. Es vienkārši neskrienu nekur... Viss pats atnāks. 
 #audio:Rainis_1_02
     -> A2
 
@@ -25,18 +25,18 @@ Tu ej mājās?
     -> A3
 
 === A3 ===
-+ [Jā…]
-Izskaties pagalam nobijusies… dīdies... grozies. Laikam nezini, kur iet.
++ [Jā...]
+Izskaties pagalam nobijusies… dīdies un grozies. Laikam nezini, kur iet.
 #audio:Rainis_1_04
     -> A4
     
-+ [Nē]
++ [Nē.]
 Tiešām? Nu nezinu, nezinu.
 #audio:Rainis_1_05
     -> A4
     
 + [Kādēļ jautā?]
-Eh.. Jo bērns parasti māk tikai apmaldīties.
+Eh... Jo bērns parasti māk tikai apmaldīties.
 #audio:Rainis_1_06
     -> A4
 
@@ -49,7 +49,7 @@ Vai tad tev pulksteņa nav? Redzi, saule jau tā kā uz rietu.
    
  === A5 ===
 + [Es zinu.]
-Šis man atgādina, zini, kad tiku labi tālu prom no mājām.
+Šis man atgādina, zini, kad tiku labi tālu prom no mājām. Jā...
 #audio:Rainis_1_08
    -> A6
    
@@ -61,7 +61,7 @@ Domāju, aizbēgšu, redzēšu pasauli. Nē, nē. Iekarošu to! Bet… tur jau n
    
 === A7 ===
 + [Kādā veidā?]
-Es tālu neaizskrēju. Un neko nesasniedzu.  Skrēju, skrēju, bet... Eh, nezinu. Kāda jēga? Es tāpat atgriezos mājās. Varēju arī neiet nekur.
+Es tālu neaizskrēju. Un neko nesasniedzu. Skrēju, skrēju, bet... eh, nezinu. Kāda jēga? Es tāpat atgriezos mājās. Varēju arī nekur neiet.
 #audio:Rainis_1_11
    -> A8
    
@@ -73,19 +73,19 @@ Ja gribi, tad ej. Es labāk nekur neiešu…
 === A8 ===
 * [Kāpēc atgriezāties?]
  ~ option1 = true
-Cilvēki pieaug un baidās. Baidās no pārmaiņām. Viņi paliek pie zināmā, runā kā vecāki, atkārto savus vecākos brāļus un māsas..
+Cilvēki pieaug un baidās. Baidās no pārmaiņām. Viņi paliek pie zināmā, runā kā vecāki, atkārto savus vecākos brāļus un māsas...
 #audio:Rainis_1_12
    -> Atkartojums1
 
 * [Kāpēc skrējāt prom?]
  ~ option2 = true
-Es neatceros. Atceros, man gribējās aizskriet. Skan smieklīgi, bet jau tad likās, ka māja ir būris. Saproti? .
+Es neatceros. Atceros, man gribējās aizskriet. Skan smieklīgi, bet jau tad likās, ka māja ir būris. Saproti?
 #audio:Rainis_1_13
    -> Atkartojums1
    
 * [Kam skrējāt pretī?]
  ~ option3 = true
-Skrēju pretī gaišākajam pasaules stūrītim. Labākus laikapstākļus …neatradu.
+Skrēju pretī gaišākajam pasaules stūrītim. Labākus laikapstākļus ...neatradu.
 #audio:Rainis_1_14
    -> Atkartojums1
    
@@ -99,13 +99,15 @@ Skrēju pretī gaišākajam pasaules stūrītim. Labākus laikapstākļus …nea
    
  === A10 ===
   + […]
-Visur, kur eju, man pakaļ velkas sasodītais būris. Un gaida. 
+Visur, kur eju, man pakaļ velkas tas sasodītais būris. 
+Un gaida. 
 #audio:Rainis_1_15
    -> A11
 
  === A11 ===
   + [Kāds būris?]
-Tas tāds viltīgs būris. Jo tālāk eju, jo ātrāk viņš skrien pakaļ. Šitā, re! 
+Tas tāds viltīgs būris. Jo tālāk eju, jo ātrāk viņš skrien pakaļ. 
+Šitā, re! 
 #audio:Rainis_1_16
    -> A12
    
@@ -122,15 +124,16 @@ Nav jau izvēles. Tā sanāk dzīvot. Es neko nevaru darīt.
    -> A14
 
 === A14 ===
-* [Kā nav izvēles?.]
+* [Kā nav izvēles?]
  ~ option4 = true
-Mēs izvēlamies neizvēlēties... Tāda tauta... Tāpat pārmaiņas nenotiek pēc mūsu pavēles. 
+Mēs izvēlamies neizvēlēties... Tāda tauta... 
+Tāpat pārmaiņas nenotiek pēc mūsu pavēles. 
 #audio:Rainis_1_19
    -> Atkartojums2
 
 * [Cilvēks nevar stāvēt visu laiku uz vietas.]
  ~ option5 = true
-Cilvēkiem kājas, lai stāvētu. Ēkas pārbūvē, tehnoloģijas.. ui kā attītās. Bet cilvēks, ko viņš, viņš nekad nemainās. Cilvēks nav mašīna. 
+Cilvēkiem kājas ir, lai stāvētu. Ēkas pārbūvē, tehnoloģijas... ui kā tās attīstās. Bet cilvēks, ko viņš? Viņš nekad nemainās. Cilvēks nav mašīna. 
 #audio:Rainis_1_20
    -> Atkartojums2
    
@@ -144,69 +147,70 @@ Cilvēkiem kājas, lai stāvētu. Ēkas pārbūvē, tehnoloģijas.. ui kā attī
 
 === A15 ===
 + [Jūs neviens negaida?]
-Ko nu, ko nu. Es nevienu negaidu. Vai tevi gaida?
+Ko nu, ko nu. Es nevienu negaidu. 
+Vai tevi gaida?
 #audio:Rainis_1_21
    -> A16
 
 === A16 ===
 + [Es nezinu.]
-Ehhh… Nu varētu arī palikt ar mani. Divatā būrī mierīgāk..
+Ehhh... Nu varētu arī palikt ar mani. Divatā būrī mierīgāk...
 #audio:Rainis_1_22
    -> A17
    
 + [Varbūt.]
-Ehhh… Nu varētu arī palikt ar mani. Divatā būrī mierīgāk..
+Ehhh... Nu varētu arī palikt ar mani. Divatā būrī mierīgāk...
 #audio:Rainis_1_22
    -> A17
    
 === A17 ===
 + [Nē, paldies.]
-Nu, kā vēlies. Vienam būrī tomēr brīvāk. Nu tad skrien!.
+Nu, kā vēlies. Vienam būrī tomēr brīvāk. Nu tad skrien!
 #audio:Rainis_1_23
    -> A18
    
 === A18 ===
 + [Es nezinu, kur iet!]
-Tādi mēs cilvēciņi… nezinīgi. Ko tad man tev teikt…? 
+Tādi mēs cilvēciņi... nezinīgi. Ko tad man tev teikt? 
 #audio:Rainis_1_24
    -> A19
    
 === A19 ===
 + [Jūs nevarat palīdzēt?]
-Ko es? Kā līdzēšu? 
+Ko es? Nu kā es te līdzēšu? 
 #audio:Rainis_1_25
    -> A20
    
 === A20 ===
-+ [Varbūt jūs parādītu pareizo virzienu..]
-Es nevaru neko, man ar savām problēmām pietiek. Paprasi kādam vēl. Kādam jaunietim…
++ [Varbūt jūs parādītu pareizo virzienu...]
+Es nevaru neko, man ar savām problēmām pietiek. Paprasi vēl kādam... Kādam jaunietim.
 #audio:Rainis_1_26
    -> A21
 
 === A21 ===
 + [Bet taču-!]
-Ne, ne, ne. Kuš. Nebļauj! 
+Ne, ne, ne. Kuš, kuš. Nebļauj. 
 #audio:Rainis_1_27
    -> A22
 
 + [Kādas tev tur problēmas???]
-Ne, ne, ne. Kuš. Nebļauj!
+Ne, ne, ne. Kuš, kuš. Nebļauj. 
 #audio:Rainis_1_27
    -> A22
 
 === A22 ===
 + [Es nebļauju.]
-Neatkarīgi no tā, ko darīsi, viss atrisināsies. Paliec un uzspēlēsim šahu. Aiziesi, arī nebūs pasaules gals..
+Neatkarīgi no tā, ko darīsi, viss atrisināsies. Paliec - uzspēlēsim šahu. Aiziesi, arī nebūs pasaules gals...
 #audio:Rainis_1_28
    -> A23
    
 + [Jo tu esi kurls kā zābaks.]
-Neatkarīgi no tā, ko darīsi, viss atrisināsies. Paliec un uzspēlēsim šahu. Aiziesi, arī nebūs pasaules gals..
+Neatkarīgi no tā, ko darīsi, viss atrisināsies. Paliec - uzspēlēsim šahu. Aiziesi, arī nebūs pasaules gals...
 #audio:Rainis_1_28
    -> A23
    
 + [Piedod.]
-Neatkarīgi no tā, ko darīsi, viss atrisināsies. Paliec, uzspēlēsim šahu. Aiziesi, arī nebūs pasaules gals..
+Neatkarīgi no tā, ko darīsi, viss atrisināsies. Paliec - uzspēlēsim šahu. Aiziesi, arī nebūs pasaules gals...
 #audio:Rainis_1_28
    -> A23
    
@@ -218,18 +222,18 @@ Atkarīgs no tā, kādā būrī gribi atrasties. Es jau labprāt dzīvotu kādā
 
 === A24 ===
 + [Es nevaru stāvēt uz vietas. Mani gaida mājās.]
-Tad tu izvēlies iet tālāk? Tu šauj sev kājā. Nekur tālāk par mani netiksi… Bet vismaz būs tev dzīves pieredze.
+Tad tu izvēlies iet tālāk, jā? Tu šauj sev kājā. Nekur tālāk par mani netiksi... Bet vismaz būs tev dzīves pieredze.
 #audio:Rainis_1_30
    -> A25
    
  + [Laikam... jums ir taisnība. Man nevajag nekur skriet. Tāpat būs labi]
-Es zinu. Bet nekas. Svarīgi samierinaties ar to, ka pasaule mums sasēja rokas un iemeta jūrā jau piedzimstot. Un tā vienkārši ir. 
+Es zinu. Bet nekas. Svarīgi samierināties ar to, ka pasaule mums sasēja rokas un iemeta jūrā jau piedzimstot. Un tā tas vienkārši ir. 
 #audio:Rainis_1_31
    -> A25
    
  === A25 ===
 + [Es tad došos.]
-Uz galda ielūgums. Paņem to un aiznes priesterim. 
+Uz galda ir ielūgums. Paņem to un aiznes priesterim. 
 #audio:Rainis_1_32
    -> A26
 

@@ -31,13 +31,13 @@ Kad būsi manā vecumā nožēlosi to, ka nepaliki ilgāk mājās un nesadraudz�
     #audio:Tante_5_N_05
     -> C1
     
-    + [Jā… laikam…]
+    + [Jā...laikam...]
 Kad būsi manā vecumā nožēlosi to, ka nepaliki ilgāk mājās un nesadraudzējies ar saviem kaimiņiem
     #audio:Tante_5_N_05
     -> C1
 
 === C1 ===
-+ [Aha...?]
++ [Ā...]
 Jūs jaunieši nenovērtē vietu, kur jūs dzīvo. Mūs laikos nekad nezināj, kur rīt dzīvosi.
     #audio:Tante_5_N_06
     -> CC1
@@ -45,7 +45,8 @@ Jūs jaunieši nenovērtē vietu, kur jūs dzīvo. Mūs laikos nekad nezināj, k
 
 === CC1 ===
 + [...]
-Vien dien krievs, otru vācietis. Daudzus aizveda. Un tiem kas palika, bij tikai atmiņas.
+Vien dien krievs, otru vācietis. Daudzus aizveda. 
+Un tiem kas palika, bij tikai atmiņas.
     #audio:Tante_5_N_07
     -> C2
 
@@ -55,8 +56,8 @@ Saproti…  cilvēki ir nolādēti dzimt ar kājām un galvu.
     #audio:Tante_5_N_09
     -> CC3
     
-    + [Vabūt tikai jūsu dzīve bija nestabila]
-Saproti…  cilvēki ir nolādēti dzimt ar kājām un galvu. 
+    + [Vabūt tikai jūsu dzīve bija nestabila.]
+Saproti... cilvēki ir nolādēti dzimt ar kājām un galvu.
     #audio:Tante_5_N_09
     -> CC3
     
@@ -67,7 +68,7 @@ Vai die, vai die...
     
     === CC4 ===
     + [...]
-Saproti…  cilvēki ir nolādēti dzimt ar kājām un galvu. 
+Saproti... cilvēki ir nolādēti dzimt ar kājām un galvu. 
     #audio:Tante_5_N_09
     -> CC3
     
@@ -94,14 +95,15 @@ Ak manu bērn, pēc mans tač pieredzes, vismaz puse domā, ka domas deniņos ir
    # audio:Tante_5_N_12
 -> CC52
 
-+ [Tie esat jūs, pieaugušie, kuri ir ļauni. ]
-Nabaga cilvēks. Tava dzīve pildīta ar naidu, kā dārgs eklērs. Pazini daudz ļaunu cilvēku?
++ [Tie esat jūs, pieaugušie, kuri ir ļauni.]
+Nabaga cilvēks. Tava dzīve pildīta ar naidu, kā dārgs eklērs. 
+Pazini daudz ļaunu cilvēku?
   #audio:Tante_5_N_13
  -> CC53
 
 
 === CC51 ===
-+ [Es meklēju pareizo ceļu ]
++ [Es meklēju pareizo ceļu.]
 Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. Tagad pat te šķiet… pretīgi. 
    # audio:Tante_5_N_14
 -> CM4
@@ -114,13 +116,15 @@ Ej. Tavs pienākums, kā bērnam ir vienmēr atgriezties laicīgi.
  
  
  === CC52 ===
-+ [Man tā nebūs]
-Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. Tagad pat te šķiet… pretīgi. 
++ [Man tā nebūs.]
+Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. 
+Tagad pat te šķiet… pretīgi. 
    # audio:Tante_5_N_14
 -> CM4
 
 + [Es negribu zināt.]
-Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. Tagad pat te šķiet… pretīgi. 
+Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās.
+Tagad pat te šķiet… pretīgi. 
    # audio:Tante_5_N_14
 -> CM4
 
@@ -133,12 +137,14 @@ Ej. Tavs pienākums, kā bērnam ir vienmēr atgriezties laicīgi.
 
  === CC53 ===
 + [Jā]
-Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. Tagad pat te šķiet… pretīgi. 
+Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. 
+Tagad pat te šķiet… pretīgi. 
    # audio:Tante_5_N_14
 -> CM4
 
 + [Es nezinu, varbūt ]
-Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. Tagad pat te šķiet… pretīgi. 
+Zini… Kādreiz visi bija laimīgi. Svešās vietās juties kā mājās. 
+Tagad pat te šķiet… pretīgi. 
    # audio:Tante_5_N_14
 -> CM4
 
@@ -153,24 +159,28 @@ Ej. Tavs pienākums, kā bērnam ir vienmēr atgriezties laicīgi.
 
 === CM4 ===
 + [Man žēl.]
-Cilvēki bij laipnāki. Vis zināja viens otru kā radiniekus. Sveicinājās, smaidīja, ciemojās...
+Cilvēki bij laipnāki. Vis zināja viens otru kā radiniekus. 
+Sveicinājās, smaidīja, ciemojās...
     # audio:Tante_5_N_15
     -> C5
 
 + [Visiem nevar vienmēr būt labi]
-Cilvēki bij laipnāki. Vis zināja viens otru kā radiniekus. Sveicinājās, smaidīja, ciemojās...
+Cilvēki bij laipnāki. Vis zināja viens otru kā radiniekus. 
+Sveicinājās, smaidīja, ciemojās...
     # audio:Tante_5_N_15
     -> C5
     
 + [Laiki mainās, cilvēki arī]
-Cilvēki bij laipnāki. Vis zināja viens otru kā radiniekus. Sveicinājās, smaidīja, ciemojās...
+Cilvēki bij laipnāki. Vis zināja viens otru kā radiniekus. 
+Sveicinājās, smaidīja, ciemojās...
     # audio:Tante_5_N_15
     -> C5
 
 
 === C5 ===
     + [Pastāstiet vēl.]
-Neviens tā vairs nedzīvo un negrib. Es vairs nezinu ko no šīs dzīves var gribēt.
+Neviens tā vairs nedzīvo un negrib. 
+Es vairs nezinu ko no šīs dzīves var gribēt.
     # audio:Tante_5_N_16
     -> C6
 
@@ -200,7 +210,8 @@ Ej. Tavs pienākums, kā bērnam ir vienmēr atgriezties laicīgi.
     -> END
 
 + [Nezinu, kā.]
-Es jau teicu, kur tev iet! Tu zini, kas notiek ar tiem, kuri neklausās?
+Es jau teicu, kur tev iet! 
+Tu zini, kas notiek ar tiem, kuri neklausās?
 # audio:Tante_5_N_18
     -> C8
 
@@ -223,7 +234,8 @@ Ej un neliec vecākiem uztraukties! Tūlīt pat!
 
 === A5 ===
 + [...]
-Pasteidzies! Būt mājas ir tavs pienākums. Tu nevari vienkārši aizbēgt prom, saproti?
+Pasteidzies! Būt mājas ir tavs pienākums. 
+Tu nevari vienkārši aizbēgt prom, saproti?
    # audio:Tante_5_N_22
     -> A6
     
