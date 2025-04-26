@@ -51,7 +51,7 @@ Es nevaru iedomāties nevienu citu kaķi, kurš būtu tāds pļāpa. Jā.
 === A6 ===
     + [Es noguru no meklēšanas.]
    Ko? Tu tagad ar kādu naktsslēpes spēlē?
-#audio:Panks_6_089
+#audio:Panks_6_08
         -> A7
         
     + [Tu nenogursti no dzīves?]

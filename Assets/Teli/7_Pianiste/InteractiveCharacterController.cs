@@ -123,47 +123,72 @@ else if (ambientAudioSource.isPlaying && (isDialogueActive || !playerInRange))
         }
     }
 
-    public void StartDialogue()
+public void StartDialogue()
+{
+    isDialogueActive = true;
+
+    // Load the correct JSON asset (first or second)
+    TextAsset selectedAsset = !playedFirstDialogue ? inkJSONAsset : inkJSONAsset2;
+
+    // Try to find AudioInkFlagSetter
+    var flagSetter = GetComponent<AudioInkFlagSetter>();
+    string jsonPath = "";
+
+    if (flagSetter != null && flagSetter.assignedJsonFile == selectedAsset)
     {
-        isDialogueActive = true;
-
-        if (!playedFirstDialogue)
-        {
-            story = new Story(inkJSONAsset.text);
-            playedFirstDialogue = true;
-        }
-        else
-        {
-            story = new Story(inkJSONAsset2.text);
-        }
-
-        if (playerMovement != null)
-        {
-            playerMovement.enabled = false;
-        }
-
-        if (cameraTransition != null && cameraTargetPosition != null)
-        {
-            cameraTransition.MoveToTarget(cameraTargetPosition);
-        }
-
-        if (animator != null)
-        {
-            animator.ResetTrigger(idleAnimation);
-            animator.SetTrigger(standUpAnimation);
-            StartCoroutine(WaitForAnimation(standUpAnimation, () =>
-            {
-                animator.SetTrigger(talkAnimation);
-            }));
-        }
-
-        if (canvas != null)
-        {
-            canvas.gameObject.SetActive(true);
-        }
-
-        RefreshView();
+        jsonPath = flagSetter.GetRuntimeJsonPath();
     }
+    else
+    {
+        // Fallback if AudioInkFlagSetter not found
+        string filename = selectedAsset.name + "_runtime.json";
+        jsonPath = System.IO.Path.Combine(Application.persistentDataPath, filename);
+
+        // Create the runtime file if it doesn’t exist
+        if (!System.IO.File.Exists(jsonPath))
+        {
+            System.IO.File.WriteAllText(jsonPath, selectedAsset.text);
+            Debug.Log("📄 Created runtime JSON for: " + jsonPath);
+        }
+    }
+
+    if (System.IO.File.Exists(jsonPath))
+    {
+        string json = System.IO.File.ReadAllText(jsonPath);
+        story = new Story(json); // ✅ LOADING FROM UPDATED JSON!
+        Debug.Log("✅ Loaded Ink story from runtime JSON: " + jsonPath);
+        Debug.Log($"🤖 PiekritiPianistei = {story.variablesState["PiekritiPianistei"]}");
+    }
+    else
+    {
+        Debug.LogError("❌ Runtime Ink JSON not found: " + jsonPath);
+        return;
+    }
+
+    playedFirstDialogue = true;
+
+    if (playerMovement != null)
+        playerMovement.enabled = false;
+
+    if (cameraTransition != null && cameraTargetPosition != null)
+        cameraTransition.MoveToTarget(cameraTargetPosition);
+
+    if (animator != null)
+    {
+        animator.ResetTrigger(idleAnimation);
+        animator.SetTrigger(standUpAnimation);
+        StartCoroutine(WaitForAnimation(standUpAnimation, () =>
+        {
+            animator.SetTrigger(talkAnimation);
+        }));
+    }
+
+    if (canvas != null)
+        canvas.gameObject.SetActive(true);
+
+    RefreshView();
+}
+
 
     void HandleInput()
     {

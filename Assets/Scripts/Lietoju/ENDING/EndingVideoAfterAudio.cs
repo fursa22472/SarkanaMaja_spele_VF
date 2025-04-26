@@ -25,6 +25,10 @@ public class EndingVideoAfterAudio : MonoBehaviour
     public string mainMenuSceneName = "MainMenu";
     public float fadeDuration = 1.5f;
 
+    [Header("UI References")]
+public GameObject dialogueCanvas; // 🎯 Drag your dialogue UI here
+
+
     private bool isRunning = false;
     private AudioVideoPair currentMatch = null;
     private AudioSource currentSource = null;
@@ -67,11 +71,18 @@ public class EndingVideoAfterAudio : MonoBehaviour
         yield return StartCoroutine(FadeImage(0f, 1f));
         yield return new WaitForSeconds(0.2f);
 
-        // Assign video clip
-        videoPlayer.clip = pair.videoClip;
+      // Assign video clip
+videoPlayer.clip = pair.videoClip;
 
-        // ✅ Set up video audio
-        SetupVideoAudio();
+// ✅ Disable dialogue UI
+if (dialogueCanvas != null)
+{
+    dialogueCanvas.SetActive(false);
+}
+
+// Set up video audio
+SetupVideoAudio();
+
 
         // Prepare and play
         videoPlayer.Prepare();

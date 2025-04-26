@@ -53,15 +53,22 @@ public class CameraTransition : MonoBehaviour
             }
             else
             {
-                Vector3 targetPos = originalParent.TransformPoint(originalPosition);
-                Quaternion targetRot = originalParent.rotation * originalRotation;
-
-                transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref currentVelocity, smoothTime);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * transitionSpeed);
-
-                if (Vector3.Distance(transform.position, targetPos) < 0.01f && Quaternion.Angle(transform.rotation, targetRot) < 1.0f)
+                if (originalParent != null)
                 {
-                    transform.parent = originalParent;
+                    Vector3 targetPos = originalParent.TransformPoint(originalPosition);
+                    Quaternion targetRot = originalParent.rotation * originalRotation;
+
+                    transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref currentVelocity, smoothTime);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, Time.deltaTime * transitionSpeed);
+
+                    if (Vector3.Distance(transform.position, targetPos) < 0.01f && Quaternion.Angle(transform.rotation, targetRot) < 1.0f)
+                    {
+                        transform.parent = originalParent;
+                        isTransitioning = false;
+                    }
+                }
+                else
+                {
                     isTransitioning = false;
                 }
             }

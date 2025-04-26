@@ -17,6 +17,9 @@ public class CharacterMovement2 : MonoBehaviour
     private float gravity = -9.81f; // Gravity force
     private float verticalVelocity = 0f; // Vertical velocity for gravity
 
+    public bool isDialogueMode = false;
+
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -36,6 +39,14 @@ public class CharacterMovement2 : MonoBehaviour
 
     void Update()
     {
+
+        if (isDialogueMode)
+    {
+        animator.SetFloat("Speed", 0f);
+        return; // Don't move or rotate when in dialogue
+    }
+
+
         // Camera rotation with arrow keys
         float rotateHorizontal = Input.GetAxis("HorizontalArrow") * cameraRotationSpeed * Time.deltaTime;
         float rotateVertical = Input.GetAxis("VerticalArrow") * cameraRotationSpeed * Time.deltaTime;
@@ -81,9 +92,12 @@ public class CharacterMovement2 : MonoBehaviour
     }
 
     void LateUpdate()
-    {
-        // Update the camera's position relative to the character
-        Vector3 cameraOffset = new Vector3(0f, cameraHeight, -cameraDistance);
-        cameraTransform.position = transform.position + Quaternion.Euler(0, yaw, 0) * cameraOffset;
-    }
+{
+    if (isDialogueMode)
+        return; // ✅ Skip camera control during dialogue mode
+
+    Vector3 cameraOffset = new Vector3(0f, cameraHeight, -cameraDistance);
+    cameraTransform.position = transform.position + Quaternion.Euler(0, yaw, 0) * cameraOffset;
+}
+
 }

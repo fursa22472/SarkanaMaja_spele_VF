@@ -29,10 +29,10 @@ public class InkDialogOnClickIND : MonoBehaviour
     private CharacterMovement2 characterMovement; // Reference to the player's movement script
     private CameraTransition cameraTransition; // Reference to the camera transition script
     private bool isFirstStory = true; // Flag to toggle between first and second JSON files
-    private bool playerInRange = false; // Track if the player is within the collider
+   [HideInInspector] public bool playerInRange = false; // Track if the player is within the collider
     private int selectedChoiceIndex = 0; // Track the currently selected choice
     private List<Button> choiceButtons = new List<Button>();
-    private bool isDialogueActive = false; // Track whether dialogue is active
+   [HideInInspector] public bool isDialogueActive = false; // Track whether dialogue is active
 
     void Awake()
     {
@@ -85,11 +85,25 @@ public class InkDialogOnClickIND : MonoBehaviour
 
 public void StartStoryOnClick()
 {
-    if (interactiveCharacter != null)
-        interactiveCharacter.SetDialogueActive(true);
+if (interactiveCharacter != null)
+    interactiveCharacter.SetDialogueActive(true);
 
-    if (characterMovement != null)
-        characterMovement.enabled = false;
+if (characterMovement != null)
+{
+    characterMovement.isDialogueMode = true; // ✅ Dialogue mode on
+    // characterMovement.enabled = false; ❌ REMOVE THIS
+}
+
+if (characterAnimator != null)
+{
+    characterAnimator.SetFloat("Speed", 0f);
+    characterAnimator.SetBool("InDialogue", true);
+    characterAnimator.CrossFade("Standing Idle", 0f);
+}
+
+
+
+
 
     if (cameraTransition != null && cameraTargetPosition != null)
         cameraTransition.MoveToTarget(cameraTargetPosition);
@@ -238,10 +252,7 @@ void EndDialogue()
     isDialogueActive = false;
     RemoveChildren();
 
-    if (characterMovement != null)
-    {
-        characterMovement.enabled = true; // Resume player movement
-    }
+   
 
     if (cameraTransition != null)
     {
@@ -255,6 +266,13 @@ void EndDialogue()
 
     // ✅ Pass the character that was spoken to
     OnDialogueEnd?.Invoke(gameObject);
+
+
+
+
+
+    characterMovement.isDialogueMode = false;
+
 }
 
 

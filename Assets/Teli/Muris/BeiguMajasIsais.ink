@@ -151,7 +151,7 @@ Tu biji tik nejauka pret Pēterīti. Viņš pēc tās sarunas ātri aizbēga pro
 === As12 ===
 {PiekritiPianistei:
   + [...]
-(TRUE) Tu piekriti pianisteti, ka cilvēki ir viņu darba vērti. 
+(TRUE) Tu piekriti pianistei, ka cilvēki ir viņu darba vērti. 
 KO TAD TU MEKLĒ TĀS MĀJAS. EJ. STRĀDĀ.! 
 #audio:Muris_0_b_Pianiste_P
     -> As13
