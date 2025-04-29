@@ -8,7 +8,7 @@ Hm?
 
 
 === A1 ===
-* [Es negribēju tev traucēt…]
+* [Es negribēju traucēt…]
 ~ option1 = true
     Tu traucē.
     #audio:Bomzis_3_01
@@ -31,41 +31,41 @@ Hm?
 }
 
 === A2 ===
-+ [Vai jums ir mājas.?]
++ [Vai jums ir mājas?]
     Nu, jā, jā. Te. Un tur. Un šeit. Tikai durvju nav. 
-    Jauns mājas izkārtojums. Bez durvīm.
+    Jauns mājas izkārtojums! Bez durvīm.
     #audio:Bomzis_3_03
     -> A3
 
 === A3 ===
 + [Par ko jūs runājat.]
- Nu par to, cik stulba tu esi, nav nekādu šaubu... 
- Tev teica iet, tu neej. Balsi…
+ Nu par to, cik stulba tu esi, nav nekādu šaubu. 
+ Tev teica iet - tu neej. Balsi!
     #audio:Bomzis_3_04
     -> A4
     
 
 + [Šeit nav nekādas mājas.]
- Nu par to, cik stulba tu esi, nav nekādu šaubu... 
- Tev teica iet, tu neej. Balsi…
+ Nu par to, cik stulba tu esi, nav nekādu šaubu. 
+ Tev teica iet - tu neej. Balsi!
      #audio:Bomzis_3_04
     -> A4
    
 
 === A4 ===
 * […]
-Hm. Uz komandām arī nereaģē.
+Hm. Uz komandām arī nereaģē...
  #audio:Bomzis_3_05
     -> A5
     
 
 === A5 ===
 + [Es atvainojos, labāk iešu… ]
-Kā avju bars…
+Kā avju bars...
    #audio:Bomzis_3_06_beigas1
     -> END
     
-+ [Es neesmu stulba]
++ [Es neesmu stulba.]
 Visiem vienmēr vajag palīdzēt, tev arī. 
 Es zinu. Ar mani neviens savādāk nerunātu.
    #audio:Bomzis_3_07
@@ -80,7 +80,7 @@ Es zinu. Ar mani neviens savādāk nerunātu.
 
 === A6 ===
 + [Bet ir arī tie, kas palīdzēs jums.]
-Protams, aizsūtīsiet mani prom uz hospisu... 
+Protams, aizsūtīsiet mani prom uz hospisu. 
 Ieslēgsiet tumšā kambarī un aizmirsīsiet par 
 mani kā vecu un nevajadzīgu lupatu. 
     #audio:Bomzis_3_08
@@ -88,7 +88,7 @@ mani kā vecu un nevajadzīgu lupatu.
     
     
 + [Es jums varu palīdzēt]
-Protams, aizsūtīsiet mani prom uz hospisu... 
+Protams, aizsūtīsiet mani prom uz hospisu. 
 Ieslēgsiet tumšā kambarī un aizmirsīsiet par 
 mani kā vecu un nevajadzīgu lupatu. 
     #audio:Bomzis_3_08
@@ -153,18 +153,18 @@ Ej mājās.
 
 === P5 ===
 + [Tā arī darīšu. Atā.]
-Kā avju bars…
+Kā avju bars...
     #audio:Bomzis_3_06_beigas1
     -> END
     
 + [Es neiešu, es gribu tev palīdzēt.]
   Labāk palīdzi sev. Ieraugi beidzot, kā stulbi cilvēki šeit dzīvo.
-  Aprecās, piedzemdē, bērnus, paiet 20 gadu un beigās paliek vientuļi.
+  Aprecās, piedzemdē bērnus, paiet 20 gadu un beigās paliek vientuļi.
   Neseko mums pa pēdām. Te vietas nav. 
     #audio:Bomzis_3_18
     -> P6
     
-+ [Varbūt palīdzat man…]
++ [Varbūt palīdzat man.]
 EJ PROM!
     #audio:Bomzis_3_17_beigas2
     -> END
@@ -180,13 +180,13 @@ raudošām fizionomijām kā tava.
     
 
 === P7 ===
-+ [Fuj…]
++ [Fuj...]
  Man palīdzēs tikai rublis alkašam un 
  ar to aizdzīt tevi prom.
    #audio:Bomzis_3_20
     -> P8
     
-+ [Jūs esiet nožēlojams. ]
++ [Jūs esiet nožēlojams.]
 Man palīdzēs tikai rublis alkašam un
 ar to aizdzīt tevi prom.
     #audio:Bomzis_3_20
@@ -201,23 +201,22 @@ ar to aizdzīt tevi prom.
 
 === P8 ===
 + [Bet–]
-Varbūt tu atcerēsies mani un teiksi
-“Viņš gudrs vīrs bijis”.
+Varbūt tu atcerēsies mani un teiksi,
+“Viņš gudrs vīrs bija”.
     #audio:Bomzis_3_21
     -> N2
     
     
 === N2 ===
-+ [Varbūt… jums ir taisnība. Labāk neko nedarīt un dzīvot kā sagribās ar savām problēmām.]
++ [Varbūt jums ir taisnība. Labāk neko nedarīt un dzīvot ar savām problēmām.]
 Nu re. Gudriniece. Visa pasaule pieder tev.
 Lauz likumu, pretojies viņiem!
     #audio:Bomzis_3_22_Piekritibeigas
     -> END
     
  + [Es negribu padoties. Es risināšu problēmas un darīšu, ko varēšu.]
-(smejas) Johambī, nedod Dieviņ tu padomā ar galvu. 
-Tu sevi met bezdibenī, kā alā… alus. 
-Gribu aliņu….
+Johambī, nedod Dieviņ tu padomā ar galvu. 
+Tu sevi met bezdibenī kā alā… Alus. Gribu aliņu...
     #audio:Bomzis_3_23_Nepiekritibeigas
         -> END
     

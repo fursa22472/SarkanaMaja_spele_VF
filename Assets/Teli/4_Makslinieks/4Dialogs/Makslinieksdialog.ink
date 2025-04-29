@@ -36,14 +36,14 @@ Es nedzīvoju ārā, bet es nejustos dzīvs, ja manis tagad šeit nebūtu.
     -> A5
 
 === A5 ===
-+ [Ko tas nozīmē…]  
++ [Ko tas nozīmē?]  
 Man ir arī normālas mājas, ja tas ir tas, ko gribēji zināt. 
 Neesmu nekāds bomzis.
     #audio:Makslinieks_4_06
     -> A6
 
 === A6 ===
-+ [Ohh.. sapratu.]  
++ [Ohh, sapratu.]  
 Zini, kāpēc šeit ir labāk? Jo visu laiku viss mainās. 
 Atšķirībā no senčiem, kuriem nekas nekad nemainās...
     #audio:Makslinieks_4_07
@@ -73,7 +73,7 @@ manā izpratnē nekad nebija svarīga.
 === A9 ===
 + [Ko darīsi ar šo gleznu?]  
     Uzkarināšu uz sienas. iedomāšos, ka esmu tur. 
-    Piemēram pie jūras… Vai mežā… 
+    Piemēram pie jūras vai mežā...
     #audio:Makslinieks_4_11
     -> A10
     
@@ -86,7 +86,7 @@ manā izpratnē nekad nebija svarīga.
 * [Tev patīk tavas gleznas?] 
 ~ option1 = true
 Man patīk, kad es zinu, ko es daru. Patīk vietas, kur es eju.
-Patīk, kad spēju noķert to momentu. Gleznas… arī nav sliktas.
+Patīk, kad spēju noķert to momentu. Gleznas arī nav sliktas.
     #audio:Makslinieks_4_12
     -> Atkartojums1
     
@@ -116,7 +116,7 @@ Es tevi iemūžinātu.
 === A12 ===
 + [Bet man jāiet…]  
 Nu labi, nevajag tad. Tev kur jāiet…?
-Ā jā, uz mjā… mājām……
+Ā jā, uz mjā... mājām...
     #audio:Makslinieks_4_15
     -> A13
 
@@ -165,7 +165,7 @@ Un jebkur citur, liekas, esmu svešinieks. Tev tā nav?
  -> A18
 
 === A18 ===
-+ [Ir… Man šeit patīk vairāk.]  
++ [Ir. Man šeit patīk vairāk.]  
  Tad paliec! Dari, ko sirds prasa.
     #audio:Makslinieks_4_21
     -> A19
@@ -221,7 +221,7 @@ Jā… Tev neliekas, ka mājās tu nejutīsi to pašu brīvību, ko šeit?
 === A23 ===
 + [Varbūt mājai nav tik liela nozīme... Tev taisnība – Tā ir tikai sajūta.]  
 Viss ir tikai sajūtas. Dari to, kas liek tev justies labi. 
-Ja jūties slikti, tad nav jēgas nekam. Arī mājām.  Iemācies baudīt dzīvi.
+Ja jūties slikti, tad nav jēgas nekam. Arī mājām. Iemācies baudīt dzīvi.
     #audio:Makslinieks_4_28_Piekritibeigas
     -> A24
     

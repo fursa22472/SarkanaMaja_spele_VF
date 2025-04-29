@@ -2505,6 +2505,7 @@ GameObject:
   - component: {fileID: 187620905}
   - component: {fileID: 187620904}
   - component: {fileID: 187620908}
+  - component: {fileID: 187620909}
   m_Layer: 0
   m_Name: rokasspradze
   m_TagString: Untagged
@@ -2634,6 +2635,19 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: 48522091aee8087478c5982373950bbf, type: 3}
   canvas: {fileID: 166331252}
   textPrefab: {fileID: 11456674, guid: 96a1a960d4c99ba448bd91d938fef0a5, type: 3}
+--- !u!114 &187620909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187620902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f5114a8cd7f164b903d5e1f730f1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorPrefab: {fileID: 3096468132422237662, guid: f125d32362631b94291afc3ecde42b67, type: 3}
 --- !u!1 &197872535
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,7 +2858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.08
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2892,7 +2906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2901,6 +2915,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 228301078}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 228301082}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 228301081}
   m_SourcePrefab: {fileID: 100100000, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
 --- !u!4 &228301076 stripped
 Transform:
@@ -2934,6 +2954,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -932139070483758504, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
+--- !u!114 &228301081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228301077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d678d990bde8df42ad7dadc1e57d93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSONAsset: {fileID: 4900000, guid: 1087e6371be091a4981894381994f458, type: 3}
+  canvas: {fileID: 166331252}
+  textPrefab: {fileID: 11456674, guid: 96a1a960d4c99ba448bd91d938fef0a5, type: 3}
+--- !u!114 &228301082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228301077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f5114a8cd7f164b903d5e1f730f1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorPrefab: {fileID: 85912911326824988, guid: 9af9c0da938faae4ca714f2d74c321b7, type: 3}
 --- !u!1 &228828596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3432,7 +3480,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1383586877743759874, guid: 701184f9e607ed14ba8945aaee9e6e51, type: 3}
       propertyPath: m_Radius
-      value: 2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1409125930533791091, guid: 701184f9e607ed14ba8945aaee9e6e51, type: 3}
       propertyPath: m_LocalScale.x
@@ -3542,6 +3590,10 @@ PrefabInstance:
       propertyPath: ambientAudioSource
       value: 
       objectReference: {fileID: 567488712}
+    - target: {fileID: 4522413834796461902, guid: 701184f9e607ed14ba8945aaee9e6e51, type: 3}
+      propertyPath: ambientMaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4522413834796461902, guid: 701184f9e607ed14ba8945aaee9e6e51, type: 3}
       propertyPath: cameraTargetPosition
       value: 
@@ -4259,6 +4311,7 @@ GameObject:
   - component: {fileID: 324297198}
   - component: {fileID: 324297197}
   - component: {fileID: 324297201}
+  - component: {fileID: 324297202}
   m_Layer: 0
   m_Name: ziedi
   m_TagString: Untagged
@@ -4388,6 +4441,19 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: 48522091aee8087478c5982373950bbf, type: 3}
   canvas: {fileID: 166331252}
   textPrefab: {fileID: 11456674, guid: 96a1a960d4c99ba448bd91d938fef0a5, type: 3}
+--- !u!114 &324297202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324297195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f5114a8cd7f164b903d5e1f730f1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorPrefab: {fileID: 3096468132422237662, guid: f125d32362631b94291afc3ecde42b67, type: 3}
 --- !u!1 &334292184
 GameObject:
   m_ObjectHideFlags: 0
@@ -4608,6 +4674,7 @@ Transform:
   - {fileID: 1414637352}
   - {fileID: 1792062663}
   - {fileID: 444199584}
+  - {fileID: 1440734722}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &338279948
@@ -5030,6 +5097,7 @@ GameObject:
   - component: {fileID: 362538786}
   - component: {fileID: 362538785}
   - component: {fileID: 362538790}
+  - component: {fileID: 362538791}
   m_Layer: 0
   m_Name: foto
   m_TagString: Untagged
@@ -5077,7 +5145,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 26.34, y: 16.58, z: 28.13}
+  m_Size: {x: 45.5, y: 16.58, z: 78.9}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &362538787
 MeshRenderer:
@@ -5159,6 +5227,19 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: 48522091aee8087478c5982373950bbf, type: 3}
   canvas: {fileID: 166331252}
   textPrefab: {fileID: 11456674, guid: 96a1a960d4c99ba448bd91d938fef0a5, type: 3}
+--- !u!114 &362538791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362538784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f5114a8cd7f164b903d5e1f730f1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorPrefab: {fileID: 3096468132422237662, guid: f125d32362631b94291afc3ecde42b67, type: 3}
 --- !u!1 &380657789
 GameObject:
   m_ObjectHideFlags: 0
@@ -10062,7 +10143,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1383586877743759874, guid: 701184f9e607ed14ba8945aaee9e6e51, type: 3}
       propertyPath: m_Radius
-      value: 2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1409125930533791091, guid: 701184f9e607ed14ba8945aaee9e6e51, type: 3}
       propertyPath: m_LocalScale.x
@@ -10188,6 +10269,10 @@ PrefabInstance:
       propertyPath: ambientAudioSource
       value: 
       objectReference: {fileID: 567488712}
+    - target: {fileID: 4522413834796461902, guid: 701184f9e607ed14ba8945aaee9e6e51, type: 3}
+      propertyPath: ambientMaxDistance
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4522413834796461902, guid: 701184f9e607ed14ba8945aaee9e6e51, type: 3}
       propertyPath: cameraTargetPosition
       value: 
@@ -12305,6 +12390,7 @@ GameObject:
   - component: {fileID: 512767505}
   - component: {fileID: 512767504}
   - component: {fileID: 512767506}
+  - component: {fileID: 512767507}
   m_Layer: 0
   m_Name: zimejums
   m_TagString: Untagged
@@ -12371,7 +12457,7 @@ Transform:
   m_GameObject: {fileID: 512767499}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 212.28, y: 22.48, z: 1028.41}
+  m_LocalPosition: {x: 212.2, y: 22.04, z: 1028.02}
   m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12392,7 +12478,7 @@ MonoBehaviour:
   itemName: zimejums
   isPickableItem: 1
   characterObject: {fileID: 947403325}
-  characterTag: 
+  characterTag: Makslinieks
   swapLocation: {x: 200, y: 200, z: 200}
   isInteractableObject: 0
   requiredItemName: 
@@ -12434,6 +12520,19 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: 48522091aee8087478c5982373950bbf, type: 3}
   canvas: {fileID: 166331252}
   textPrefab: {fileID: 11456674, guid: 96a1a960d4c99ba448bd91d938fef0a5, type: 3}
+--- !u!114 &512767507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512767499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f5114a8cd7f164b903d5e1f730f1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorPrefab: {fileID: 3096468132422237662, guid: f125d32362631b94291afc3ecde42b67, type: 3}
 --- !u!1001 &514958468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17729,7 +17828,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 999
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -17900,7 +17999,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20.3
+      scalar: 120.42
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -18217,7 +18316,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 5000
+    maxNumParticles: 295
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -18285,7 +18384,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 50.86, y: 838.4, z: 47.8}
+    m_Scale: {x: 19.4, y: 704, z: 50}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -18483,7 +18582,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -18589,11 +18688,11 @@ ParticleSystem:
     m_BurstCount: 1
     m_Bursts:
     - serializedVersion: 2
-      time: 5
+      time: 4.82
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 3000
+        scalar: 2914.1
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -22436,7 +22535,7 @@ Transform:
   m_GameObject: {fileID: 932768011}
   serializedVersion: 2
   m_LocalRotation: {x: 0.013089264, y: 0.006980624, z: -0.00009138128, w: 0.99989}
-  m_LocalPosition: {x: 699.9, y: 21.4, z: 1543.3}
+  m_LocalPosition: {x: 695.1, y: 21.4, z: 1541.5}
   m_LocalScale: {x: 1.8, y: -0.13, z: 5.63}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28054,7 +28153,7 @@ Terrain:
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: f629ec3eff2e58340bb4388ac854dfa5, type: 2}
   m_TreeDistance: 1421
-  m_TreeBillboardDistance: 246
+  m_TreeBillboardDistance: 245
   m_TreeCrossFadeLength: 19
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 673
@@ -28257,6 +28356,59 @@ Transform:
   - {fileID: 1158219408}
   m_Father: {fileID: 2092266632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1440734721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1440734722}
+  - component: {fileID: 1440734723}
+  m_Layer: 0
+  m_Name: 7doors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1440734722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440734721}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 335957933}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1440734723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440734721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f6795331c549b44860296abe99b2d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackedAudioClips:
+  - {fileID: 8300000, guid: 0edd1c68beee9734f98ef5737be8b61f, type: 3}
+  - {fileID: 8300000, guid: ce2f5ad74c9293c41ab6fd099ed1677b, type: 3}
+  - {fileID: 8300000, guid: d188ab972aac45846a27ef7e1247ee47, type: 3}
+  - {fileID: 8300000, guid: f734909ff11bc2f46914e75be6649ccc, type: 3}
+  - {fileID: 8300000, guid: dad2d4ba9ad205c46a69a35cfaedb6ca, type: 3}
+  - {fileID: 8300000, guid: 54557cb4913cd8d46951be94211cfd17, type: 3}
+  - {fileID: 8300000, guid: fa1a54ad853557247afb5c13633ff918, type: 3}
+  objectToDisappear: {fileID: 228301077}
 --- !u!1001 &1445888674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29381,6 +29533,7 @@ GameObject:
   - component: {fileID: 1571175879}
   - component: {fileID: 1571175878}
   - component: {fileID: 1571175883}
+  - component: {fileID: 1571175884}
   m_Layer: 0
   m_Name: aploksne
   m_TagString: Untagged
@@ -29510,6 +29663,19 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: 48522091aee8087478c5982373950bbf, type: 3}
   canvas: {fileID: 166331252}
   textPrefab: {fileID: 11456674, guid: 96a1a960d4c99ba448bd91d938fef0a5, type: 3}
+--- !u!114 &1571175884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571175877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f5114a8cd7f164b903d5e1f730f1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorPrefab: {fileID: 3096468132422237662, guid: f125d32362631b94291afc3ecde42b67, type: 3}
 --- !u!4 &1587808215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1b242840db388634f934950787bd54e8, type: 3}
@@ -30873,7 +31039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.48
+      value: 12.19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30881,7 +31047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.08
+      value: -0.84000015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30989,7 +31155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1735453420
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31087,6 +31253,7 @@ GameObject:
   - component: {fileID: 1738940705}
   - component: {fileID: 1738940704}
   - component: {fileID: 1738940709}
+  - component: {fileID: 1738940710}
   m_Layer: 0
   m_Name: cepumi
   m_TagString: Untagged
@@ -31216,6 +31383,19 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: 48522091aee8087478c5982373950bbf, type: 3}
   canvas: {fileID: 166331252}
   textPrefab: {fileID: 11456674, guid: 96a1a960d4c99ba448bd91d938fef0a5, type: 3}
+--- !u!114 &1738940710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738940703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f5114a8cd7f164b903d5e1f730f1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorPrefab: {fileID: 3096468132422237662, guid: f125d32362631b94291afc3ecde42b67, type: 3}
 --- !u!1 &1743111215
 GameObject:
   m_ObjectHideFlags: 0
@@ -31986,6 +32166,7 @@ GameObject:
   - component: {fileID: 1815986282}
   - component: {fileID: 1815986281}
   - component: {fileID: 1815986280}
+  - component: {fileID: 1815986283}
   m_Layer: 0
   m_Name: zimulis
   m_TagString: Untagged
@@ -32052,7 +32233,7 @@ Transform:
   m_GameObject: {fileID: 1815986275}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.23302105, z: 0, w: 0.9724717}
-  m_LocalPosition: {x: 599.9, y: 0.09, z: 277}
+  m_LocalPosition: {x: 600.93, y: 0.09, z: 277}
   m_LocalScale: {x: 0.39, y: 0.39, z: 0.39}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -32113,8 +32294,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 13, y: 13.34, z: 11.83}
+  m_Size: {x: 19.97, y: 17.5, z: 19.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1815986283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815986275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f5114a8cd7f164b903d5e1f730f1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorPrefab: {fileID: 3096468132422237662, guid: f125d32362631b94291afc3ecde42b67, type: 3}
 --- !u!1001 &1816534086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32137,7 +32331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4541b9e29d07a6b4bb25d07c8da8b5dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -78.53537
+      value: -54.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4541b9e29d07a6b4bb25d07c8da8b5dd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -32145,7 +32339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4541b9e29d07a6b4bb25d07c8da8b5dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -441.75763
+      value: -459.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4541b9e29d07a6b4bb25d07c8da8b5dd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32792,6 +32986,7 @@ GameObject:
   - component: {fileID: 1905930691}
   - component: {fileID: 1905930693}
   - component: {fileID: 1905930694}
+  - component: {fileID: 1905930695}
   m_Layer: 0
   m_Name: piezime
   m_TagString: Untagged
@@ -33017,6 +33212,19 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: 48522091aee8087478c5982373950bbf, type: 3}
   canvas: {fileID: 166331252}
   textPrefab: {fileID: 11456674, guid: 96a1a960d4c99ba448bd91d938fef0a5, type: 3}
+--- !u!114 &1905930695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905930686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f5114a8cd7f164b903d5e1f730f1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorPrefab: {fileID: 3096468132422237662, guid: f125d32362631b94291afc3ecde42b67, type: 3}
 --- !u!1 &1956572273 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 114a4f879392c7c4a8945b8c89cb1c9e, type: 3}
@@ -33780,7 +33988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.48
+      value: 12.19
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33788,7 +33996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8199997
+      value: -1.58
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c43ec61d90897f64686f1f1cab1aac0f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34115,6 +34323,7 @@ GameObject:
   - component: {fileID: 2099036196}
   - component: {fileID: 2099036195}
   - component: {fileID: 2099036199}
+  - component: {fileID: 2099036200}
   m_Layer: 0
   m_Name: kaklarota
   m_TagString: Untagged
@@ -34244,6 +34453,19 @@ MonoBehaviour:
   inkJSONAsset: {fileID: 4900000, guid: 48522091aee8087478c5982373950bbf, type: 3}
   canvas: {fileID: 166331252}
   textPrefab: {fileID: 11456674, guid: 96a1a960d4c99ba448bd91d938fef0a5, type: 3}
+--- !u!114 &2099036200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099036193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f5114a8cd7f164b903d5e1f730f1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicatorPrefab: {fileID: 3096468132422237662, guid: f125d32362631b94291afc3ecde42b67, type: 3}
 --- !u!1 &2104211933
 GameObject:
   m_ObjectHideFlags: 0

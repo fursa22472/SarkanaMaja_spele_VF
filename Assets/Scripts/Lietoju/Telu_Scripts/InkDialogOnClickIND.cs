@@ -192,7 +192,7 @@ if (characterAnimator != null)
         }
         else
         {
-            Button choice = CreateChoiceView("Aizvērt");
+            Button choice = CreateChoiceView("(Aiziet prom)");
             choice.onClick.AddListener(delegate
             {
                 EndDialogue();

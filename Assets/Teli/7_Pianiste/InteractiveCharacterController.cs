@@ -268,7 +268,7 @@ public void StartDialogue()
         }
         else
         {
-            Button choice = CreateChoiceView("Close");
+            Button choice = CreateChoiceView("(Aiziet prom)");
             choice.onClick.AddListener(EndDialogue);
             choiceButtons.Add(choice);
             HighlightChoiceButton();

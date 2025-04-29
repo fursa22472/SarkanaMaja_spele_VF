@@ -2,7 +2,7 @@ Kaut kas šķiet neskaidrs, meitēn? Apmaldījies?
 #audio:Muris_0_s_01
 
       + [Kur es esmu?]
-Es teiku labāk…, kur tu neesi? Kur tev jābūt?
+Es teiku labāk, kur tu neesi? Kur tev jābūt?
     #audio:Muris_0_s_02
     -> A1
 
@@ -14,94 +14,97 @@ Es teiku labāk…, kur tu neesi? Kur tev jābūt?
 
 === A1 ===
  + [Kur?]
- Mājās..?
+ Mājās... Mājās? Mājas.
   #audio:Muris_0_s_04
  -> A2
  
  === A2 ===
- + [Mājās..?]
- Jā, mājās, mājās. Tas ir, ko normāli cilvēki dara – iet mājās.
+ + [Mājās...?]
+ Jā, mājās, mājās. 
+ Tas ir, ko normāli cilvēki dara – iet mājās.
  #audio:Muris_0_s_05
   -> A3
  
   === A3 ===
-   + [Laikam jā…]
-Tev ir jātic, ka tevi gaida
+   + [Laikam jā...]
+Tev ir jātic, ka tevi gaida.
  #audio:Muris_0_s_06
    -> A4
    
       + [Bet, ja kādam nav kur iet?]
-Tad viņi turpina iet. Tik ilgi, cik vajag. Un tik, cik nevajag…….
+Tad viņi turpina iet. Tik ilgi, cik vajag. Un tik, cik nevajag...
  #audio:Muris_0_s_07
    -> A4
    
    
 === A4 ===
 + [...]
-Pasaki man. Kā izskatās tava māja?
+Pasaki man, kā izskatās tava māja?
  #audio:Muris_0_s_08
    -> A6
      
 
 === A6 ===
-+ [Nu… Tur ir jumts, durvis..sienas.]
++ [Tur ir jumts... sienas.]
 Tev sienas krāsotas?
  #audio:Muris_0_s_09
    -> A7
    
 === A7 ===
-+ [Es…nezi–]
++ [Es nezi–]
 Sarkanas sienas, pareizi? Atcerējies, malacīte? 
  #audio:Muris_0_s_10
    -> A8
    
 === A8 ===
 + [Tagad laikam atcerējos.]
-Un tomēr..šķiet dīvaini…
+Un tomēr šķiet dīvaini...
  #audio:Muris_0_s_11
    -> A9
    
  + [Nē.]
-Un tomēr..šķiet dīvaini…
+Un tomēr šķiet dīvaini...
  #audio:Muris_0_s_11
    -> A9
    
   === A9 ===
   + [Kas tieši?]
-Ja tu ej mājās… kāpēc esi tik tālu no tām? 
+Ja tu ej mājās, kāpēc esi tik tālu no tām? 
  #audio:Muris_0_s_12
    -> A10
    
   === A10 ===
   + [Esmu tālu?]
-Varbūt jā, varbūt nē! Kas zin. Es zinu.
+Varbūt jā, varbūt nē! Kas zin? Es zinu.
  #audio:Muris_0_s_13
-   -> A11
+   -> A12
    
   + [Tu runā pārāk daudz.]
-Mmmm…varbūt. Un tu turpini klausīties.
+Mmm... varbūt. Un tu turpini klausīties.
  #audio:Muris_0_s_14
-   -> A11
+   -> A12
    
  + [Vai es pagāju garām?]
-Jā, ak nabaga bērns! Mājas uz mūžiem pazaudētas… hihi
+Ak, nabaga bērns! Mājas uz mūžiem pazaudētas...
  #audio:Muris_0_s_15
-   -> A11
+   -> A12
    
+   ///ignore
 === A11 ===
  + [...]
 Tu saki, ka zini, kā izskatās tava māja, jā?
  #audio:Muris_0_s_16
    -> A12
+   ////
    
  === A12 ===
- + [Jā… varbūt…]
-Bet ja no tavām mājām būs tikai skabargas, atpazīsi?
+ + [Man jāiet...]
+Bet, ja no tavām mājām būs tikai skabargas, atpazīsi?
  #audio:Muris_0_s_17
    -> A13
    
  === A13 ===
- + [Kā nebūs–? …]
+ + [Kā nebūs–?]
 –Hipotētiski spriežot.
  #audio:Muris_0_s_18
    -> A14
@@ -112,13 +115,13 @@ Izvēlies to ceļu, kas tev patīk.
  #audio:Muris_0_s_19
    -> A15
    
-    + [Es… nezinu. Es tev neuzticos.]
+    + [Es tev neuzticos.]
 Neviens man netic.
-Esmu vienīgais, kurš var parādīt, kur iet….
+Esmu vienīgais, kurš var parādīt, kur iet.
  #audio:Muris_0_s_20
    -> A15
    
-    + [Kāda jēga man iet tur, kur tikai skabargas….?]
+    + [Kāda jēga man iet tur, kur tikai skabargas?]
 Nezinu. Kāda jēga darīt jebko? Sapratīsi, kad tur nonāksi.
  #audio:Muris_0_s_21
    -> A15
@@ -157,7 +160,7 @@ To nevar zināt. Tu neesi liktenis, tu neko nezini.
 #audio:Muris_0_s_24
 -> A19
 
- + […Es ceru, ka tu palīdzēsi.]
+ + [Es ceru, ka tu palīdzēsi.]
 To nevar zināt. Tu neesi liktenis, tu neko nezini. 
 #audio:Muris_0_s_24
 -> A19
@@ -179,56 +182,21 @@ Tu neesi vienīgā. Viņi arī meklē “mājas”.
 -> A20
    
 === A20 ===
-  + [Par, ko tu runā??? Kas ir viņi?]
+  + [Kas ir viņi?]
   Kaimiņi, kaimiņi! Citi cilvēki! Tie, kas zina labāk.
   #audio:Muris_0_s_26
 -> A21
 
 === A21 ===
-  + [Mani kaimiņi…]
-Esi uzmanīga. Pasaulē nevar iztikt ar vienu atbildi - jā vai nē. EJ.
+  + [Kādi kaimiņi?]
+Esi uzmanīga. Pasaulē nevar iztikt ar vienu atbildi - jā vai nē. Ej.
   #audio:Muris_0_s_27
 -> END
 
   + [Man ir kaimiņi?]
-Esi uzmanīga. Pasaulē nevar iztikt ar vienu atbildi - jā vai nē. EJ.
+Esi uzmanīga. Pasaulē nevar iztikt ar vienu atbildi - jā vai nē. Ej.
    #audio:Muris_0_s_27
 -> END
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
    
    
    

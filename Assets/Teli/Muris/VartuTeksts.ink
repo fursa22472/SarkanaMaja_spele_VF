@@ -1,0 +1,1 @@
+Vai nevēlies apciemot visus kaimiņus pirms dodies tālāk?

@@ -1,4 +1,5 @@
-A! Man likās, ka man virsū skrēja kaķis uz 2 ķepām. Tā biji tu.
+A! Man likās, ka man virsū skrēja kaķis uz 2 ķepām. 
+Tā biji tu.
  #audio:Panks_6_00  
  
 + [Es redzēju kaķi... savā sapnī.]
@@ -26,7 +27,7 @@ Tu pa Muri runā? Viņš nespīd, bet runa točna.
 
 === A3 ===
     + [Muris?]
-Es nevaru iedomāties nevienu citu kaķi, kurš būtu tāds pļāpa. Jā.
+Es nevaru iedomāties nevienu citu kaķi, kurš būtu tāds pļāpa, jā. 
         #audio:Panks_6_04
         -> A4
 
@@ -142,7 +143,7 @@ Te dzīvo tikai ērmi un garīgi slimie.
         
         
     === A15 ===
-    + [Ā...]
+    + [Ā.]
 Es vienreiz paprasīju, kur var nodot depozītu un mani gandrīz vai
 ievilka kaut kādā pagrabā, kur 100% darbojas vietējā sekta.
  #audio:Panks_6_17
@@ -178,7 +179,7 @@ lai man viņa nebūtu jāredz.
  #audio:Panks_6_21
         -> A20
         
-    + [Daži centās man palīdzēt....]
+    + [Daži centās man palīdzēt...]
 Forši. Feini. Fantastiski!!! Viņiem ar savām problēmām pietiek. 
 Man arī. Es netaisos tevi skolot.
  #audio:Panks_6_22
