@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.Video;
 using System.Collections;
+using UnityEngine.SceneManagement; // if not already at top
+
 
 [RequireComponent(typeof(AudioSource))]
 public class PersistentMusicManager : MonoBehaviour
@@ -153,4 +155,35 @@ public class PersistentMusicManager : MonoBehaviour
     {
         volumeMultiplier = Mathf.Clamp01(value);
     }
+
+
+
+
+
+
+
+
+    void OnEnable()
+{
+    SceneManager.sceneLoaded += OnSceneLoaded;
+}
+
+void OnDisable()
+{
+    SceneManager.sceneLoaded -= OnSceneLoaded;
+}
+
+private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+{
+    if (scene.name == "MainMenu")
+    {
+        hasForcedFadeOut = false;
+        audioSource.volume = 0f;
+        audioSource.clip = null;
+        volumeMultiplier = 1f; // 🔥 Reset proximity dampening!
+        Debug.Log("🎵 MusicManager reset — ready to play main menu music.");
+    }
+}
+
+
 }

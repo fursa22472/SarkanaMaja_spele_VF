@@ -14,8 +14,9 @@ public class CharacterMovement2 : MonoBehaviour
     private float pitch = 0f; // Vertical rotation (pitch)
     private float yaw = 0f;   // Horizontal rotation (yaw)
     private Vector3 movement = Vector3.zero; // Movement vector
-    private float gravity = -9.81f; // Gravity force
-    private float verticalVelocity = 0f; // Vertical velocity for gravity
+    private float gravity = -30f;      // Stronger gravity for better realism
+private float verticalVelocity = -2f; // Small downward force to keep grounded
+
 
     public bool isDialogueMode = false;
 
@@ -65,14 +66,16 @@ public class CharacterMovement2 : MonoBehaviour
         Vector3 inputMovement = new Vector3(moveHorizontal, 0f, moveVertical).normalized;
         inputMovement = Quaternion.Euler(0, yaw, 0) * inputMovement; // Rotate movement direction to match camera's yaw
 
-        if (characterController.isGrounded)
-        {
-            verticalVelocity = 0f; // Reset vertical velocity when grounded
-        }
-        else
-        {
-            verticalVelocity += gravity * Time.deltaTime; // Apply gravity
-        }
+       if (characterController.isGrounded)
+{
+    if (verticalVelocity < 0)
+        verticalVelocity = -2f; // Stick to the ground
+}
+else
+{
+    verticalVelocity += gravity * Time.deltaTime; // Apply gravity
+}
+
 
         movement = inputMovement * speed;
         movement.y = verticalVelocity; // Include vertical movement (gravity)

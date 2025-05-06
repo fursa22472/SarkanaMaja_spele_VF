@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeDuration: 2
-  targetVolume: 1
+  targetVolume: 0.7
   videoA: {fileID: 32900000, guid: 1f0d1fc0a04ac4a4cb6bf1833177cc06, type: 3}
   videoB: {fileID: 32900000, guid: 0977485627d461c4b998dbe709f7f748, type: 3}
 --- !u!1 &1558157897

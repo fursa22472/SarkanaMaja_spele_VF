@@ -2,52 +2,48 @@ using UnityEngine;
 
 public class InteractiveCharacter : MonoBehaviour
 {
+    [Header("Indicator Settings")]
     public GameObject indicatorPrefab; // Prefab for the indicator
+    public Vector3 indicatorLocalPosition = new Vector3(-0.16f, 1.66f, -0.11f);
+    public Vector3 indicatorLocalRotation = new Vector3(0f, 321.4f, 0f);
+    public Vector3 indicatorLocalScale = Vector3.one;
+
     private GameObject indicatorInstance; // Instance of the indicator
-    private Collider characterCollider; // Collider of the character
+    private Collider characterCollider;   // Collider of the character
 
     private void Start()
     {
-        // Initially, the indicator is not visible
+        characterCollider = GetComponent<Collider>();
+
         if (indicatorPrefab != null)
         {
-            indicatorInstance = Instantiate(indicatorPrefab, transform.position + Vector3.up * 2, Quaternion.identity, transform);
+            indicatorInstance = Instantiate(indicatorPrefab, transform);
+            indicatorInstance.transform.localPosition = indicatorLocalPosition;
+            indicatorInstance.transform.localEulerAngles = indicatorLocalRotation;
+            indicatorInstance.transform.localScale = indicatorLocalScale;
+
             indicatorInstance.SetActive(false);
         }
-
-        // Get the collider component
-        characterCollider = GetComponent<Collider>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the player entered the trigger and dialogue is not active
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && indicatorInstance != null)
         {
-            // Show the indicator
-            if (indicatorInstance != null)
-            {
-                indicatorInstance.SetActive(true);
-            }
+            indicatorInstance.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        // Check if the player exited the trigger
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && indicatorInstance != null)
         {
-            // Hide the indicator
-            if (indicatorInstance != null)
-            {
-                indicatorInstance.SetActive(false);
-            }
+            indicatorInstance.SetActive(false);
         }
     }
 
     public void SetDialogueActive(bool active)
     {
-        // Hide the indicator and disable the collider when dialogue starts
         if (indicatorInstance != null)
         {
             indicatorInstance.SetActive(!active);

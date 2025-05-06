@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+           
         }
         else
         {
@@ -34,7 +34,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Invoke("FindUIElements", 0.1f); // Ensure UI loads properly
+        
+         Cursor.lockState = CursorLockMode.Locked; // Locks the cursor to the center of the screen
+    Cursor.visible = false;                   // Hides the cursor
     }
 
     void Update()
@@ -173,4 +175,29 @@ public void StartNewGame()
             SelectButton(0);
         }
     }
+
+
+
+
+
+
+
+    void OnEnable()
+{
+    SceneManager.sceneLoaded += OnSceneLoaded;
+}
+
+void OnDisable()
+{
+    SceneManager.sceneLoaded -= OnSceneLoaded;
+}
+
+private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+{
+    if (scene.name == "MainMenu")
+    {
+        Invoke("FindUIElements", 0.1f); // Delay slightly to ensure objects are loaded
+    }
+}
+
 }
