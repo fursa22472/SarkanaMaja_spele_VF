@@ -596,6 +596,8 @@ void EndDialogue()
 
         dialogueAudioMap.Add("Panks_6_Loop_1", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_Loop_1"));
         dialogueAudioMap.Add("Panks_6_Loop_2", Resources.Load<AudioClip>("Audio/PanksAudio/Panks_6_Loop_2"));
+
+        dialogueAudioMap.Add("PanksKlusums", Resources.Load<AudioClip>("Audio/PanksAudio/PanksKlusums"));
     
 
         dialogueAudioMap.Add("Gongs", Resources.Load<AudioClip>("Audio/PapildusSkana/Gongs"));

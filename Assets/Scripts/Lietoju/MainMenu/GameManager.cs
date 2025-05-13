@@ -32,12 +32,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        
-         Cursor.lockState = CursorLockMode.Locked; // Locks the cursor to the center of the screen
-    Cursor.visible = false;                   // Hides the cursor
-    }
+void Start()
+{
+    Cursor.lockState = CursorLockMode.Locked;
+    Cursor.visible = false;
+
+    DisableMouseUIInteraction(); // No more mouse selection
+
+    Invoke("FindUIElements", 0.1f);
+}
+
+
 
     void Update()
     {
@@ -199,5 +204,39 @@ private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         Invoke("FindUIElements", 0.1f); // Delay slightly to ensure objects are loaded
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+private void DisableMouseUIInteraction()
+{
+    var eventSystem = EventSystem.current;
+    if (eventSystem != null)
+    {
+        var inputModule = eventSystem.GetComponent<StandaloneInputModule>();
+        if (inputModule != null)
+        {
+            // Block pointer by using fake/unmapped input names
+            inputModule.horizontalAxis = "Disabled";
+            inputModule.verticalAxis = "Disabled";
+            inputModule.submitButton = "Submit";
+            inputModule.cancelButton = "Cancel";
+        }
+    }
+}
+
+
+
+
+
 
 }

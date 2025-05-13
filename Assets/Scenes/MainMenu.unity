@@ -122,6 +122,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &226712962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226712964}
+  - component: {fileID: 226712963}
+  m_Layer: 0
+  m_Name: QuitGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &226712963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226712962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899af4b3865a3964c93cef878d91d9b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quitPanel: {fileID: 0}
+  mainMenuSceneName: MainMenu
+--- !u!4 &226712964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226712962}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 96.17176, y: -0.6779556, z: 1249.5679}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &251151486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,10 +1194,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ff05467e07203341b92ec2a4a716dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 2
-  targetVolume: 0.7
-  videoA: {fileID: 32900000, guid: 1f0d1fc0a04ac4a4cb6bf1833177cc06, type: 3}
-  videoB: {fileID: 32900000, guid: 0977485627d461c4b998dbe709f7f748, type: 3}
+  fadeDuration: 0.6
+  targetVolume: 1.5
+  videoA: {fileID: 32900000, guid: da4be9c89ad18bd40a841da74e5c06c0, type: 3}
+  videoB: {fileID: 32900000, guid: a37f8b2d1d6c5af40bde9460de3052c1, type: 3}
 --- !u!1 &1558157897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,7 +1573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174c78c3880db3045bc67d9e1d8641f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneMusic: {fileID: 8300000, guid: 2250ec0ff4e50b043bd226767ea6e64e, type: 3}
+  sceneMusic: {fileID: 8300000, guid: ae95ef1201ff9b341bd8214cc995f670, type: 3}
 --- !u!4 &1766319559
 Transform:
   m_ObjectHideFlags: 0
@@ -1688,3 +1734,4 @@ SceneRoots:
   - {fileID: 284307841}
   - {fileID: 1526151517}
   - {fileID: 1766319559}
+  - {fileID: 226712964}

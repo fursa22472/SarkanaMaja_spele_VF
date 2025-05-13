@@ -1,0 +1,1 @@
+﻿{"inkVersion":21,"root":[["^Ko?","\n","#","^audio:Panks_6_Loop_1","/#","ev","str","^Neko.","/str","/ev",{"*":"0.c-0","flg":4},{"c-0":["\n","^Skaidrs.","\n","#","^audio:Panks_6_Loop_2","/#","end",{"->":"0.g-0"},{"#f":5}],"g-0":["done",{"#f":5}]}],"done",{"#f":1}],"listDefs":{}}

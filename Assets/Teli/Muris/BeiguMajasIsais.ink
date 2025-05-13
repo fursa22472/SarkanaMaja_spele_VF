@@ -8,7 +8,7 @@ VAR PiekritiPianistei = false
 
 
 Tas tik bija kaut kas! Ceļš tev apsolīja beigas, bet… 
-šeit tikai maziņais nevainīgais es un tu, joprojām esi pazudusi.
+šeit tikai maziņais, nevainīgais es un tu, joprojām esi pazudusi.
 #audio:Muris_0_b_01
 -> A1
 
@@ -44,7 +44,7 @@ Ko, ko? Šis ceļš nekad tevi nenovedīs līdz mājām.
 
 === A4 ===
 + [Bet tu teici, ka…]
-Varbūt es meloju. Varbūt citi meloja.
+Varbūt es meloju? Varbūt citi meloja?
 #audio:Muris_0_b_07
     -> A5
     
@@ -145,7 +145,7 @@ Esi droša, ka tev patika ideja nevis pats Pēteris?
     -> As12
   - else:
   + [...]
-Tu biji tik nejauka pret Pēterīti. Viņš pēc tās sarunas ātri aizbēga prom. Viņam nebija vienalga. Bet viņam arī bija daļa taisnības - nevar uzticēties visiem. 
+Tu biji tik nejauka pret Pēterīti. Viņš pēc tās sarunas ātri aizbēga prom. Viņam nebija vienalga. Bet viņam arī bija daļa taisnības - nevar visiem uzticēties. 
 #audio:Muris_0_b_Panks_N
     -> As12
 }
@@ -205,7 +205,8 @@ Nekādas mājas nekad nebija, tu tikai iztērēji savu laiku.
     -> A12
     
 + [Tu esi melns, šmucīgs un vēl melis! Es atradīšu mājas bez tevis. ]
-Rāmāk. Tu nezini par ko runā. Es gribēju tikai palīdzēt? Vai tu to pamanīji? 
+Rāmāk. Tu nezini par ko runā. 
+Es gribēju tikai palīdzēt? Vai tu to pamanīji? 
 #audio:Muris_0_b_labas_13
     -> A13
     

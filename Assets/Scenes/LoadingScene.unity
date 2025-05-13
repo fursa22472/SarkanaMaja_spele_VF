@@ -677,7 +677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 174c78c3880db3045bc67d9e1d8641f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneMusic: {fileID: 8300000, guid: 98f18142fee66654d938681755351df0, type: 3}
+  sceneMusic: {fileID: 8300000, guid: 38bd8d604b10dd04181ec3f1619c2a91, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

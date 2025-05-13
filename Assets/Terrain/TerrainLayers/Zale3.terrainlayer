@@ -7,10 +7,10 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Zale3
-  m_DiffuseTexture: {fileID: 2800000, guid: bc258473fbd7538428b6fa5d254e4b9c, type: 3}
+  m_DiffuseTexture: {fileID: 2800000, guid: 87f7bd4f60e422f418d4b4b66a9c6fcf, type: 3}
   m_NormalMapTexture: {fileID: 0}
   m_MaskMapTexture: {fileID: 0}
-  m_TileSize: {x: 2, y: 2}
+  m_TileSize: {x: 6, y: 6}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0.53683865, g: 0.6886792, b: 0.46453363, a: 0}
   m_Metallic: 0

@@ -6,10 +6,14 @@ public class SevenDoors : MonoBehaviour
     [Header("Assign exactly 7 unique AudioClips to track.")]
     public List<AudioClip> trackedAudioClips;
 
+    [Header("The bonus clip that reappears the object.")]
+    public AudioClip bonusClip;
+
     [Header("Object that disappears when all 7 have been played.")]
     public GameObject objectToDisappear;
 
     private HashSet<AudioClip> playedClips = new HashSet<AudioClip>();
+    private bool hasDisappeared = false;
 
     private void Update()
     {
@@ -20,18 +24,32 @@ public class SevenDoors : MonoBehaviour
         {
             if (source == null || source.clip == null) continue;
 
-            // Only count if it's playing AND the GameObject is active
-            if (source.isPlaying && trackedAudioClips.Contains(source.clip))
-            {
-                if (!playedClips.Contains(source.clip))
-                {
-                    playedClips.Add(source.clip);
-                    Debug.Log($"Audio played: {source.clip.name} ({playedClips.Count}/7)");
+            AudioClip currentClip = source.clip;
 
-                    if (playedClips.Count == 7)
+            if (source.isPlaying)
+            {
+                // Bonus logic: If door is gone and bonus clip is played, bring it back
+                if (hasDisappeared && currentClip == bonusClip)
+                {
+                    objectToDisappear.SetActive(true);
+                    hasDisappeared = false;
+                    Debug.Log("🎁 Bonus clip played. Object reappeared.");
+                    return;
+                }
+
+                // Track progress toward disappearance
+                if (!hasDisappeared && trackedAudioClips.Contains(currentClip))
+                {
+                    if (!playedClips.Contains(currentClip))
                     {
-                        TriggerDisappearance();
-                        return;
+                        playedClips.Add(currentClip);
+                        Debug.Log($"Audio played: {currentClip.name} ({playedClips.Count}/7)");
+
+                        if (playedClips.Count == 7)
+                        {
+                            TriggerDisappearance();
+                            return;
+                        }
                     }
                 }
             }
@@ -43,9 +61,8 @@ public class SevenDoors : MonoBehaviour
         if (objectToDisappear != null && objectToDisappear.activeSelf)
         {
             objectToDisappear.SetActive(false);
+            hasDisappeared = true;
             Debug.Log("✅ All 7 audio clips played. Object disappeared.");
         }
-
-        enabled = false; // Stop checking after success
     }
 }

@@ -1,1 +1,1 @@
-Uzspiediet E, lai sāktu dialogu.
+Uzspiediet E, lai sāktu dialogu
