@@ -78,13 +78,13 @@ Tad tu domā šeit palikt vai ko tu dari?
 
 === A9 ===
     + [Laikam.]
-Skaidrs... Tu uz mani tā skaties it kā kaut ko gaidi. 
+Skaidrs... Tu uz mani tā skaties it kā kaut ko gribētu. 
 Naudu? Alkašu vai cīgas es tev nepirkšu.
 #audio:Panks_6_11
         -> A10
         
  + [Nē. Es eju mājās.]
-Skaidrs... Tu uz mani tā skaties it kā kaut ko gaidi. 
+Skaidrs... Tu uz mani tā skaties it kā kaut ko gribētu. 
 Naudu? Alkašu vai cīgas es tev nepirkšu.
 #audio:Panks_6_11
         -> A10
@@ -243,7 +243,7 @@ Tante, tā riebīgā vecene?
     
     + [Es iešu. Atā...]
 Ā, un vēl. Varēsi nodot vienu sīkumu? Tas ir tev pa ceļam.
-Pianistei. Puķes. Lūūūūūdzu?
+Pianistei. Puķes. Lūdzu?
  #audio:Panks_6_OBJ_PUK_1
         -> A24
             

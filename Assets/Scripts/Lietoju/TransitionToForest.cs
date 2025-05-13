@@ -69,7 +69,7 @@ public class TransitionToForest : MonoBehaviour
         if (hasTeleported) return;
         hasTeleported = true;
 
-        InkDialogOnClickIND.OnDialogueEnd -= HandleDialogueEnd;
+        
         StartCoroutine(FadeAndTeleport());
     }
 
@@ -152,4 +152,31 @@ public class TransitionToForest : MonoBehaviour
         public Collider zoneCollider;
         public AudioClip musicClip;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public void ResetState()
+{
+    hasTeleported = false;
+    currentZone = "";
+
+    // Make sure we are subscribed again to the event
+    InkDialogOnClickIND.OnDialogueEnd -= HandleDialogueEnd;
+    InkDialogOnClickIND.OnDialogueEnd += HandleDialogueEnd;
+}
+
+
+
+
 }

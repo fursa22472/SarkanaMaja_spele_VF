@@ -117,9 +117,22 @@ void Start()
 
 public void StartNewGame()
 {
-    Debug.Log("Starting new game... Loading LoadingScene first...");
-    SceneManager.LoadScene("LoadingScene"); // <-- change this to your actual loading scene name
+    Debug.Log("Starting new game... resetting scripts and loading scene...");
+
+    // Reset NPC-related gameplay scripts before loading the game scene
+    foreach (var blocker in FindObjectsOfType<OneTimeDialogueBlocker>())
+    {
+        blocker.ResetState();
+    }
+
+    foreach (var teleporter in FindObjectsOfType<TransitionToForest>())
+    {
+        teleporter.ResetState();
+    }
+
+    SceneManager.LoadScene("LoadingScene"); // Load your game scene
 }
+
 
 
     public void OpenTutorial()

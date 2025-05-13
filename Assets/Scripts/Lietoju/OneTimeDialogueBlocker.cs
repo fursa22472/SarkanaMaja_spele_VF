@@ -37,4 +37,40 @@ public class OneTimeDialogueBlocker : MonoBehaviour
             targetDialogueScript.enabled = false; // 🔥 Disable the whole InkDialogOnClickIND script!
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public void ResetState()
+{
+    locked = false;
+
+    if (targetDialogueScript != null)
+    {
+        targetDialogueScript.enabled = true;
+     
+    }
+
+    // Re-subscribe in case it was removed
+    InkDialogOnClickIND.OnDialogueEnd -= HandleDialogueEnd;
+    InkDialogOnClickIND.OnDialogueEnd += HandleDialogueEnd;
+}
+
 }
