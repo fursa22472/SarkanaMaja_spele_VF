@@ -13,7 +13,7 @@ Uzmanīgi, neiekrīti ūdenī.
 
 === A1 ===
 + [Ko tu glezno?]  
-Vietu, kur es gribētu … vienkārši būt.
+Vietu, kur es gribētu vienkārši būt.
     #audio:Makslinieks_4_02
     -> A2
     
@@ -45,7 +45,7 @@ Neesmu nekāds bomzis.
 === A6 ===
 + [Ohh, sapratu.]  
 Zini, kāpēc šeit ir labāk? Jo visu laiku viss mainās. 
-Atšķirībā no senčiem, kuriem nekas nekad nemainās...
+Atšķirībā no senčiem, kuriem nekas nekad nemainās.
     #audio:Makslinieks_4_07
     -> A7
 
@@ -160,7 +160,7 @@ sēdēt mājas, kad var apbrīnot to, kas ir ārpus tās.
 === A17 ===
 + [Te nav kur gulēt.] 
 Vari droši gulēt teltī. Ārā es jūtos kā mājās. 
-Un jebkur citur, liekas, esmu svešinieks. Tev tā nav? 
+Un jebkur citur, liekas, ka esmu svešinieks. Tev tā nav? 
 #audio:Makslinieks_4_20
  -> A18
 

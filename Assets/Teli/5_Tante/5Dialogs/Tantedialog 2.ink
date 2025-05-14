@@ -21,18 +21,21 @@ Vienaldzīgā paaudze. Tu esi gan pierādījums, gan atgādinājums tam.
 
 === A1 ===
 + [...]
-Dzīvē vajag kārtību, savādāk viss sabrūk. Ja ne es… Ja ne mana  paaudze, visa valsts jau būtu sabrukusi… un jūs sīkie knaušļi visi paliktu bez mājām.
+Dzīvē vajag kārtību, savādāk viss sabrūk. Ja ne es, ja ne mana  paaudze, 
+visa valsts jau būtu sabrukusi, un jūs sīkie knaušļi visi paliktu bez mājām.
     #audio:Tante_5_N_04
     -> A2
 
 === A2 ===
 + [Dzīve ir nekārtīga.]
-Kad būsi manā vecumā, nožēlosi to, ka nepaliki ilgāk mājās un nesadraudzējies ar saviem kaimiņiem
+Kad būsi manā vecumā, nožēlosi to, ka nepaliki ilgāk mājās
+un nesadraudzējies ar saviem kaimiņiem.
     #audio:Tante_5_N_05
     -> C1
     
     + [Jā...laikam...]
-Kad būsi manā vecumā nožēlosi to, ka nepaliki ilgāk mājās un nesadraudzējies ar saviem kaimiņiem
+Kad būsi manā vecumā nožēlosi to, ka nepaliki ilgāk mājās
+un nesadraudzējies ar saviem kaimiņiem.
     #audio:Tante_5_N_05
     -> C1
 
@@ -93,7 +96,8 @@ Tad ko tu te klaiņo, ja ne citiem traucēt vai musināt uz nedarbiem, koa?
 -> CC51
 
 + [Kā cilvēks prātā tur ļaunumu?]
-Ak manu bērn, pēc mans tač pieredzes, vismaz puse domā, ka domas deniņos ir vislielākā nelaime – velna balss aiz ausīm.
+Ak manu bērn, pēc mans tač pieredzes, vismaz puse domā, 
+ka domas deniņos ir vislielākā nelaime – velna balss aiz ausīm.
    # audio:Tante_5_N_12
 -> CC52
 
@@ -182,7 +186,7 @@ Sveicinājās, smaidīja, ciemojās...
 
 === C5 ===
     + [Pastāstat vēl.]
-Neviens tā vairs nedzīvo un negrib. 
+Neviens tā vairs nedzīvo un negrib dzīvot. 
 Es vairs nezinu ko no šīs dzīves var gribēt.
     # audio:Tante_5_N_16
     -> C6
@@ -195,12 +199,12 @@ Tad, tu iesi mājās vai nē? Sen kā jau teicu, lai ej mājās!
     -> C7
 
     + [Es arī…]
-Tad, tu iesi mājās vai nē? Sen kā jau teicu, lai ej mājās!
+Tad, tu galu galā iesi mājās vai nē? Sen kā jau teicu, lai ej mājās!
     # audio:Tante_5_N_17
     -> C7
 
     + [Tāda ir dzīve...?]
-Tad, tu iesi mājās vai nē? Sen kā jau teicu, lai ej mājās!
+Tad, tu galu galā iesi mājās vai nē? Sen kā jau teicu, lai ej mājās!
     # audio:Tante_5_N_17
     -> C7
 
@@ -208,7 +212,7 @@ Tad, tu iesi mājās vai nē? Sen kā jau teicu, lai ej mājās!
 
 === C7 ===
 + [Es jau eju.]
-Ej. Tavs pienākums, kā bērnam ir vienmēr atgriezties laicīgi.
+Ej! Tavs pienākums, kā bērnam ir vienmēr atgriezties laicīgi.
 # audio:Tante_5_N_beigas
     -> END
 
@@ -220,7 +224,7 @@ Tu zini, kas notiek ar tiem, kuri neklausās?
 
 === C8 ===
 + [Viņi nekad neatrod ceļu līdz mājām?]
-Tieš tā. Tagad beidz tēlot gudro. Tu zini, ko tev jādara.
+Tieši tā. Tagad beidz tēlot gudro. Tu zini, ko tev jādara.
     # audio:Tante_5_N_19
     -> A5
     

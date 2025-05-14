@@ -52,7 +52,7 @@ kurš būtu tāds pļāpa. Jā.
 
 === A6 ===
     + [Es noguru no meklēšanas.]
-   Ko? Tu tagad ar kādu naktsslēpes spēlē?
+   Ko? Tu tagad ar kādu spēlē naktsslēpes?
 #audio:Panks_6_08
         -> A7
         
@@ -71,20 +71,20 @@ ar tādiem jautājumiem.
 
 === A8 ===
     + [...]
-Ok, piedo… 
+Ok, piedod… 
 Tad tu domā šeit palikt vai ko tu dari?
 #audio:Panks_6_10
         -> A9
 
 === A9 ===
     + [Laikam.]
-Skaidrs... Tu uz mani tā skaties it kā kaut ko gribētu. 
+Skaidrs... Tu uz mani skaties kā kaut ko gribētu. 
 Naudu? Alkašu vai cīgas es tev nepirkšu.
 #audio:Panks_6_11
         -> A10
         
  + [Nē. Es eju mājās.]
-Skaidrs... Tu uz mani tā skaties it kā kaut ko gribētu. 
+Skaidrs... Tu uz mani skaties kā kaut ko gribētu. 
 Naudu? Alkašu vai cīgas es tev nepirkšu.
 #audio:Panks_6_11
         -> A10
@@ -174,15 +174,16 @@ lai man viņa nebūtu jāredz.
         -> A19
         
     + [Bet Tante ir cilvēks ar pieredzi, es viņai piekrītu.]
-Nav jēga te būt pieklājīgam - teikšu kā ir. Tu točna neesi tas gudrākais bērns ģimenē. Aizmirsti par to dumjo Tanti un visiem pārējiem. 
-Izdomā ar savu prātu, un varu saderēt tu tiksi galā. 
+Nav jēga te būt pieklājīgam - teikšu kā ir. 
+Tu točna neesi tas gudrākais bērns ģimenē. Aizmirsti par to dumjo Tanti un 
+visiem pārējiem. Izdomā ar savu prātu, un varu saderēt tu tiksi galā. 
  #audio:Panks_6_20_V2
         -> A19
         
         
     === A19 ===
     + [Tu esi nejauks.]
-“Tu esi nejauks” Paraudi!
+“Tu esi nejauks.” Paraudi!
  #audio:Panks_6_21
         -> A20
         
@@ -217,8 +218,8 @@ Tu piekrīti Tantei, tu esi tāda pati kā viņi.
         
     === A22 ===
     + [Nē. Tu runā muļķības. Ir daudz  labu cilvēku, kuriem var uzticēties.]
-Piemēram??? Tante, kurai uz visiem nospļauties? Vienalga. Man apnika. 
-Turpini ticēt visam, ko tev saka.  
+Piemēram??? Tante, kurai uz visiem nospļauties? Vienalga. 
+Man šitas apnika. Ej tinies.
  #audio:Panks_6_25_Nepiekritbeigas_V2_1
         -> A24_TANTE
         
@@ -331,22 +332,11 @@ Pianistei. Puķes. Lūdzu?
  #audio:Panks_6_OBJ_PUK_1
         -> A24
         
+        
     === A33_TANTE ===
     + [...]
-Tante?
+Tante? Tante, nopietni? Tā Tante?!
  #audio:Panks_6_25_Nepiekritbeigas_V2_11
-        -> A34_TANTE
-        
-    + [Es iešu. Atā...]
-Ā, un vēl. Varēsi nodot vienu sīkumu? Tas ir tev pa ceļam.
-Pianistei. Puķes. Lūdzu?
- #audio:Panks_6_OBJ_PUK_1
-        -> A24
-        
-    === A34_TANTE ===
-    + [...]
-Tante, nopietni?
- #audio:Panks_6_25_Nepiekritbeigas_V2_12
         -> A35_TANTE
         
     + [Es iešu. Atā...]
@@ -358,7 +348,7 @@ Pianistei. Puķes. Lūdzu?
     === A35_TANTE ===
     + [...]
 Tante, kas grib ananāsus uz katras picas?
- #audio:Panks_6_25_Nepiekritbeigas_V2_13
+ #audio:Panks_6_25_Nepiekritbeigas_V2_12
         -> A36_TANTE
         
     + [Es iešu. Atā...]
@@ -371,7 +361,7 @@ Pianistei. Puķes. Lūdzu?
     + [...]
 Tante, kurai nav draugu?
 Tante, kurai nestrādā printeris?
- #audio:Panks_6_25_Nepiekritbeigas_V2_14
+ #audio:Panks_6_25_Nepiekritbeigas_V2_13
         -> A37_TANTE
         
     + [Es iešu. Atā...]
@@ -384,7 +374,7 @@ Pianistei. Puķes. Lūdzu?
     + [...]
 Tante, kurai nav pirkstu? 
 Tante, kurai tikai dārzenis uzticētos? 
- #audio:Panks_6_25_Nepiekritbeigas_V2_15
+ #audio:Panks_6_25_Nepiekritbeigas_V2_14
         -> A23
         
     + [Es iešu. Atā...]

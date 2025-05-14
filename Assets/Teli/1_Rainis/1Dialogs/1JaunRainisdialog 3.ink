@@ -52,7 +52,7 @@ Vai tad tev pulksteņa nav? Redzi, saule jau tā kā uz rietu.
    
  === A5 ===
 + [Es zinu.]
-Šis man atgādina, kad tiku labi tālu prom no mājām. Jā...
+Šis man atgādina, zini, kad tiku labi tālu prom no mājām. Jā...
 #audio:Rainis_1_08
    -> A6
    
@@ -142,7 +142,8 @@ Tāpat pārmaiņas nenotiek pēc mūsu pavēles.
 
 * [Cilvēks nevar stāvēt visu laiku uz vietas.]
  ~ option5 = true
-Cilvēkiem kājas ir, lai stāvētu. Ēkas pārbūvē, tehnoloģijas... ui kā tās attīstās. Bet cilvēks, ko viņš? Viņš nekad nemainās. Cilvēks nav mašīna. 
+Cilvēkiem kājas ir, lai stāvētu. Ēkas pārbūvē, tehnoloģijas... ui kā tās attīstās. 
+Bet cilvēks, ko viņš? Viņš nekad nemainās. Cilvēks nav mašīna. 
 #audio:Rainis_1_20
    -> Atkartojums2
    
@@ -243,7 +244,8 @@ Bet vismaz būs tev dzīves pieredze.
    -> A25
    
  + [Laikam... Jums ir taisnība. Man nevajag nekur skriet. Tāpat būs labi]
-Es zinu. Bet nekas. Svarīgi samierināties ar to, ka pasaule mums sasēja rokas un iemeta jūrā, jau piedzimstot. Nu tā tas vienkārši ir. 
+Es zinu. Bet nekas. Svarīgi samierināties ar to, ka pasaule mums sasēja rokas un 
+iemeta jūrā, jau piedzimstot. Nu tā tas vienkārši ir. 
 #audio:Rainis_1_31
    -> A25
    

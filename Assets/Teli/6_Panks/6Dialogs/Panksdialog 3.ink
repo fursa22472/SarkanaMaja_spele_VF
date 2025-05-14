@@ -52,7 +52,7 @@ Nabaga bērns palaida garām diendusu?
 
 === A6 ===
     + [Es noguru no meklēšanas.]
-   Ko? Tu tagad ar kādu naktsslēpes spēlē?
+   Ko? Tu tagad ar kādu spēlē naktsslēpes?
 #audio:Panks_6_08
         -> A7
         
@@ -72,7 +72,7 @@ ar tādiem jautājumiem.
 
 === A8 ===
     + [...]
-Ok, piedo… tad tu domā šeit palikt vai ko tu dari?
+Ok, piedod… Tad tu domā šeit palikt vai ko tu dari?
 #audio:Panks_6_10
         -> A9
 
@@ -161,8 +161,7 @@ Tev neviens te gudra vārda nepateiks.
         
     === A17 ===
     + [Tiešām?]
-Tiešām. It īpaši tā..
-Tante…
+Tiešām. It īpaši tā Tante...
  #audio:Panks_6_19
         -> A18
         
@@ -177,7 +176,7 @@ lai man viņa nebūtu jāredz.
         
     === A19 ===
     + [Tu esi nejauks.]
-“Tu esi nejauks” Paraudi!
+“Tu esi nejauks.” Paraudi!
  #audio:Panks_6_21
         -> A20
         
