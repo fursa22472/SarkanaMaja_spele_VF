@@ -723,4 +723,27 @@ public bool IsFirstStory()
     return isFirstStory;
 }
 
+
+
+
+
+
+
+
+public void ResetState()
+{
+    isFirstStory = true;
+    isDialogueActive = false;
+}
+void OnDestroy()
+{
+    OnDialogueEnd = null;
+    OnCreateStory = null;
+}
+
+
+
+
+
+
 }

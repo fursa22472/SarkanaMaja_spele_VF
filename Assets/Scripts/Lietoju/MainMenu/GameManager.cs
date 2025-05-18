@@ -119,7 +119,6 @@ public void StartNewGame()
 {
     Debug.Log("Starting new game... resetting scripts and loading scene...");
 
-    // Reset NPC-related gameplay scripts before loading the game scene
     foreach (var blocker in FindObjectsOfType<OneTimeDialogueBlocker>())
     {
         blocker.ResetState();
@@ -130,7 +129,12 @@ public void StartNewGame()
         teleporter.ResetState();
     }
 
-    SceneManager.LoadScene("LoadingScene"); // Load your game scene
+    foreach (var dialogue in FindObjectsOfType<InkDialogOnClickIND>())
+    {
+        dialogue.ResetState(); // ✅ This is the key missing piece
+    }
+
+    SceneManager.LoadScene("LoadingScene");
 }
 
 

@@ -7,7 +7,7 @@ VAR PiekritiPianistei = false
 
 
 
-Tas tik bija kaut kas! Ceļš tev apsolīja beigas, bet… 
+Tas tik bija kaut kas! Ceļš tev apsolīja beigas, bet...
 šeit tikai maziņais, nevainīgais es un tu, joprojām esi pazudusi.
 #audio:Muris_0_b_01
 -> A1
@@ -18,14 +18,14 @@ Kur ir šis, kur ir tas? Kur ir kas?
 #audio:Muris_0_b_03
     -> A3
     
-+ [Tu arī esi šeit mežā??]
++ [Tu arī esi šeit mežā?]
 Es neesmu mežā, tu esi mežā. 
 #audio:Muris_0_b_02
     -> A2
 
 + [Tu nespīdi!]
-Es esmu ne šis, ne tas. Ko citu gaidīji, 
-“Ņau, ņau?”
+Es esmu ne šis, ne tas. 
+Ko citu gaidīji, “Ņau, ņau?”
 #audio:Muris_0_b_04
     -> A2
 
@@ -50,12 +50,14 @@ Varbūt es meloju? Varbūt citi meloja?
     
 === A5 ===
 + [Man meloja?]
-Tu pati nekad neredzēji šo māju. Kā varēji zināt, ka tā eksistē?
+Tu pati nekad neredzēji šo māju. 
+Kā varēji zināt, ka tā eksistē?
 #audio:Muris_0_b_08
     -> A6
     
 + [Nēēēēē!!!]
-Tu pati nekad neredzēji šo māju. Kā varēji zināt, ka tā eksistē?
+Tu pati nekad neredzēji šo māju.
+Kā varēji zināt, ka tā eksistē?
 #audio:Muris_0_b_08
     -> A6
     
@@ -72,8 +74,9 @@ Beidzot tu jautā pareizos jautājumus! Dod padomāt…
 === As7 ===
 {PiekritiPriesterim:
   + [...]
-(TRUE) Zināju, ka esi viena no ticīgajiem. Paļaujies uz katra viltnieka pasaciņām. 
-Dievs tev nepalīdzētu tikt mājās. Hmmm…
+(TRUE) Zināju, ka esi viena no ticīgajiem. 
+Paļaujies uz katra viltnieka pasaciņām. 
+Dievs tev nepalīdzētu tikt mājās. Hmmm...
 #audio:Muris_0_b_Priest_P
     -> As8
   - else:
@@ -88,7 +91,7 @@ Domā esi stiprāka par viņa Dievu? Tu?! Redzēsim...
 === As8 ===
 {PiekritiBomzim:
   + [...]
-(TRUE) Mjā… Tu domā lauzt likumus kā tas…bomzis? 
+(TRUE) Mjā...Tu domā lauzt likumus kā tas bomzis? 
 Bez likumiem nav kārtības, bez kārtības nebūs skaidra ceļa. 
 Bez ceļa - nav mājas. 
 #audio:Muris_0_b_Bomz_P
@@ -130,7 +133,8 @@ Hm… Varbūt tavs, bet ne mans. Man rieeebbjas pienākumi.
   - else:
   + [...]
 Tu nepiekriti tam tantukam, pareizi? 
-Viņa man arī centās ieskaidrot, ka man jāsēž mājās. Bet skat, kur esam.
+Viņa man arī centās ieskaidrot, ka man jāsēž mājās. 
+Bet skat, kur esam.
 #audio:Muris_0_b_Tante_N
     -> As11
 }
@@ -145,7 +149,9 @@ Esi droša, ka tev patika ideja nevis pats Pēteris?
     -> As12
   - else:
   + [...]
-Tu biji tik nejauka pret Pēterīti. Viņš pēc tās sarunas ātri aizbēga prom. Viņam nebija vienalga. Bet viņam arī bija daļa taisnības - nevar visiem uzticēties. 
+Tu biji tik nejauka pret Pēterīti. 
+Viņš pēc tās sarunas ātri aizbēga prom. Viņam nebija vienalga. 
+Bet viņam arī bija daļa taisnības - nevar visiem uzticēties. 
 #audio:Muris_0_b_Panks_N
     -> As12
 }
@@ -155,7 +161,7 @@ Tu biji tik nejauka pret Pēterīti. Viņš pēc tās sarunas ātri aizbēga pro
 {PiekritiPianistei:
   + [...]
 (TRUE) Tu piekriti pianistei, ka cilvēki ir viņu darba vērti. 
-KO TAD TU MEKLĒ TĀS MĀJAS? EJ. STRĀDĀ! 
+Ko tad tu meklē tās mājas? EJ, STRĀDĀ! 
 #audio:Muris_0_b_Pianiste_P
     -> As13
   - else:
@@ -218,7 +224,8 @@ Bet palika tikai pēdējais pārbaudījums, bez jokiem.
     
     === A15_1 ===
 + [Par ko tu runā?]
-Nu, nu , saki man! Saki, ja tu jau zināji, ka māju nav, ja tu lieki ticēji katram, kurš zināja labāk un tu joprojām cīnies, kāda jēga?
+Nu, nu, saki man! Saki, ja tu jau zināji, ka māju nav, ja tu lieki ticēji katram, 
+kurš zināja labāk un tu joprojām cīnies, kāda jēga?
 #audio:Muris_0_b_labas_17
     -> A15
     
@@ -231,8 +238,8 @@ Tā bija tava izvēle spēlēt šo spēli ar mani… Ņau, ņau.
 #audio:Muris_0_b_labas_15_beigas
     -> END
     
-+ [Kā man tikt mājās? Lūdzu palīdzi.]
-Nu, nu, saki man, saki, ja tu jau zināji, ka māju nav, ja tu lieki 
++ [Ko man tagad darīt? Lūdzu palīdzi.]
+Nu, nu, saki man! Saki, ja tu jau zināji, ka māju nav, ja tu lieki 
 ticēji katram, kurš zināja labāk un tu joprojām cīnies, kāda jēga?
 #audio:Muris_0_b_labas_17
     -> A15
@@ -244,7 +251,7 @@ Tavs ceļš, tavas kājas, tu izvēlies ko ar tām darīt.
 #audio:Muris_0_b_labas_16_beigas
     -> END
     
-+ [Piedod...]
++ [Ko man tagad darīt? Lūdzu palīdzi.]
 Nu, nu, saki man! Saki, ja tu jau zināji, ka māju nav, ja tu lieki 
 ticēji katram, kurš zināja labāk un tu joprojām cīnies, kāda jēga?
 #audio:Muris_0_b_labas_17
@@ -260,31 +267,31 @@ ticēji katram, kurš zināja labāk un tu joprojām cīnies, kāda jēga?
     -> A15
     
 === A15 ===
-+ [Lai draudzētos un iegūtu jaunu pieredzi]
++ [Lai draudzētos un iegūtu jaunu pieredzi.]
 Vai tu esi pārliecināta? 
-Tas nebija, ko vēlējos dzirdēt. Izskatās, ka vērtē citus augstāk par sevi… 
+Tas nebija, ko vēlējos dzirdēt. Izskatās, ka vērtē citus augstāk par sevi.
 Liekas, ka šoreiz šis ceļojums tev neko nebija iemācījis…
 Mēģini vēlreiz.
 #audio:Muris_0_b_labas_23_nepareizs_BEIGAS
     -> END
     
-+ [Lai mācītos no citiem un viņu kļūdām]
++ [Lai mācītos no citiem un viņu kļūdām.]
 Vai tu esi pārliecināta? 
-Tas nebija, ko vēlējos dzirdēt. Izskatās, ka vērtē citus augstāk par sevi… 
+Tas nebija, ko vēlējos dzirdēt. Izskatās, ka vērtē citus augstāk par sevi.
 Liekas, ka šoreiz šis ceļojums tev neko nebija iemācījis… 
 Mēģini vēlreiz.
 #audio:Muris_0_b_labas_23_nepareizs_BEIGAS
     -> END
     
     
-+ [Lai iemācītos izvēlēties, ko es gribu ]
++ [Lai iemācītos izvēlēties, ko es gribu.]
 Tu vienmēr zināji, ko tu dari.
 Tu neesi zvērs, tev ir sava galva, kas domā. 
 #audio:Muris_0_b_labas_18
     -> A16
     
 === A16 ===
-+ [...]
++ [Es gribu tikt mājās.]
 Šī dzīve pieder tev un tikai tev. 
 Tā ir māja, kuru celsi un kurā dzīvosi.
 #audio:Muris_0_b_labas_19
@@ -300,7 +307,7 @@ Kur sienas būs tavā mīļākajā krāsā.
     
 === A18 ===
 + [...]
-Māja…, kur tu darīsi visu, ko tu patiešām gribi.
+Māja, kur tu darīsi visu, ko tu patiešām gribi.
 #audio:Muris_0_b_labas_21
     -> A19
     

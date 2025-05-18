@@ -13,7 +13,8 @@ Nākamreiz vilkšu uz rokas, nevis kājas, lai nejauši nenogriežu ar citām...
 === A ===
 
 + [Vai tev to kāds uzdāvināja?]
-Svarīga persona. Ierobežotas pieejamības informācija. Ā bet nu ja tu esi policija? Negribi vel manu personas kodu un kredītkartes informāciju. Tinies.
+Svarīga persona. Ierobežotas pieejamības informācija. Ā bet nu ja tu esi policija?
+Negribi vel manu personas kodu un kredītkartes informāciju. Tinies.
 #audio:Panks_6_OBJ_ROKAS_3
     -> END
 

@@ -55,7 +55,8 @@ Tu māki spēlēt?
     
 === A8 ===
 + [...Piedodiet?] 
-Tā sajūta. Kad esi viens ar mūziku, kad ķermenis pārņemts tikai ar radīšanu. 
+Tā sajūta. Kad esi viens ar mūziku, 
+kad ķermenis pārņemts tikai ar radīšanu. 
 Tu strādā un nevari beigt.
     #audio:Pianiste_7_10
     -> A9
@@ -74,8 +75,8 @@ Zini… ja es varētu, es pavadītu šeit visu savu atlikušo mūžu.
     
 === A10 ===
 + [Kāpēc?] 
-No agras bērnības man bija vēlme, lai cilvēki domā par mani... 
-Klausās manu mūziku.
+No agras bērnības man bija vēlme, 
+lai cilvēki domā par mani... Klausās manu mūziku.
     #audio:Pianiste_7_13
     -> A11
     
@@ -111,7 +112,7 @@ Es paturētu tevi ilgāk, ja man nebūtu aizņemtas rokas.
     
 === A13 ===
 + [Jūs nevarētu man palīdzēt tikt mājās?] 
-Mā...mmm....
+Mājās...mā...mmm.
     #audio:Pianiste_7_18
     -> A14
     
@@ -123,20 +124,20 @@ Kāpēc?
     
 === A15 ===
 + [Jo ir vēls...?] 
-Es tavā vietā izmantotu iespēju, lai mācītos. 
-No tādiem ģēnijiem kā es.
+Es tavā vietā izmantotu iespēju, lai mācītos 
+no tādiem ģēnijiem kā es.
     #audio:Pianiste_7_20
     -> A16
     
 + [Nezinu.] 
-Es tavā vietā izmantotu iespēju, lai mācītos. 
-No tādiem ģēnijiem kā es.
+Es tavā vietā izmantotu iespēju, lai mācītos 
+no tādiem ģēnijiem kā es.
     #audio:Pianiste_7_20
     -> A16
     
 + [Tas viss ir tā kaķa dēļ.] 
-Es tavā vietā izmantotu iespēju, lai mācītos. 
-No tādiem ģēnijiem kā es.
+Es tavā vietā izmantotu iespēju, lai mācītos
+no tādiem ģēnijiem kā es.
     #audio:Pianiste_7_20
     -> A16
     
@@ -179,14 +180,15 @@ Iesi uz manu koncertu?
     -> END
     
 + [Jūs nevarētu no sākuma palīdzēt man?] 
-Ar ko? Es esmu aizņemta. Tā esi tu, kas blandās apkārt bez mērķa.
+Ar ko? Es esmu aizņemta. 
+Tā esi tu, kas blandās apkārt bez mērķa.
     #audio:Pianiste_7_27
     -> A20
     
 === A20 ===
 + [...Bet es-] 
 Es cienu tikai tos, kuri zina, ko viņi dara ar savu dzīvi. 
-Tie, kuri ir nodarbināti. Un arī tos, kuri novērtē. MANU DARBU!
+Tie, kuri ir nodarbināti. Un arī tos, kuri novērtē MANU DARBU!
     #audio:Pianiste_7_28
     -> A21
     

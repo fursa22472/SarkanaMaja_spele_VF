@@ -21,7 +21,8 @@ Nevajag meklēt. Tā ir kādreiz piederējusi man.
     
 === A2 ===
 + […]
-Nevaru un negribu to vilkt, bet es saprotu, ka šī rīcība nebija pareiza no manas puses. Paldies, ka atradi. 
+Nevaru un negribu to vilkt, bet es saprotu, ka šī rīcība 
+nebija pareiza no manas puses. Paldies, ka atradi. 
    #audio:Priesteris_2_OBJ_KAK_4
     -> A3
     
