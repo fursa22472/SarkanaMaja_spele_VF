@@ -126,8 +126,8 @@ Divi. Traki. Vientuļnieki. Telts nav māja.
 === As10 ===
 {PiekritiTantei:
   + [...]
-Tu piekriti tantei, ka māja ir tavs pienākums? 
-Hm… Varbūt tavs, bet ne mans. Man rieeebbjas pienākumi.
+Tu piekriti tantei, ka mājas ir tavs pienākums? 
+Hm… Varbūt tavs, bet ne mans. Man riebjas pienākumi.
 #audio:Muris_0_b_Tante_P
     -> As11
   - else:
