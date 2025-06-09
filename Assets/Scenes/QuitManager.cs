@@ -7,22 +7,29 @@ public class QuitManager : MonoBehaviour
     [SerializeField] private string mainMenuSceneName = "MainMenu";
 
     private bool isPanelActive = false;
+    private bool hasStarted = false;
 
     private void Start()
     {
         if (quitPanel != null)
             quitPanel.SetActive(false);
+
+        // Optional: delay to avoid triggering on scene load input
+        Invoke(nameof(EnableInputHandling), 0.1f);
+    }
+
+    private void EnableInputHandling()
+    {
+        hasStarted = true;
     }
 
     void Update()
     {
+        if (!hasStarted) return; // Wait until we're ready
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (IsInMainMenu())
-            {
-                QuitGame(); // Quit the whole app
-            }
-            else
+            if (!IsInMainMenu())
             {
                 ToggleQuitPanel();
             }
@@ -49,16 +56,6 @@ public class QuitManager : MonoBehaviour
     private void LoadMainMenu()
     {
         SceneManager.LoadScene(mainMenuSceneName);
-    }
-
-    private void QuitGame()
-    {
-        Debug.Log("Quitting Game...");
-        Application.Quit();
-
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false; // For testing in Editor
-#endif
     }
 
     private bool IsInMainMenu()
