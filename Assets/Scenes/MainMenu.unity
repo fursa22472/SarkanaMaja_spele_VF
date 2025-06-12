@@ -975,9 +975,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ae64fc73ab3b74b8b898186d80c37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialButton: {fileID: 437300764}
+  tutorialButton: {fileID: 11455116, guid: 8427728bb9aa7e34ca68a07fda50f969, type: 3}
   newGameButton: {fileID: 1738609456}
-  tutorialPanel: {fileID: 251151486}
+  tutorialPanel: {fileID: 437300762}
 --- !u!1 &1514591915
 GameObject:
   m_ObjectHideFlags: 0
